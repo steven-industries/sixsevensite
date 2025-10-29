@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SIXSEVEN - Just Do 6-7</title>
+    <meta name="description" content="The Gen Alpha memecoin revolution. Meaningless by design. Legendary by accident.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --nike-black: #111;
+            --nike-white: #fff;
+            --nike-grey: #757575;
+            --nike-light-grey: #f5f5f5;
+            --brainrot-purple: #7B2CBF;
+            --brainrot-pink: #FF006E;
+            --brainrot-cyan: #00F5FF;
+            --brainrot-yellow: #FFD60A;
+            --brainrot-green: #06FFA5;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--nike-white);
+            color: var(--nike-black);
+            overflow-x: hidden;
+        }
+
+        /* Nike-inspired Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--nike-white);
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .nav-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--nike-black);
+            letter-spacing: -1px;
+            animation: glitch-logo 3s infinite;
+        }
+
+        @keyframes glitch-logo {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-2px, 1px); }
+            94% { transform: translate(2px, -1px); }
+            96% { transform: translate(-1px, 2px); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--nike-black);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--nike-grey);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--brainrot-pink);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .cta-nav:hover {
+            background: var(--brainrot-pink);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section - Nike Style with Brainrot Energy */
+        .hero {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--nike-light-grey);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-overline {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--nike-grey);
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: clamp(72px, 12vw, 180px);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin-bottom: 24px;
+            color: var(--nike-black);
+            position: relative;
+        }
+
+        .hero-title .six {
+            display: inline-block;
+            animation: bounce-six 2s ease-in-out infinite;
+        }
+
+        .hero-title .seven {
+            display: inline-block;
+            animation: bounce-seven 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce-six {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bounce-seven {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(24px, 3vw, 42px);
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: var(--nike-grey);
+            line-height: 1.3;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--nike-black);
+            color: var(--nike-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--brainrot-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 0, 110, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--nike-black);
+            border: 2px solid var(--nike-black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            transform: translateY(-2px);
+        }
+
+        /* Brainrot Background Animation */
+        .brainrot-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            pointer-events: none;
+            background: 
+                repeating-linear-gradient(45deg, var(--brainrot-purple) 0px, var(--brainrot-purple) 10px, transparent 10px, transparent 20px),
+                repeating-linear-gradient(-45deg, var(--brainrot-cyan) 0px, var(--brainrot-cyan) 10px, transparent 10px, transparent 20px);
+            animation: slide-bg 20s linear infinite;
+        }
+
+        @keyframes slide-bg {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        /* Stats Bar - Nike Inspired */
+        .stats-bar {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            padding: 24px 40px;
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--brainrot-cyan), var(--brainrot-pink), var(--brainrot-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(180deg); }
+        }
+
+        .stat-label {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--nike-grey);
+        }
+
+        /* Content Sections */
+        .section {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+
+        .section-title {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 32px;
+            color: var(--nike-black);
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--nike-grey);
+            margin-bottom: 60px;
+            max-width: 600px;
+        }
+
+        /* Product Grid - Nike Style */
+        .lore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .lore-card {
+            background: var(--nike-light-grey);
+            padding: 40px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lore-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brainrot-purple), var(--brainrot-pink), var(--brainrot-cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .lore-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .lore-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .lore-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .lore-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--nike-black);
+        }
+
+        .lore-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--nike-grey);
+        }
+
+        /* Hero Image Section */
+        .hero-image-section {
+            background: var(--nike-black);
+            padding: 0;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+            align-items: center;
+        }
+
+        .hero-image-text {
+            padding: 80px 60px;
+            color: var(--nike-white);
+        }
+
+        .hero-image-text h2 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-image-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            color: #ccc;
+        }
+
+        .hero-image-visual {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, var(--brainrot-purple), var(--brainrot-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200px;
+            animation: gradient-rotate 10s ease infinite;
+        }
+
+        @keyframes gradient-rotate {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Testimonials - Clean Nike Style */
+        .testimonials {
+            background: var(--nike-light-grey);
+            padding: 100px 40px;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .testimonial {
+            background: var(--nike-white);
+            padding: 40px;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--nike-black);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--nike-grey);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Manifesto Section - Bold Nike Hero Style */
+        .manifesto {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            padding: 140px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto::before {
+            content: '👐';
+            position: absolute;
+            font-size: 400px;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .manifesto-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .manifesto h2 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 60px;
+            line-height: 1.1;
+        }
+
+        .manifesto-item {
+            font-size: 24px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .manifesto-item strong {
+            color: var(--brainrot-yellow);
+        }
+
+        /* How to Buy - Nike Product Detail Style */
+        .how-to-buy {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--nike-black);
+            color: var(--nike-white);
+            font-size: 32px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .step-number::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid var(--brainrot-pink);
+            animation: pulse-ring 2s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .step h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--nike-black);
+        }
+
+        .step p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--nike-grey);
+        }
+
+        /* Contract Section */
+        .contract-section {
+            background: var(--nike-light-grey);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .contract-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--nike-white);
+            padding: 40px;
+            border: 2px solid var(--nike-black);
+        }
+
+        .contract-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            color: var(--nike-grey);
+        }
+
+        .contract-address {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--nike-black);
+            word-break: break-all;
+            padding: 20px;
+            background: var(--nike-light-grey);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .contract-address:hover {
+            background: var(--brainrot-yellow);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            padding: 80px 40px 40px;
+        }
+
+        .footer-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--nike-grey);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--nike-white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 32px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--nike-grey);
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto 24px;
+            line-height: 1.6;
+        }
+
+        /* Glitch Text Effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch::before {
+            color: var(--brainrot-cyan);
+            animation: glitch-1 0.3s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        }
+
+        .glitch::after {
+            color: var(--brainrot-pink);
+            animation: glitch-2 0.3s infinite;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        }
+
+        @keyframes glitch-1 {
+            0%, 100% { transform: translate(0); }
+            33% { transform: translate(-2px, 2px); }
+            66% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitch-2 {
+            0%, 100% { transform: translate(0); }
+            33% { transform: translate(2px, -2px); }
+            66% { transform: translate(-2px, 2px); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 16px 20px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-link {
+                font-size: 13px;
+            }
+
+            .hero-content {
+                padding: 60px 20px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .hero-image-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image-visual {
+                height: 400px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .manifesto {
+                padding: 80px 20px;
+            }
+
+            .manifesto h2 {
+                font-size: 42px;
+            }
+
+            .manifesto-item {
+                font-size: 18px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo-nav">$67</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#lore" class="nav-link">The Lore</a>
+                <a href="#how" class="nav-link">How to Buy</a>
+                <a href="#buy" class="nav-link cta-nav">Buy Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="brainrot-bg"></div>
+        <div class="hero-content">
+            <div class="hero-overline">GEN ALPHA'S FIRST MEMECOIN</div>
+            <h1 class="hero-title">
+                <span class="six glitch" data-text="6">6</span>
+                <span class="seven glitch" data-text="7">7</span>
+            </h1>
+            <p class="hero-subtitle">
+                Meaningless by Design.<br>Legendary by Accident.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#buy" class="btn btn-primary">Buy $SIXSEVEN</a>
+                <a href="#lore" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div style="font-size: 64px; animation: weighing 2s ease-in-out infinite;">👐</div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">6.7B</div>
+                <div class="stat-label">Total Supply</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Tax</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Community</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">67%</div>
+                <div class="stat-label">LP Locked</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section reveal" id="about">
+        <h2 class="section-title">What Does It Mean?</h2>
+        <p class="section-subtitle">
+            Nothing. And that's exactly the point.
+        </p>
+        <p style="font-size: 20px; line-height: 1.8; color: var(--nike-grey); max-width: 800px;">
+            While you're over there "researching fundamentals" and "analyzing tokenomics," Gen Alpha just made $SIXSEVEN the most viral movement in crypto. This isn't a coin. It's a cultural revolution wrapped in chaos, delivered via TikTok, amplified by NBA highlight reels, and sustained by pure, unfiltered brainrot energy.
+        </p>
+    </section>
+
+    <!-- The Lore Grid -->
+    <section class="section reveal" id="lore">
+        <h2 class="section-title">The Sacred Lore</h2>
+        <div class="lore-grid">
+            <div class="lore-card">
+                <span class="lore-icon">🎵</span>
+                <h3>The Prophecy</h3>
+                <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
+            </div>
+            <div class="lore-card">
+                <span class="lore-icon">🏀</span>
+                <h3>The Chosen One</h3>
+                <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
+            </div>
+            <div class="lore-card">
+                <span class="lore-icon">👦</span>
+                <h3>The 67 Kid</h3>
+                <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
+            </div>
+            <div class="lore-card">
+                <span class="lore-icon">🎓</span>
+                <h3>The Disruption</h3>
+                <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
+            </div>
+            <div class="lore-card">
+                <span class="lore-icon">💰</span>
+                <h3>The Tokenization</h3>
+                <p>October 2025: Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. The prophecy is monetized.</p>
+            </div>
+            <div class="lore-card">
+                <span class="lore-icon">🚀</span>
+                <h3>You Are Here</h3>
+                <p>You're reading this. Considering buying. About to become part of history. Welcome to the movement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <div class="hero-image-section reveal">
+        <div class="hero-image-content">
+            <div class="hero-image-text">
+                <h2>Peak Cultural Relevance</h2>
+                <p>South Park featured it. CNN tried to explain it. Teachers are losing their minds. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.</p>
+                <p>This is the moment. The meme is peaking. Adults are talking. Gen Alpha is about to move on.</p>
+                <a href="#buy" class="btn btn-primary">Don't Miss Out</a>
+            </div>
+            <div class="hero-image-visual">
+                👐
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials reveal">
+        <div class="testimonials-container">
+            <h2 class="section-title">What Degens Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"I don't understand it but I'm all in. My kids won't talk to me anymore but my bag is up 600%."</p>
+                    <div class="testimonial-author">— Dad on Twitter</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Teacher: 'Turn to page 67.' My entire class: *buys $SIXSEVEN*. I've lost control of my life."</p>
+                    <div class="testimonial-author">— 7th Grade Math Teacher</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"This is either the dumbest thing I've ever seen or absolute genius. I bought more just in case."</p>
+                    <div class="testimonial-author">— Crypto Veteran Since 2021</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"My financial advisor asked what it means. I just did the hand gesture. He bought in."</p>
+                    <div class="testimonial-author">— Diamond Hands</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Finally, a coin as stupid as the market. This is peak crypto."</p>
+                    <div class="testimonial-author">— Anonymous Degen</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"My nephew explained it to me for 20 minutes. I still don't get it. I bought anyway."</p>
+                    <div class="testimonial-author">— Confused Boomer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto reveal">
+        <div class="manifesto-content">
+            <h2>The Manifesto</h2>
+            <div class="manifesto-item">
+                <strong>We believe</strong> in the power of meaninglessness.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> Gen Alpha is smarter than us and we should follow their lead into beautiful chaos.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> the best investments are the ones that make your financial advisor cry.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> page 67 is the most powerful page in any textbook.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> the hand gesture 👐 is sacred and must be protected.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> in you, degen. Welcome to the movement.
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section class="how-to-buy reveal" id="how">
+        <h2 class="section-title">How to Buy</h2>
+        <p class="section-subtitle">Four steps to generational wealth (or at least legendary memes)</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Get a Wallet</h3>
+                <p>Download Phantom or Solflare. Your first step into the future.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Buy SOL</h3>
+                <p>Use any exchange. Send SOL to your wallet. Don't send it to the wrong address.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Swap on DEX</h3>
+                <p>Hit Raydium or Jupiter. Paste our contract. Swap SOL for $SIXSEVEN.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Join the Movement</h3>
+                <p>Do the hand gesture. Screenshot your bag. Welcome to the 67 Army. 👐</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Section -->
+    <section class="contract-section" id="buy">
+        <div class="contract-box">
+            <div class="contract-label">Contract Address</div>
+            <div class="contract-address" onclick="copyContract()">
+                LAUNCHING SOON • STAY TUNED
+            </div>
+            <p style="margin-top: 24px; color: var(--nike-grey); font-size: 14px;">
+                Click to copy when live • Verify on Solscan before buying
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="text-align: center; padding: 140px 40px;">
+        <h2 class="section-title" style="margin-bottom: 24px;">The Clock Is Ticking</h2>
+        <p style="font-size: 20px; color: var(--nike-grey); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Adults are talking about it. The meme is peaking. You have 2-4 weeks before Gen Alpha moves on. This is your window.
+        </p>
+        <a href="#buy" class="btn btn-primary" style="padding: 24px 60px; font-size: 20px;">
+            Buy $SIXSEVEN Now
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Twitter/X</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Whitepaper</a></li>
+                    <li><a href="#">Tokenomics</a></li>
+                    <li><a href="#">How to Buy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Charts</h4>
+                <ul class="footer-links">
+                    <li><a href="#">DexScreener</a></li>
+                    <li><a href="#">DexTools</a></li>
+                    <li><a href="#">CoinGecko</a></li>
+                    <li><a href="#">CoinMarketCap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul class="footer-links">
+                    <li><a href="#">The Lore</a></li>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="disclaimer">
+                <strong>DISCLAIMER:</strong> $SIXSEVEN is a memecoin. It means nothing. It could go to zero. You could lose everything. We're not financial advisors. Do your own research. Only invest what you can afford to lose. This is pure speculation wrapped in absurdity wrapped in Gen Alpha brainrot. Past performance doesn't indicate future results. Not affiliated with Skrilla, LaMelo Ball, the NBA, or rational decision-making.
+            </p>
+            <p style="margin-top: 24px;">
+                © 2025 $SIXSEVEN. All Rights Reserved. Built with chaos, fueled by brainrot, sustained by community.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // Copy contract address
+        function copyContract() {
+            const contractAddress = "SIXSEVEN_CONTRACT_ADDRESS_HERE";
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                alert('Contract address copied! 👐');
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add weighing animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes weighing {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                25% { transform: translateY(-10px) rotate(-5deg); }
+                50% { transform: translateY(0) rotate(0deg); }
+                75% { transform: translateY(-10px) rotate(5deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
