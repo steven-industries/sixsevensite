@@ -18,7 +18,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -45,13 +45,14 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: var(--nike-black);
             color: var(--nike-white);
             overflow-x: hidden;
             position: relative;
+            letter-spacing: -0.02em;
         }
 
         /* Brutalist Navigation - Supreme Style */
@@ -524,15 +525,16 @@
         }
 
         .section-title {
-            font-size: clamp(48px, 8vw, 120px);
+            font-size: clamp(48px, 8vw, 140px);
             font-weight: 900;
-            line-height: 0.9;
-            letter-spacing: -4px;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
             margin-bottom: 40px;
             color: var(--nike-white);
             text-transform: uppercase;
             position: relative;
             display: inline-block;
+            font-family: 'Inter Tight', sans-serif;
         }
 
         .section-title::after {
@@ -545,6 +547,25 @@
             background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
         }
 
+        /* Balenciaga Oversized Text Block */
+        .balenciaga-block {
+            background: var(--nike-white);
+            color: var(--nike-black);
+            padding: 60px;
+            margin: 120px 0;
+            border: 8px solid var(--nike-black);
+            position: relative;
+        }
+
+        .balenciaga-block-text {
+            font-size: clamp(32px, 5vw, 72px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            font-family: 'Inter Tight', sans-serif;
+        }
+
         .section-subtitle {
             font-size: 24px;
             font-weight: 600;
@@ -554,93 +575,196 @@
             line-height: 1.6;
         }
 
-        /* Lore Grid - Bold Cards */
-        .lore-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-            margin-top: 80px;
-        }
-
-        .lore-card {
-            background: var(--nike-light-grey);
-            padding: 48px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Timeline - Balenciaga Brutalist Style */
+        .timeline-container {
             position: relative;
-            overflow: hidden;
-            border: 3px solid transparent;
+            max-width: 1200px;
+            margin: 80px auto 0;
         }
 
-        .lore-card::before {
-            content: '';
+        .timeline-line {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s;
-        }
-
-        .lore-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
             height: 100%;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            opacity: 0;
-            transition: opacity 0.4s;
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
             z-index: 0;
         }
 
-        .lore-card:hover::before {
-            transform: scaleX(1);
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            position: relative;
         }
 
-        .lore-card:hover::after {
-            opacity: 0.05;
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
         }
 
-        .lore-card:hover {
-            transform: translateY(-12px);
+        .timeline-item:nth-child(even) .timeline-date {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-date {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: var(--neon-pink);
+            border: 4px solid var(--nike-black);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% {
+                box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 0, 110, 0.5), 0 0 40px var(--neon-pink);
+            }
+        }
+
+        .timeline-date {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .timeline-year {
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.05em;
+            font-family: 'Inter Tight', sans-serif;
+        }
+
+        .timeline-label {
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--nike-grey);
+            margin-top: 12px;
+        }
+
+        .timeline-content {
+            background: var(--nike-light-grey);
+            padding: 48px;
+            border: 3px solid transparent;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s;
+        }
+
+        .timeline-content:hover::before {
+            transform: scaleY(1);
+        }
+
+        .timeline-content:hover {
             border-color: var(--neon-pink);
+            transform: translateX(10px);
             box-shadow:
                 0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 0 3px var(--nike-black),
-                0 0 0 6px var(--neon-pink),
-                0 0 40px rgba(255, 0, 110, 0.4);
+                0 0 40px rgba(255, 0, 110, 0.3);
         }
 
-        .lore-icon {
-            font-size: 64px;
-            margin-bottom: 32px;
+        .timeline-item:nth-child(even) .timeline-content:hover {
+            transform: translateX(-10px);
+        }
+
+        .timeline-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
             display: block;
             filter: drop-shadow(0 0 20px currentColor);
-            position: relative;
-            z-index: 1;
         }
 
-        .lore-card h3 {
-            font-size: 28px;
+        .timeline-content h3 {
+            font-size: 32px;
             font-weight: 900;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             color: var(--nike-white);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 1;
+            letter-spacing: -0.02em;
+            font-family: 'Inter Tight', sans-serif;
         }
 
-        .lore-card p {
+        .timeline-content p {
             font-size: 18px;
             line-height: 1.7;
             color: var(--nike-grey);
-            position: relative;
-            z-index: 1;
+        }
+
+        /* Timeline Mobile Responsive */
+        @media (max-width: 968px) {
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                margin-bottom: 60px;
+                padding-left: 80px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .timeline-date,
+            .timeline-item:nth-child(odd) .timeline-date {
+                grid-column: 1;
+                text-align: left;
+                padding: 0 0 20px 0;
+            }
+
+            .timeline-year {
+                font-size: 72px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content:hover {
+                transform: translateX(10px);
+            }
         }
 
         /* Split Section - Framer Style */
@@ -691,15 +815,41 @@
         .split-visual {
             position: relative;
             height: 700px;
-            background: linear-gradient(135deg, var(--brainrot-purple), var(--neon-pink));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 300px;
             overflow: hidden;
+            background: var(--nike-black);
+        }
+
+        .split-visual-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.1) saturate(1.3) grayscale(0.2);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .split-visual:hover .split-visual-img {
+            transform: scale(1.05);
+            filter: contrast(1.2) saturate(1.5) grayscale(0);
         }
 
         .split-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 0, 110, 0.3),
+                rgba(0, 245, 255, 0.3)
+            );
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .split-visual::after {
             content: '';
             position: absolute;
             width: 200%;
@@ -708,10 +858,12 @@
                 45deg,
                 transparent,
                 transparent 10px,
-                rgba(255, 255, 255, 0.1) 10px,
-                rgba(255, 255, 255, 0.1) 20px
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
             );
             animation: diagonal-move 20s linear infinite;
+            pointer-events: none;
+            z-index: 2;
         }
 
         @keyframes diagonal-move {
@@ -1134,8 +1286,7 @@
                 letter-spacing: -4px;
             }
 
-            .testimonial-grid,
-            .lore-grid {
+            .testimonial-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1281,39 +1432,88 @@
         </p>
     </section>
 
-    <!-- The Lore Grid -->
+    <!-- The Lore Timeline -->
     <section class="section reveal" id="lore">
         <h2 class="section-title">The Sacred Lore</h2>
-        <div class="lore-grid">
-            <div class="lore-card">
-                <span class="lore-icon">🎵</span>
-                <h3>The Prophecy</h3>
-                <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-label">The Beginning</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🎵</span>
+                    <h3>The Prophecy</h3>
+                    <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
-            <div class="lore-card">
-                <span class="lore-icon">🏀</span>
-                <h3>The Chosen One</h3>
-                <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-label">The Ascension</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🏀</span>
+                    <h3>The Chosen One</h3>
+                    <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
-            <div class="lore-card">
-                <span class="lore-icon">👦</span>
-                <h3>The 67 Kid</h3>
-                <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">MAR<br>2025</div>
+                    <div class="timeline-label">The Messiah</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">👦</span>
+                    <h3>The 67 Kid</h3>
+                    <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
-            <div class="lore-card">
-                <span class="lore-icon">🎓</span>
-                <h3>The Disruption</h3>
-                <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-label">The Disruption</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🎓</span>
+                    <h3>Global Chaos</h3>
+                    <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
-            <div class="lore-card">
-                <span class="lore-icon">💰</span>
-                <h3>The Tokenization</h3>
-                <p>October 2025: Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. The prophecy is monetized.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">OCT<br>2025</div>
+                    <div class="timeline-label">The Tokenization</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">💰</span>
+                    <h3>Peak Absurdity</h3>
+                    <p>October 2025: Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. The prophecy is monetized.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
-            <div class="lore-card">
-                <span class="lore-icon">🚀</span>
-                <h3>You Are Here</h3>
-                <p>You're reading this. Considering buying. About to become part of history. Welcome to the movement.</p>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">NOW</div>
+                    <div class="timeline-label">You Are Here</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🚀</span>
+                    <h3>Your Moment</h3>
+                    <p>You're reading this. Considering buying. About to become part of history. Welcome to the movement.</p>
+                </div>
+                <div class="timeline-dot"></div>
             </div>
         </div>
     </section>
@@ -1328,7 +1528,7 @@
                 <a href="#buy" class="btn btn-primary">Don't Miss Out</a>
             </div>
             <div class="split-visual">
-                👐
+                <img src="https://vergemagazine.co.uk/wp-content/uploads/2025/10/AA1LJYLq.jpeg" alt="6-7 Cultural Moment" class="split-visual-img">
             </div>
         </div>
     </div>
@@ -1575,7 +1775,7 @@
         });
 
         // 3D tilt effect on cards
-        const cards = document.querySelectorAll('.lore-card, .testimonial, .step');
+        const cards = document.querySelectorAll('.timeline-content, .testimonial, .step');
 
         cards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
