@@ -179,7 +179,7 @@
             align-items: center;
             position: relative;
             background: var(--nike-black);
-            overflow: hidden;
+            overflow: visible;
             padding-top: 100px;
         }
 
@@ -1220,11 +1220,6 @@
             transform: translateY(0);
         }
 
-        /* Parallax Elements */
-        .parallax {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         /* Mobile Responsive */
         @media (max-width: 1024px) {
             .hero {
@@ -1377,7 +1372,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content parallax">
+        <div class="hero-content">
             <div class="hero-overline">GEN ALPHA'S FIRST MEMECOIN</div>
             <h1 class="hero-title">
                 <span class="six">6</span>
@@ -1708,17 +1703,6 @@
             });
         };
 
-        // Parallax effect
-        const parallaxElements = document.querySelectorAll('.parallax');
-
-        const parallaxScroll = () => {
-            const scrolled = window.pageYOffset;
-            parallaxElements.forEach(element => {
-                const speed = 0.5;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        };
-
         // Mouse move effect on stats
         const stats = document.querySelectorAll('.stat');
 
@@ -1745,7 +1729,6 @@
         // Event listeners
         window.addEventListener('scroll', () => {
             revealOnScroll();
-            parallaxScroll();
         });
 
         revealOnScroll(); // Initial check
