@@ -113,7 +113,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: 0;
+            z-index: 1;
         }
 
         /* Dark overlay for contrast */
@@ -127,13 +127,13 @@
                 rgba(10, 10, 10, 0.5) 50%,
                 rgba(10, 10, 10, 0.7) 100%
             );
-            z-index: 1;
+            z-index: 2;
         }
 
         /* Countdown in Hero - Centered */
         .hero .countdown-box {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(20px);
             padding: 48px;
@@ -180,16 +180,22 @@
             color: var(--grey);
         }
 
-        /* Parallax Headline */
+        /* Parallax Headline Section - Below Hero */
+        .parallax-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
         .parallax-headline {
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 3;
-            width: 90%;
-            max-width: 1400px;
-            pointer-events: none;
+            text-align: center;
+            padding: 80px 40px;
+            will-change: transform, opacity;
+            transition: transform 0.1s ease-out;
         }
 
         .parallax-title {
@@ -200,10 +206,8 @@
             text-transform: uppercase;
             color: var(--white);
             text-shadow:
-                4px 4px 0 rgba(0, 0, 0, 0.8),
-                8px 8px 20px rgba(0, 0, 0, 0.9);
-            will-change: transform;
-            transition: transform 0.1s ease-out;
+                4px 4px 0 rgba(255, 0, 110, 0.3),
+                8px 8px 20px rgba(255, 0, 110, 0.2);
         }
 
         .parallax-title .highlight {
@@ -587,8 +591,12 @@
                 text-shadow: 2px 2px 0 var(--pink), 4px 4px 0 var(--blue);
             }
 
+            .parallax-section {
+                min-height: 60vh;
+            }
+
             .parallax-headline {
-                top: 10%;
+                padding: 60px 24px;
             }
 
             .parallax-title {
@@ -646,14 +654,6 @@
             <source src="videos/67kid-with-writing.mp4" type="video/mp4">
         </video>
 
-        <!-- Parallax Headline -->
-        <div class="parallax-headline" id="parallaxHeadline">
-            <h1 class="parallax-title">
-                Teachers <span class="highlight">Banned</span> It.<br>
-                We <span class="highlight">Tokenized</span> It.
-            </h1>
-        </div>
-
         <!-- Countdown Timer -->
         <div class="countdown-box">
             <div class="countdown-label">LAUNCHING 11/11 AT 6:07PM EST</div>
@@ -675,6 +675,16 @@
                     <div class="countdown-text">Seconds</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Parallax Headline Section -->
+    <section class="parallax-section">
+        <div class="parallax-headline" id="parallaxHeadline">
+            <h1 class="parallax-title">
+                Teachers <span class="highlight">Banned</span> It.<br>
+                We <span class="highlight">Tokenized</span> It.
+            </h1>
         </div>
     </section>
 
@@ -944,11 +954,15 @@
         // Parallax scroll effect for headline
         window.addEventListener('scroll', () => {
             const headline = document.getElementById('parallaxHeadline');
+            const section = headline.closest('.parallax-section');
+            const sectionTop = section.offsetTop;
             const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.5; // Parallax speed (0.5 = half speed)
 
-            headline.style.transform = `translate(-50%, ${rate}px)`;
-            headline.style.opacity = Math.max(0, 1 - (scrolled / 600));
+            // Calculate parallax offset relative to section position
+            const offset = (scrolled - sectionTop) * 0.3;
+
+            // Apply parallax transform
+            headline.style.transform = `translateY(${offset}px)`;
         });
 
         // Counter animation
