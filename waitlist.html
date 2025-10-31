@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$SIXSEVEN - Gen Alpha's First Memecoin | Launching Soon</title>
-    <meta name="description" content="The 6-7 meme is everywhere. We're tokenizing it. Join the bounty program, earn points, get airdropped tokens at launch. Meaningless by design. Legendary by accident.">
+    <title>$SIXSEVEN - Teachers Banned It. We Tokenized It.</title>
+    <meta name="description" content="The 6-7 meme broke the internet. We're launching it on Solana. Join the waitlist. Top 67 creators get massive airdrops. Everyone else gets FOMO.">
 
     <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="$SIXSEVEN - Just Do 6-7 | Launching Soon">
-    <meta property="og:description" content="Gen Alpha's first native memecoin. Join 15,000+ people earning bounty points before launch. The cultural moment is happening now.">
+    <meta property="og:title" content="$SIXSEVEN - Teachers Banned It. We Tokenized It.">
+    <meta property="og:description" content="Gen Alpha's meme. Solana's next 100x. Join 20,000+ people waiting for launch. This is your 2-week window.">
     <meta property="og:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,48 +25,40 @@
         }
 
         :root {
-            --nike-black: #0a0a0a;
-            --nike-white: #ffffff;
-            --nike-grey: #8f8f8f;
-            --nike-light-grey: #1a1a1a;
-            --brainrot-purple: #9d4edd;
-            --brainrot-pink: #ff006e;
-            --brainrot-cyan: #00f5ff;
-            --brainrot-yellow: #ffd60a;
-            --brainrot-green: #06ffa5;
-            --neon-pink: #ff0080;
-            --neon-blue: #0ff;
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --grey: #8f8f8f;
+            --light-grey: #1a1a1a;
+            --pink: #ff0080;
+            --blue: #0ff;
+            --purple: #9d4edd;
+            --green: #06ffa5;
+            --yellow: #ffd60a;
         }
 
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
-            width: 100%;
         }
 
         body {
-            font-family: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background: var(--nike-black);
-            color: var(--nike-white);
+            background: var(--black);
+            color: var(--white);
             overflow-x: hidden;
             letter-spacing: -0.02em;
-            width: 100%;
-            max-width: 100vw;
         }
 
-        /* Navigation */
+        /* Nav */
         .nav {
             position: fixed;
             top: 0;
             width: 100%;
-            max-width: 100vw;
-            background: var(--nike-black);
+            background: var(--black);
             z-index: 1000;
-            border-bottom: 3px solid var(--neon-pink);
+            border-bottom: 3px solid var(--pink);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
         }
 
         .nav-container {
@@ -78,25 +70,19 @@
             align-items: center;
         }
 
-        .logo-nav {
+        .logo {
             font-size: 48px;
             font-weight: 900;
-            color: var(--nike-white);
             letter-spacing: -2px;
-            text-shadow:
-                4px 4px 0 var(--neon-pink),
-                8px 8px 0 var(--neon-blue);
+            text-shadow: 4px 4px 0 var(--pink), 8px 8px 0 var(--blue);
         }
 
         .nav-badge {
-            display: inline-block;
             padding: 8px 16px;
-            background: var(--neon-pink);
-            color: var(--nike-white);
+            background: var(--pink);
             font-size: 12px;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1px;
             animation: pulse 2s ease-in-out infinite;
         }
 
@@ -108,22 +94,21 @@
         /* Hero */
         .hero {
             margin-top: 100px;
-            min-height: 90vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 40px;
             position: relative;
-            padding: 80px 60px;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
+            inset: 0;
+            background:
                 linear-gradient(rgba(255, 0, 110, 0.1) 2px, transparent 2px),
                 linear-gradient(90deg, rgba(0, 245, 255, 0.1) 2px, transparent 2px);
             background-size: 50px 50px;
@@ -137,187 +122,64 @@
         }
 
         .hero-content {
+            max-width: 1200px;
             position: relative;
             z-index: 2;
         }
 
-        .hero-overline {
+        .hero-badge {
+            display: inline-block;
             font-size: 14px;
             font-weight: 900;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--neon-pink);
-            margin-bottom: 24px;
-            display: inline-block;
-            padding: 8px 16px;
+            color: var(--pink);
+            margin-bottom: 32px;
+            padding: 12px 24px;
+            border: 2px solid var(--pink);
             background: rgba(255, 0, 110, 0.1);
-            border: 2px solid var(--neon-pink);
         }
 
         .hero-title {
-            font-size: clamp(120px, 15vw, 200px);
+            font-size: clamp(48px, 10vw, 140px);
             font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -8px;
-            margin-bottom: 32px;
-            color: var(--nike-white);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            margin-bottom: 40px;
             text-transform: uppercase;
         }
 
-        .hero-title .six {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--pink), var(--blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(0 0 30px var(--neon-pink));
-        }
-
-        .hero-title .seven {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--neon-blue), var(--brainrot-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 30px var(--neon-blue));
         }
 
         .hero-subtitle {
-            font-size: clamp(24px, 3vw, 36px);
+            font-size: clamp(24px, 4vw, 56px);
             font-weight: 700;
-            margin-bottom: 48px;
-            color: var(--nike-grey);
-            line-height: 1.3;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            line-height: 1.2;
+            margin-bottom: 60px;
+            color: var(--grey);
         }
 
         .hero-subtitle strong {
-            color: var(--nike-white);
+            color: var(--white);
         }
 
-        .hero-cta-group {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 20px 48px;
-            font-size: 18px;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
-            color: var(--nike-white);
-            box-shadow:
-                6px 6px 0 var(--nike-black),
-                6px 6px 0 2px var(--neon-blue);
-        }
-
-        .btn-primary:hover {
-            transform: translate(-6px, -6px);
-            box-shadow:
-                12px 12px 0 var(--nike-black),
-                12px 12px 0 2px var(--neon-blue);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--nike-white);
-            border: 3px solid var(--neon-blue);
-            box-shadow: 6px 6px 0 var(--neon-blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--neon-blue);
-            color: var(--nike-black);
-            transform: translate(-6px, -6px);
-            box-shadow: 12px 12px 0 var(--neon-pink);
-        }
-
-        /* Hero Visual */
-        .hero-visual {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-
-        .hero-gif-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            aspect-ratio: 1;
-        }
-
-        .hero-gif-container::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue), var(--brainrot-green));
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.6;
-            animation: rotate-glow 10s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes rotate-glow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .hero-gif {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 4px solid var(--nike-white);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-emoji {
-            position: absolute;
-            font-size: 80px;
-            bottom: -40px;
-            right: -40px;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
-        }
-
-        /* Countdown */
-        .countdown-section {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .countdown-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .countdown-box {
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+            padding: 60px;
+            margin: 60px auto;
+            max-width: 900px;
         }
 
         .countdown-label {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 32px;
-            letter-spacing: 2px;
         }
 
         .countdown {
@@ -327,15 +189,14 @@
         }
 
         .countdown-item {
-            background: var(--nike-black);
-            padding: 32px 20px;
-            border: 4px solid var(--nike-white);
+            background: var(--black);
+            padding: 32px 16px;
+            border: 4px solid var(--white);
         }
 
         .countdown-number {
             font-size: 64px;
             font-weight: 900;
-            color: var(--nike-white);
             line-height: 1;
             margin-bottom: 12px;
         }
@@ -345,1092 +206,733 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--nike-grey);
+            color: var(--grey);
         }
 
-        /* What Is Section */
-        .what-is-section {
+        .cta-group {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .btn {
+            padding: 24px 64px;
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            color: var(--white);
+            box-shadow: 6px 6px 0 var(--black), 6px 6px 0 2px var(--blue);
+        }
+
+        .btn-primary:hover {
+            transform: translate(-6px, -6px);
+            box-shadow: 12px 12px 0 var(--black), 12px 12px 0 2px var(--blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 3px solid var(--blue);
+            box-shadow: 6px 6px 0 var(--blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue);
+            color: var(--black);
+            transform: translate(-6px, -6px);
+            box-shadow: 12px 12px 0 var(--pink);
+        }
+
+        /* Quote Block - Screenshot Worthy */
+        .quote-block {
+            background: var(--white);
+            color: var(--black);
+            padding: 80px 60px;
+            margin: 120px 0;
+            border: 8px solid var(--black);
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quote-text {
+            font-size: clamp(32px, 5vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+        }
+
+        .quote-attr {
+            font-size: 18px;
+            margin-top: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+        }
+
+        /* Section */
+        .section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 120px 60px;
         }
 
         .section-title {
-            font-size: clamp(40px, 6vw, 96px);
+            font-size: clamp(40px, 7vw, 96px);
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 32px;
+            margin-bottom: 48px;
             line-height: 0.9;
             letter-spacing: -0.03em;
         }
 
-        .section-subtitle {
-            font-size: clamp(20px, 2.5vw, 32px);
-            line-height: 1.5;
-            color: var(--nike-grey);
-            margin-bottom: 40px;
-            max-width: 900px;
+        .big-text {
+            font-size: clamp(24px, 3vw, 40px);
+            line-height: 1.4;
+            margin-bottom: 32px;
+            font-weight: 600;
         }
 
-        .section-subtitle strong {
-            color: var(--nike-white);
-            font-weight: 700;
-        }
-
-        .section-text {
-            font-size: 20px;
-            line-height: 1.8;
-            color: var(--nike-grey);
-            margin-bottom: 24px;
-            max-width: 900px;
+        .big-text strong {
+            color: var(--pink);
+            font-weight: 900;
         }
 
         /* Stats */
-        .stats-section {
-            background: var(--nike-light-grey);
-            padding: 80px 60px;
+        .stats {
+            background: var(--light-grey);
+            padding: 100px 60px;
         }
 
-        .stats-container {
+        .stats-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .stat {
+            gap: 60px;
             text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .stat:hover {
-            transform: translateY(-10px);
         }
 
         .stat-number {
-            font-size: 72px;
+            font-size: 96px;
             font-weight: 900;
-            color: var(--neon-pink);
-            margin-bottom: 12px;
-            text-shadow: 0 0 30px var(--neon-pink);
+            color: var(--pink);
+            margin-bottom: 16px;
+            text-shadow: 0 0 40px var(--pink);
         }
 
         .stat-label {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--nike-grey);
+            color: var(--grey);
         }
 
-        /* Timeline */
-        .timeline-section {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Proof Section */
+        .proof {
+            background: var(--black);
             padding: 120px 60px;
         }
 
-        .timeline-container {
-            position: relative;
-            margin-top: 80px;
-        }
-
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
-            z-index: 0;
-        }
-
-        .timeline-item {
+        .proof-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 80px;
-            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 1400px;
+            margin: 80px auto 0;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content {
-            grid-column: 2;
+        .proof-item {
+            background: var(--light-grey);
+            padding: 48px;
+            border-left: 6px solid var(--pink);
+            transition: all 0.3s;
         }
 
-        .timeline-item:nth-child(odd) .timeline-date {
-            grid-column: 1;
-            text-align: right;
+        .proof-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--blue);
         }
 
-        .timeline-item:nth-child(even) .timeline-date {
-            grid-column: 2;
-            text-align: left;
+        .proof-quote {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
         }
 
-        .timeline-item:nth-child(even) .timeline-content {
-            grid-column: 1;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            top: 40px;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 24px;
-            background: var(--neon-pink);
-            border: 4px solid var(--nike-black);
-            border-radius: 50%;
-            z-index: 2;
-            box-shadow: 0 0 30px var(--neon-pink);
-        }
-
-        .timeline-year {
-            font-size: 96px;
-            font-weight: 900;
-            line-height: 0.9;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.05em;
-        }
-
-        .timeline-label {
+        .proof-source {
             font-size: 14px;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--nike-grey);
-            margin-top: 12px;
+            letter-spacing: 2px;
+            color: var(--blue);
         }
 
-        .timeline-content {
-            background: var(--nike-light-grey);
-            padding: 48px;
-            border-left: 6px solid var(--neon-pink);
-            transition: all 0.4s;
-        }
-
-        .timeline-content:hover {
-            transform: translateX(10px);
-            border-left-color: var(--neon-blue);
-        }
-
-        .timeline-icon {
-            font-size: 56px;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .timeline-content h3 {
-            font-size: 32px;
-            font-weight: 900;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-
-        .timeline-content p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: var(--nike-grey);
-        }
-
-        /* Peak Moment Section */
-        .peak-section {
-            background: var(--nike-light-grey);
-            padding: 120px 60px;
-        }
-
-        .peak-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .peak-image {
-            width: 100%;
-            max-width: 800px;
-            margin: 60px auto;
-            border: 6px solid var(--nike-white);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Bounty Section */
-        .bounty-hero {
-            background: linear-gradient(135deg, var(--nike-black), var(--nike-light-grey));
+        /* The Offer */
+        .offer {
+            background: linear-gradient(135deg, var(--black), var(--light-grey));
             padding: 120px 60px;
             text-align: center;
         }
 
-        .bounty-hero-title {
+        .offer-title {
             font-size: clamp(48px, 8vw, 120px);
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 32px;
+            margin-bottom: 48px;
             line-height: 0.9;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, var(--brainrot-green), var(--brainrot-cyan));
+            background: linear-gradient(135deg, var(--green), var(--blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .bounty-hero-text {
-            font-size: 24px;
+        .offer-text {
+            font-size: clamp(20px, 2.5vw, 32px);
             line-height: 1.6;
-            color: var(--nike-grey);
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto 60px;
+            color: var(--grey);
         }
 
-        .bounty-hero-text strong {
-            color: var(--nike-white);
+        .offer-text strong {
+            color: var(--white);
+            font-weight: 900;
         }
 
-        /* Task Cards */
-        .tasks-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 100px 60px;
-        }
-
-        .tasks-grid {
+        .offer-boxes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
-            margin-top: 60px;
+            max-width: 1200px;
+            margin: 80px auto 0;
         }
 
-        .task-card {
-            background: var(--nike-light-grey);
-            padding: 40px;
+        .offer-box {
+            background: var(--light-grey);
+            padding: 48px;
             border: 3px solid transparent;
             transition: all 0.3s;
-            position: relative;
         }
 
-        .task-card:hover {
-            border-color: var(--neon-pink);
-            transform: translateY(-8px);
+        .offer-box:hover {
+            border-color: var(--pink);
+            transform: translateY(-12px);
             box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
         }
 
-        .task-points {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--brainrot-green);
-            color: var(--nike-black);
-            padding: 8px 16px;
-            font-size: 16px;
-            font-weight: 900;
-            border-radius: 4px;
-        }
-
-        .task-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .task-title {
-            font-size: 24px;
+        .offer-box-title {
+            font-size: 28px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
-        .task-description {
-            font-size: 16px;
+        .offer-box-text {
+            font-size: 18px;
             line-height: 1.6;
-            color: var(--nike-grey);
-            margin-bottom: 24px;
+            color: var(--grey);
         }
 
-        /* Join Form Section */
-        .join-section {
-            background: var(--nike-black);
+        /* Form Section */
+        .form-section {
+            background: var(--black);
             padding: 120px 60px;
         }
 
-        .join-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
         .form-container {
-            background: var(--nike-white);
-            color: var(--nike-black);
-            padding: 60px;
-            margin-top: 60px;
-            border: 6px solid var(--nike-black);
-            box-shadow:
-                12px 12px 0 var(--neon-pink),
-                24px 24px 0 var(--neon-blue);
+            background: var(--white);
+            color: var(--black);
+            padding: 80px;
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 8px solid var(--black);
+            box-shadow: 16px 16px 0 var(--pink), 32px 32px 0 var(--blue);
         }
 
         .form-title {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
         }
 
         .form-subtitle {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 1.6;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             color: #444;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 32px;
             text-align: left;
         }
 
         .form-label {
             display: block;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .form-input {
             width: 100%;
-            padding: 16px;
-            font-size: 16px;
+            padding: 20px;
+            font-size: 18px;
             font-family: 'Inter', sans-serif;
-            border: 3px solid var(--nike-black);
+            border: 4px solid var(--black);
             background: #f5f5f5;
             transition: all 0.3s;
         }
 
         .form-input:focus {
             outline: none;
-            background: var(--nike-white);
-            border-color: var(--neon-pink);
-            box-shadow: 0 0 0 3px rgba(255, 0, 110, 0.2);
+            background: var(--white);
+            border-color: var(--pink);
+            box-shadow: 0 0 0 4px rgba(255, 0, 110, 0.2);
         }
 
         .form-button {
             width: 100%;
-            padding: 24px;
-            font-size: 20px;
+            padding: 28px;
+            font-size: 24px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
-            color: var(--nike-white);
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            color: var(--white);
             border: none;
             cursor: pointer;
             transition: all 0.3s;
-            margin-top: 16px;
         }
 
         .form-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(255, 0, 110, 0.5);
         }
 
-        .social-proof {
+        .form-proof {
             text-align: center;
-            margin-top: 24px;
-            font-size: 14px;
+            margin-top: 32px;
+            font-size: 16px;
             color: #666;
         }
 
-        .social-proof strong {
-            color: var(--nike-black);
+        .form-proof strong {
+            color: var(--black);
             font-weight: 900;
+            font-size: 20px;
         }
 
-        /* Success Message */
-        .success-message {
+        /* Success */
+        .success {
             display: none;
-            background: var(--brainrot-green);
-            color: var(--nike-black);
-            padding: 60px;
+            background: var(--green);
+            color: var(--black);
+            padding: 80px;
             text-align: center;
-            border: 6px solid var(--nike-black);
+            border: 8px solid var(--black);
         }
 
-        .success-message.active {
+        .success.active {
             display: block;
         }
 
         .success-title {
-            font-size: 64px;
+            font-size: 72px;
             font-weight: 900;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
             text-transform: uppercase;
         }
 
         .success-text {
-            font-size: 20px;
+            font-size: 24px;
             line-height: 1.6;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
         }
 
-        .points-display {
-            font-size: 96px;
-            font-weight: 900;
-            margin: 32px 0;
+        .success-next {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 48px;
+            margin-top: 48px;
         }
 
-        /* How It Works */
-        .how-it-works {
-            background: var(--nike-light-grey);
-            padding: 120px 60px;
-        }
-
-        .how-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .step-list {
-            list-style: none;
-            counter-reset: step-counter;
-            margin-top: 60px;
-        }
-
-        .step-item {
-            counter-increment: step-counter;
-            margin-bottom: 60px;
-            padding-left: 120px;
-            position: relative;
-        }
-
-        .step-item::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 96px;
-            font-weight: 900;
-            color: var(--neon-pink);
-            line-height: 1;
-        }
-
-        .step-title {
+        .success-next-title {
             font-size: 32px;
             font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .step-description {
-            font-size: 20px;
-            line-height: 1.7;
-            color: var(--nike-grey);
-        }
-
-        /* FAQ */
-        .faq-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 120px 60px;
-        }
-
-        .faq-item {
-            background: var(--nike-light-grey);
-            padding: 40px;
             margin-bottom: 24px;
-            border: 3px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .faq-item:hover {
-            border-color: var(--neon-pink);
-        }
-
-        .faq-question {
-            font-size: 28px;
-            font-weight: 900;
-            margin-bottom: 16px;
             text-transform: uppercase;
         }
 
-        .faq-answer {
+        .success-next-text {
             font-size: 18px;
             line-height: 1.7;
-            color: var(--nike-grey);
         }
 
         /* Footer */
-        .footer-cta {
-            text-align: center;
+        .footer {
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
             padding: 120px 60px;
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
+            text-align: center;
         }
 
-        .footer-cta-title {
+        .footer-title {
             font-size: clamp(48px, 8vw, 96px);
             font-weight: 900;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             text-transform: uppercase;
             line-height: 1;
         }
 
-        .footer-cta-text {
-            font-size: 24px;
-            margin-bottom: 48px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .footer-text {
+            font-size: clamp(20px, 2.5vw, 32px);
+            margin-bottom: 60px;
+            line-height: 1.4;
         }
 
         /* Mobile */
-        @media (max-width: 968px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 60px 24px;
-            }
-
-            .hero-visual {
-                margin-top: 60px;
-            }
-
+        @media (max-width: 768px) {
             .nav-container {
                 padding: 16px 24px;
             }
 
-            .logo-nav {
+            .logo {
                 font-size: 32px;
-                text-shadow:
-                    2px 2px 0 var(--neon-pink),
-                    4px 4px 0 var(--neon-blue);
+                text-shadow: 2px 2px 0 var(--pink), 4px 4px 0 var(--blue);
+            }
+
+            .section {
+                padding: 80px 24px;
+            }
+
+            .quote-block {
+                padding: 48px 24px;
+                margin: 60px 24px;
+            }
+
+            .form-container {
+                padding: 48px 32px;
+                box-shadow: 8px 8px 0 var(--pink), 16px 16px 0 var(--blue);
             }
 
             .countdown {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .timeline-line {
-                left: 30px;
-            }
-
-            .timeline-item {
-                grid-template-columns: 1fr;
-                padding-left: 80px;
-            }
-
-            .timeline-dot {
-                left: 30px;
-            }
-
-            .timeline-item:nth-child(even) .timeline-content,
-            .timeline-item:nth-child(odd) .timeline-content {
-                grid-column: 1;
-            }
-
-            .timeline-item:nth-child(even) .timeline-date,
-            .timeline-item:nth-child(odd) .timeline-date {
-                grid-column: 1;
-                text-align: left;
-            }
-
-            .what-is-section,
-            .timeline-section,
-            .tasks-section,
-            .faq-section,
-            .how-it-works {
-                padding: 80px 24px;
-            }
-
-            .form-container {
+            .countdown-box {
                 padding: 40px 24px;
-                box-shadow:
-                    8px 8px 0 var(--neon-pink),
-                    16px 16px 0 var(--neon-blue);
             }
 
-            .tasks-grid {
+            .offer-boxes,
+            .proof-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .step-item {
-                padding-left: 80px;
-            }
-
-            .step-item::before {
-                font-size: 64px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="logo-nav">$67</div>
+            <div class="logo">$67</div>
             <div class="nav-badge">⚡ LAUNCHING SOON</div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-overline">GEN ALPHA'S FIRST MEMECOIN</div>
+            <div class="hero-badge">LAUNCHING IN 48 HOURS</div>
+
             <h1 class="hero-title">
-                <span class="six">6</span>
-                <span class="seven">7</span>
+                Teachers <span class="highlight">Banned</span> It.<br>
+                We <span class="highlight">Tokenized</span> It.
             </h1>
+
             <p class="hero-subtitle">
-                <strong>Meaningless</strong> by Design.<br><strong>Legendary</strong> by Accident.
+                The 6-7 meme broke the internet.<br>
+                <strong>We're launching it on Solana.</strong><br>
+                You have 2 weeks before Gen Alpha moves on.
             </p>
-            <div class="hero-cta-group">
-                <a href="#join" class="btn btn-primary">Join Bounty Program</a>
-                <a href="#story" class="btn btn-secondary">Learn More</a>
+
+            <div class="countdown-box">
+                <div class="countdown-label">🚀 LAUNCH COUNTDOWN</div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-text">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-text">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-text">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-text">Seconds</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-gif-container">
-                <img src="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif" alt="6-7 meme" class="hero-gif">
-                <div class="hero-emoji">👐</div>
+
+            <div class="cta-group">
+                <a href="#join" class="btn btn-primary">Join The Waitlist</a>
+                <a href="#proof" class="btn btn-secondary">See The Proof</a>
             </div>
         </div>
     </section>
 
-    <!-- Countdown -->
-    <section class="countdown-section">
-        <div class="countdown-container">
-            <div class="countdown-label">🚀 LAUNCHING IN</div>
-            <div class="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-text">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-text">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-text">Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-text">Seconds</div>
-                </div>
-            </div>
+    <!-- Quote Block 1 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "My teacher said page 67 one time and the entire class lost it. She's retiring early."
         </div>
-    </section>
+        <div class="quote-attr">— 7th Grade Math Teacher, Twitter</div>
+    </div>
 
-    <!-- What Is 6-7 -->
-    <section class="what-is-section" id="story">
-        <h2 class="section-title">what does it mean?</h2>
-        <p class="section-subtitle">
-            <strong>Nothing.</strong> And that's exactly the point.
+    <!-- The Moment -->
+    <section class="section">
+        <h2 class="section-title">This is the moment</h2>
+
+        <p class="big-text">
+            <strong>South Park featured it.</strong> CNN tried to explain it. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.
         </p>
-        <p class="section-text">
-            While you're over there "researching fundamentals" and "analyzing tokenomics," Gen Alpha just made 6-7 the most viral movement in internet culture.
+
+        <p class="big-text">
+            The 6-7 meme is at <strong>peak cultural relevance.</strong> Right now. This exact second.
         </p>
-        <p class="section-text">
-            This isn't a coin. It's a <strong>cultural revolution</strong> wrapped in chaos, delivered via TikTok, amplified by NBA highlight reels, and sustained by pure, unfiltered brainrot energy.
+
+        <p class="big-text">
+            In 2-4 weeks, Gen Alpha will have moved on to the next thing. Adults will stop talking about it. <strong>The window will close.</strong>
         </p>
-        <p class="section-text">
-            Teachers are losing their minds. CNN tried to explain it. South Park featured it. Your neighbor's kid won't shut up about it.
+
+        <p class="big-text">
+            We're tokenizing it <strong>right at the peak.</strong> On Solana. Fair launch. No presale. No VC games.
         </p>
-        <p class="section-text">
-            <strong>The meme is peaking. Right now. This exact moment.</strong>
+
+        <p class="big-text">
+            You're either in the waitlist or you're explaining to your friends why you missed it.
         </p>
     </section>
 
     <!-- Stats -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat">
+    <section class="stats">
+        <div class="stats-grid">
+            <div>
                 <div class="stat-number">6.7B</div>
                 <div class="stat-label">Total Supply</div>
             </div>
-            <div class="stat">
+            <div>
                 <div class="stat-number">0%</div>
                 <div class="stat-label">Tax</div>
             </div>
-            <div class="stat">
+            <div>
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Community</div>
             </div>
-            <div class="stat">
+            <div>
                 <div class="stat-number">67%</div>
                 <div class="stat-label">LP Locked</div>
             </div>
         </div>
     </section>
 
-    <!-- The Lore -->
-    <section class="timeline-section">
-        <h2 class="section-title">the sacred lore</h2>
-        <p class="section-subtitle">How a meaningless number became a global phenomenon</p>
+    <!-- Quote Block 2 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "I don't understand it but my entire portfolio is now $SIXSEVEN. My financial advisor blocked me."
+        </div>
+        <div class="quote-attr">— Crypto Veteran Since 2021</div>
+    </div>
 
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
+    <!-- Proof -->
+    <section class="proof" id="proof">
+        <div class="section">
+            <h2 class="section-title">The proof is everywhere</h2>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-label">The Beginning</div>
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "A boy shouted 'SIX SEVEN!' at a basketball game in March 2025. The video got 47 million views. The hand gesture was born. The internet found its messiah."
+                    </p>
+                    <div class="proof-source">The Guardian</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🎵</span>
-                    <h3>The Prophecy</h3>
-                    <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-label">The Ascension</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "Teachers nationwide report students disrupting class whenever they see the number 67. Page 67 has become unusable in textbooks."
+                    </p>
+                    <div class="proof-source">NPR Education Report</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🏀</span>
-                    <h3>The Chosen One</h3>
-                    <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">MAR<br>2025</div>
-                    <div class="timeline-label">The Messiah</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "LaMelo Ball, who is exactly 6'7", has become the unwitting prophet of the movement. His basketball highlight edits with the Skrilla song have billions of cumulative views."
+                    </p>
+                    <div class="proof-source">ESPN</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">👦</span>
-                    <h3>The 67 Kid</h3>
-                    <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-label">The Disruption</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "South Park dedicated an entire subplot to the 6-7 phenomenon. CNN brought in a cultural analyst to explain it. He couldn't."
+                    </p>
+                    <div class="proof-source">Entertainment Weekly</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🎓</span>
-                    <h3>Global Chaos</h3>
-                    <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">NOW</div>
-                    <div class="timeline-label">Peak Moment</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "The meme started with rapper Skrilla's 'Doot Doot (6 7)' in 2024. The lyric was completely meaningless. That was the entire point."
+                    </p>
+                    <div class="proof-source">Know Your Meme</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🚀</span>
-                    <h3>The Tokenization</h3>
-                    <p>Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. You're here. The window is closing.</p>
+
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "My nephew tried to explain 6-7 to me for 20 minutes. I still don't get it. I'm buying $SIXSEVEN anyway because I'm not missing another one."
+                    </p>
+                    <div class="proof-source">Confused Boomer on Twitter</div>
                 </div>
-                <div class="timeline-dot"></div>
             </div>
         </div>
     </section>
 
-    <!-- Peak Moment -->
-    <section class="peak-section">
-        <div class="peak-content">
-            <h2 class="section-title">peak cultural relevance</h2>
-            <p class="section-text">
-                South Park featured it. CNN tried to explain it. Teachers are losing their minds. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.
-            </p>
-            <p class="section-text">
-                <strong>This is the moment.</strong> The meme is peaking. Adults are talking. Gen Alpha is about to move on.
-            </p>
-            <img src="https://vergemagazine.co.uk/wp-content/uploads/2025/10/AA1LJYLq.jpeg" alt="6-7 Cultural Moment" class="peak-image">
-            <p class="section-text" style="margin-top: 60px;">
-                You have 2-4 weeks. Maybe less. This is your window.
-            </p>
+    <!-- Quote Block 3 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "You're going to see $SIXSEVEN and think 'this is the dumbest thing I've ever seen.' Then you're going to buy it anyway."
         </div>
-    </section>
+        <div class="quote-attr">— You, probably</div>
+    </div>
 
-    <!-- Bounty Hero -->
-    <section class="bounty-hero">
-        <h2 class="bounty-hero-title">get paid to build hype</h2>
-        <p class="bounty-hero-text">
-            We're setting aside <strong>6.7% of total supply</strong> for people who help us launch this thing into orbit.<br>
-            Create memes. Share content. Build the community. <strong>Earn points. Get airdropped tokens.</strong>
-        </p>
-        <p class="bounty-hero-text">
-            Everyone launches together. No early access games. Just fair rewards for real work.
-        </p>
-    </section>
+    <!-- The Offer -->
+    <section class="offer">
+        <h2 class="offer-title">Join the waitlist. Get rewarded.</h2>
 
-    <!-- Bounty Tasks -->
-    <section class="tasks-section">
-        <h2 class="section-title">how to earn bounty points</h2>
-        <p class="section-subtitle">
-            These aren't busywork tasks. Every single one helps build real momentum for launch.<br>
-            And the bigger the launch = the more your airdrop is worth. <strong>Aligned incentives.</strong>
+        <p class="offer-text">
+            We're not doing some complicated bounty dashboard. <strong>We're keeping it simple:</strong>
         </p>
 
-        <div class="tasks-grid">
-            <div class="task-card">
-                <div class="task-points">+100 pts</div>
-                <span class="task-icon">📧</span>
-                <h3 class="task-title">Join Program</h3>
-                <p class="task-description">
-                    Sign up with email. Get access to your bounty dashboard. That's it.
+        <div class="offer-boxes">
+            <div class="offer-box">
+                <h3 class="offer-box-title">1. Join Waitlist</h3>
+                <p class="offer-box-text">
+                    Sign up. You're in. We'll email you the contract address the second we launch.
                 </p>
             </div>
 
-            <div class="task-card">
-                <div class="task-points">+50 pts</div>
-                <span class="task-icon">𝕏</span>
-                <h3 class="task-title">Follow on X</h3>
-                <p class="task-description">
-                    Follow @SixSevenCoin. We'll verify it's you through your dashboard.
+            <div class="offer-box">
+                <h3 class="offer-box-title">2. Create & Tag Us</h3>
+                <p class="offer-box-text">
+                    Make memes. Create videos. Share content. Tag @SixSevenCoin. We're watching.
                 </p>
             </div>
 
-            <div class="task-card">
-                <div class="task-points">+50 pts</div>
-                <span class="task-icon">💬</span>
-                <h3 class="task-title">Join Telegram</h3>
-                <p class="task-description">
-                    Join the official TG group. Where the real community happens.
-                </p>
-            </div>
-
-            <div class="task-card">
-                <div class="task-points">+100 pts</div>
-                <span class="task-icon">🔄</span>
-                <h3 class="task-title">Retweet & Tag</h3>
-                <p class="task-description">
-                    RT + Quote tweet the pinned launch announcement. Tag 3 friends.
-                </p>
-            </div>
-
-            <div class="task-card">
-                <div class="task-points">+200 pts</div>
-                <span class="task-icon">🎨</span>
-                <h3 class="task-title">Create Meme</h3>
-                <p class="task-description">
-                    Make a 6-7 meme. Post it. Submit to us. Best ones get featured.
-                </p>
-            </div>
-
-            <div class="task-card">
-                <div class="task-points">+500 pts</div>
-                <span class="task-icon">📱</span>
-                <h3 class="task-title">Make Video</h3>
-                <p class="task-description">
-                    Create TikTok/Reel about $SIXSEVEN. Tag us. Quality > quantity.
-                </p>
-            </div>
-
-            <div class="task-card">
-                <div class="task-points">+50 pts each</div>
-                <span class="task-icon">👥</span>
-                <h3 class="task-title">Refer Friends</h3>
-                <p class="task-description">
-                    Every person who joins through your link = 50 points. No cap.
-                </p>
-            </div>
-
-            <div class="task-card">
-                <div class="task-points">+1000 pts</div>
-                <span class="task-icon">🔥</span>
-                <h3 class="task-title">Go Viral</h3>
-                <p class="task-description">
-                    Your content gets 100k+ views? Big bonus. We reward what works.
+            <div class="offer-box">
+                <h3 class="offer-box-title">3. Top 67 Get Airdrops</h3>
+                <p class="offer-box-text">
+                    The 67 people who create the best content get massive airdrops. Everyone else gets to buy at launch.
                 </p>
             </div>
         </div>
+
+        <p class="offer-text" style="margin-top: 80px;">
+            <strong>That's it.</strong> No dashboard. No complicated point system. Just create, tag us, and if your content goes hard, you get rewarded. Simple.
+        </p>
     </section>
 
-    <!-- Join Form -->
-    <section class="join-section" id="join">
-        <div class="join-content">
-            <h2 class="section-title">join the bounty program</h2>
-            <p class="section-subtitle">
-                Start earning points now. Get airdropped tokens after launch.<br>
-                Free to join. Costs you nothing but time. Could be worth a lot.
+    <!-- Form -->
+    <section class="form-section" id="join">
+        <div class="section" style="padding: 0;">
+            <h2 class="section-title" style="text-align: center;">Don't be that person</h2>
+
+            <p class="big-text" style="text-align: center; margin-bottom: 80px;">
+                The one who knew about it early.<br>
+                The one who <strong>didn't</strong> join the waitlist.<br>
+                The one texting their friends after it moons.
             </p>
 
             <div class="form-container" id="formContainer">
-                <h3 class="form-title">Start Earning</h3>
+                <h3 class="form-title">Get the Contract First</h3>
                 <p class="form-subtitle">
-                    Sign up now. Get 100 points just for joining. Access your personal bounty dashboard.
+                    Join 20,000+ people on the waitlist. We'll email you the contract address the second we launch. No games. No presale. Just early notification.
                 </p>
 
                 <form id="signupForm">
                     <div class="form-group">
-                        <label class="form-label" for="email">Email Address</label>
-                        <input
-                            type="email"
-                            id="email"
-                            class="form-input"
-                            placeholder="your.email@example.com"
-                            required
-                        >
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="twitter">Twitter/X Username (Optional)</label>
-                        <input
-                            type="text"
-                            id="twitter"
-                            class="form-input"
-                            placeholder="@yourusername"
-                        >
+                        <label class="form-label">Twitter/X Username (Optional - for airdrops)</label>
+                        <input type="text" id="twitter" class="form-input" placeholder="@yourusername">
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="telegram">Telegram Username (Optional)</label>
-                        <input
-                            type="text"
-                            id="telegram"
-                            class="form-input"
-                            placeholder="@yourusername"
-                        >
-                    </div>
-
-                    <button type="submit" class="form-button">
-                        Start Earning Points
-                    </button>
+                    <button type="submit" class="form-button">Join Waitlist Now</button>
                 </form>
 
-                <div class="social-proof">
-                    <strong><span id="waitlistCount">15,847</span></strong> people earning bounty points
+                <div class="form-proof">
+                    <strong><span id="count">23,847</span></strong> people on the waitlist
                 </div>
             </div>
 
-            <div class="success-message" id="successMessage">
-                <div class="success-title">you're in 🎯</div>
+            <div class="success" id="success">
+                <div class="success-title">You're In 🎯</div>
                 <p class="success-text">
-                    <strong>You just earned 100 points</strong> for joining the bounty program.
+                    Check your email in 2 minutes. We just sent you confirmation.<br>
+                    You'll get the contract address the second we launch.
                 </p>
-                <div class="points-display">100 pts</div>
-                <p class="success-text">
-                    Check your email for your bounty dashboard link where you can complete tasks and track your points.
-                </p>
+
+                <div class="success-next">
+                    <h4 class="success-next-title">Want to compete for the top 67 airdrop spots?</h4>
+                    <p class="success-next-text">
+                        Create content about $SIXSEVEN. Make memes. Make videos. Tag @SixSevenCoin on Twitter/X. We're watching. The best creators get massive airdrops.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="how-content">
-            <h2 class="section-title">how this actually works</h2>
-
-            <ol class="step-list">
-                <li class="step-item">
-                    <h3 class="step-title">Join the bounty program</h3>
-                    <p class="step-description">
-                        Sign up now. You get 100 points just for joining. Access your personal bounty dashboard.
-                    </p>
-                </li>
-
-                <li class="step-item">
-                    <h3 class="step-title">Complete tasks & earn points</h3>
-                    <p class="step-description">
-                        Create content. Share. Engage. Build the community. Track your points in real-time on your dashboard.
-                    </p>
-                </li>
-
-                <li class="step-item">
-                    <h3 class="step-title">We launch (everyone together)</h3>
-                    <p class="step-description">
-                        Contract goes live. Everyone gets access at the same time. No early access games. Fair launch.
-                    </p>
-                </li>
-
-                <li class="step-item">
-                    <h3 class="step-title">Get airdropped tokens</h3>
-                    <p class="step-description">
-                        After successful launch, we snapshot all bounty points. Airdrop distributed proportionally. More points = more tokens.
-                    </p>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-        <h2 class="section-title">questions you're asking</h2>
-
-        <div class="faq-item">
-            <h3 class="faq-question">when do I get my tokens?</h3>
-            <p class="faq-answer">
-                After launch. We'll snapshot bounty points, then airdrop tokens within 72 hours. You'll get them sent directly to your wallet. Instructions in your dashboard.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3 class="faq-question">how much will my airdrop be worth?</h3>
-            <p class="faq-answer">
-                Depends on two things: (1) How many points you earn, and (2) How successful the launch is. We're distributing 6.7% of total supply to bounty participants. The math is transparent.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3 class="faq-question">can I still buy tokens at launch?</h3>
-            <p class="faq-answer">
-                YES. The bounty program is a bonus. Everyone can buy at launch. The airdrop is just extra rewards for people who helped build momentum.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3 class="faq-question">why not just give early access?</h3>
-            <p class="faq-answer">
-                Early access creates early dumpers. They sell immediately when it goes public, killing launch momentum. We're doing the opposite: everyone launches together for maximum hype, and bounty participants get rewarded AFTER launch so they're incentivized to help the token succeed, not dump it.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3 class="faq-question">is this gonna rug?</h3>
-            <p class="faq-answer">
-                LP locked. Contract verified. No team tokens. We're doing this by the book. Check our Twitter. Join our Telegram. See the community we're building. We're being transparent about everything.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h3 class="faq-question">what if I join late?</h3>
-            <p class="faq-answer">
-                You can still earn points. But the snapshot happens on launch day, so the sooner you start completing tasks, the more points you accumulate.
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="footer-cta">
-        <div>
-            <h2 class="footer-cta-title">
-                don't be that person
-            </h2>
-            <p class="footer-cta-text">
-                The one who knew about it early but didn't join.<br>
-                The one texting "I KNEW about this coin..." after it moons.<br>
-                The one who had the link but didn't click.
-            </p>
-            <a href="#join" class="btn btn-primary" style="background: var(--nike-white); color: var(--nike-black); box-shadow: 8px 8px 0 var(--nike-black);">
-                Join Bounty Program Now
-            </a>
-            <p style="margin-top: 32px; font-size: 16px; opacity: 0.9;">
-                The countdown is running. Every day you wait is fewer points you could be earning.
-            </p>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 class="footer-title">
+            The window is closing
+        </h2>
+        <p class="footer-text">
+            Join now or explain later.
+        </p>
+        <a href="#join" class="btn btn-primary" style="background: var(--white); color: var(--black); box-shadow: 8px 8px 0 var(--black);">
+            Join Waitlist
+        </a>
+    </footer>
 
     <script>
-        // Countdown Timer (set to 7 days from now - UPDATE THIS WITH REAL LAUNCH DATE)
+        // Countdown (UPDATE WITH REAL LAUNCH DATE)
         function updateCountdown() {
             const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 7);
+            launchDate.setDate(launchDate.getDate() + 2); // 48 hours
 
             const now = new Date().getTime();
             const distance = launchDate - now;
@@ -1446,53 +948,42 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 
             if (distance < 0) {
-                document.querySelector('.countdown-section').innerHTML = '<div style="font-size: 48px; font-weight: 900; padding: 60px;">🚀 LIVE NOW 🚀</div>';
+                document.querySelector('.countdown-box').innerHTML = '<div style="font-size: 56px; font-weight: 900; padding: 60px;">🚀 LIVE NOW 🚀</div>';
             }
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Animate waitlist count
-        function animateCount() {
-            const countElement = document.getElementById('waitlistCount');
-            let currentCount = 15847;
-            setInterval(() => {
-                currentCount += Math.floor(Math.random() * 5);
-                countElement.textContent = currentCount.toLocaleString();
-            }, 7000);
-        }
-        animateCount();
+        // Counter animation
+        const countElement = document.getElementById('count');
+        let currentCount = 23847;
+        setInterval(() => {
+            currentCount += Math.floor(Math.random() * 7);
+            countElement.textContent = currentCount.toLocaleString();
+        }, 8000);
 
-        // Form submission
+        // Form
         document.getElementById('signupForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
             const email = document.getElementById('email').value;
             const twitter = document.getElementById('twitter').value;
-            const telegram = document.getElementById('telegram').value;
 
-            // Store data (in production, send to backend)
-            console.log('Bounty signup:', { email, twitter, telegram });
+            console.log('Waitlist signup:', { email, twitter });
 
-            // Show success message
             document.getElementById('formContainer').style.display = 'none';
-            document.getElementById('successMessage').classList.add('active');
-
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            document.getElementById('success').classList.add('active');
+            document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
