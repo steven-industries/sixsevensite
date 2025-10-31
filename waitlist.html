@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Early Access - $SIXSEVEN Waitlist</title>
-    <meta name="description" content="Join the waitlist for $SIXSEVEN launch. Limited spots. Early access. Exclusive perks. Don't be the person who finds out too late.">
+    <title>Earn Free $SIXSEVEN - Bounty Waitlist</title>
+    <meta name="description" content="Join the $SIXSEVEN bounty program. Complete tasks, earn points, get airdropped tokens when we launch. Help us build hype, get rewarded for real.">
 
     <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="$SIXSEVEN Waitlist - Don't Miss Launch">
-    <meta property="og:description" content="Join 10,000+ people waiting for the most anticipated memecoin launch of 2025. Limited early access spots available.">
+    <meta property="og:title" content="$SIXSEVEN Bounty Program - Earn Free Tokens">
+    <meta property="og:description" content="Join 10,000+ people earning bounty points. Create memes, share content, build hype. Get airdropped tokens at launch.">
     <meta property="og:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -367,11 +367,36 @@
             font-weight: 900;
         }
 
-        /* Why Join Section */
-        .why-section {
+        /* Bounty Points Display */
+        .points-tracker {
+            background: linear-gradient(135deg, var(--brainrot-green), var(--brainrot-cyan));
+            color: var(--nike-black);
+            padding: 24px;
+            margin-top: 32px;
+            border: 4px solid var(--nike-black);
+            text-align: center;
+        }
+
+        .points-number {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .points-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Bounty Tasks Section */
+        .bounty-section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 120px 40px;
+            background: var(--nike-black);
         }
 
         .section-title {
@@ -391,44 +416,133 @@
             max-width: 800px;
         }
 
-        /* Bullets */
-        .bullets-grid {
+        /* Task Cards */
+        .tasks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 32px;
-            margin-bottom: 80px;
+            margin-top: 60px;
         }
 
-        .bullet-item {
+        .task-card {
             background: var(--nike-light-grey);
-            padding: 32px;
-            border-left: 6px solid var(--neon-pink);
+            padding: 40px;
+            border: 3px solid transparent;
             transition: all 0.3s;
+            position: relative;
         }
 
-        .bullet-item:hover {
-            transform: translateX(10px);
-            border-left-color: var(--neon-blue);
-            background: rgba(255, 0, 110, 0.05);
+        .task-card:hover {
+            border-color: var(--neon-pink);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
         }
 
-        .bullet-icon {
-            font-size: 32px;
-            margin-bottom: 16px;
+        .task-points {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--neon-pink);
+            color: var(--nike-white);
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 900;
+            border-radius: 4px;
+        }
+
+        .task-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
             display: block;
         }
 
-        .bullet-text {
-            font-size: 18px;
-            line-height: 1.6;
+        .task-title {
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 16px;
             color: var(--nike-white);
+        }
+
+        .task-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--nike-grey);
+            margin-bottom: 24px;
+        }
+
+        .task-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--nike-white);
+            color: var(--nike-black);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid var(--nike-black);
+        }
+
+        .task-button:hover {
+            background: var(--neon-pink);
+            color: var(--nike-white);
+            border-color: var(--neon-pink);
+            transform: translateY(-2px);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--nike-light-grey);
+            padding: 100px 40px;
+        }
+
+        .how-it-works-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .step-item {
+            counter-increment: step-counter;
+            margin-bottom: 48px;
+            padding-left: 100px;
+            position: relative;
+        }
+
+        .step-item::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--neon-pink);
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .step-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--nike-grey);
         }
 
         /* Honest Section */
         .honest-section {
-            background: var(--nike-light-grey);
-            padding: 80px 40px;
-            margin: 80px 0;
+            background: var(--nike-black);
+            padding: 100px 40px;
         }
 
         .honest-content {
@@ -460,10 +574,11 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 80px 40px;
+            background: var(--nike-light-grey);
         }
 
         .faq-item {
-            background: var(--nike-light-grey);
+            background: var(--nike-black);
             padding: 32px;
             margin-bottom: 24px;
             border: 3px solid transparent;
@@ -590,13 +705,22 @@
                     16px 16px 0 var(--neon-blue);
             }
 
-            .why-section,
-            .faq-section {
+            .bounty-section,
+            .faq-section,
+            .how-it-works {
                 padding: 60px 24px;
             }
 
-            .bullets-grid {
+            .tasks-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .step-item {
+                padding-left: 80px;
+            }
+
+            .step-item::before {
+                font-size: 56px;
             }
         }
 
@@ -629,51 +753,38 @@
             margin-bottom: 32px;
         }
 
-        .referral-section {
+        .task-checklist {
             background: rgba(0, 0, 0, 0.1);
             padding: 32px;
             margin-top: 32px;
+            text-align: left;
         }
 
-        .referral-title {
+        .checklist-title {
             font-size: 24px;
             font-weight: 900;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
             text-transform: uppercase;
+            text-align: center;
         }
 
-        .referral-code {
-            font-family: 'Courier New', monospace;
-            font-size: 24px;
-            font-weight: 900;
+        .checklist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 16px;
             background: var(--nike-white);
             border: 3px solid var(--nike-black);
-            margin: 16px 0;
-            word-break: break-all;
-        }
-
-        .share-buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 24px;
-        }
-
-        .share-button {
-            padding: 12px 24px;
-            background: var(--nike-black);
-            color: var(--nike-white);
-            text-decoration: none;
+            margin-bottom: 12px;
             font-weight: 700;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: all 0.3s;
         }
 
-        .share-button:hover {
-            background: var(--nike-white);
-            color: var(--nike-black);
+        .checklist-points {
+            background: var(--nike-black);
+            color: var(--brainrot-green);
+            padding: 4px 12px;
+            font-weight: 900;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -689,18 +800,18 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">⚡ EARLY ACCESS</div>
+            <div class="hero-badge">💰 BOUNTY PROGRAM LIVE</div>
             <h1 class="hero-title">
-                okay so here's the deal
+                get paid to build hype
             </h1>
             <p class="hero-subtitle">
-                You're either on this waitlist getting <strong>early access</strong> when we launch,<br>
-                or you're the person texting your friend 3 days later asking "wait why didn't you tell me about this?"
+                We're setting aside <strong>6.7% of total supply</strong> for people who help us launch this thing into orbit.<br>
+                Create memes. Share content. Build the community. <strong>Earn points. Get airdropped tokens.</strong>
             </p>
 
             <!-- Countdown Timer -->
             <div class="countdown-container">
-                <div class="countdown-label">🚨 LAUNCH COUNTDOWN</div>
+                <div class="countdown-label">⏰ AIRDROP SNAPSHOT IN</div>
                 <div class="countdown">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">00</div>
@@ -723,10 +834,10 @@
 
             <!-- Waitlist Form -->
             <div class="waitlist-form-container" id="waitlistForm">
-                <h2 class="form-title">Join the Waitlist</h2>
+                <h2 class="form-title">Join Bounty Program</h2>
                 <p class="form-subtitle">
-                    Get the contract address 24 hours before everyone else. Plus exclusive launch perks.
-                    No BS. No spam. Just early access.
+                    Sign up now to start earning bounty points. The more you help, the bigger your airdrop.
+                    Everyone launches together. No early access games. Just fair rewards for real work.
                 </p>
 
                 <form id="signupForm">
@@ -742,7 +853,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="telegram">Telegram Username (Optional)</label>
+                        <label class="form-label" for="twitter">Twitter/X Username</label>
+                        <input
+                            type="text"
+                            id="twitter"
+                            class="form-input"
+                            placeholder="@yourusername"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="telegram">Telegram Username</label>
                         <input
                             type="text"
                             id="telegram"
@@ -751,182 +872,248 @@
                         >
                     </div>
 
-                    <div class="form-checkbox-group">
-                        <input
-                            type="checkbox"
-                            id="updates"
-                            class="form-checkbox"
-                            checked
-                        >
-                        <label class="form-checkbox-label" for="updates">
-                            Yeah, send me launch updates. I actually want to know when this goes live because FOMO would destroy me.
-                        </label>
-                    </div>
-
                     <button type="submit" class="form-button">
-                        Get Early Access
+                        Start Earning Points
                     </button>
                 </form>
 
                 <div class="social-proof">
-                    <strong><span id="waitlistCount">12,847</span></strong> people already on the list
+                    <strong><span id="waitlistCount">14,382</span></strong> people earning bounty points
                 </div>
             </div>
 
             <!-- Success Message (Hidden by default) -->
             <div class="success-message" id="successMessage">
-                <div class="success-title">you're in 👐</div>
+                <div class="success-title">you're in 🎯</div>
                 <p class="success-text">
-                    Check your email in like 2 minutes. We just sent you confirmation + your early access details.
+                    <strong>You just earned 100 points</strong> for joining the bounty program.
                 </p>
-                <p class="success-text">
-                    Also? You just moved to the front of the line.
+                <div class="points-tracker">
+                    <div class="points-number" id="userPoints">100</div>
+                    <div class="points-label">BOUNTY POINTS</div>
+                </div>
+                <p class="success-text" style="margin-top: 32px;">
+                    Check your email for your bounty dashboard link where you can track points and complete more tasks.
                 </p>
 
-                <div class="referral-section">
-                    <div class="referral-title">Want to skip even MORE people?</div>
-                    <p style="font-size: 16px; margin-bottom: 16px;">
-                        Share your unique link. Every person who joins = you move up 10 spots.
-                    </p>
-                    <div class="referral-code" id="referralLink">
-                        https://sixseven.com/waitlist?ref=YOUR_CODE
+                <div class="task-checklist">
+                    <div class="checklist-title">Quick wins to earn more 👇</div>
+                    <div class="checklist-item">
+                        <span>✅ Join Telegram Group</span>
+                        <span class="checklist-points">+50 pts</span>
                     </div>
-                    <div class="share-buttons">
-                        <a href="#" class="share-button" onclick="copyReferral()">📋 Copy Link</a>
-                        <a href="#" class="share-button" onclick="shareTwitter()">𝕏 Share on X</a>
-                        <a href="#" class="share-button" onclick="shareTelegram()">📱 Share on TG</a>
+                    <div class="checklist-item">
+                        <span>✅ Follow on Twitter/X</span>
+                        <span class="checklist-points">+50 pts</span>
+                    </div>
+                    <div class="checklist-item">
+                        <span>✅ Refer a Friend</span>
+                        <span class="checklist-points">+50 pts each</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Join Section -->
-    <section class="why-section">
-        <h2 class="section-title">what you're actually getting</h2>
+    <!-- Bounty Tasks Section -->
+    <section class="bounty-section">
+        <h2 class="section-title">how to earn bounty points</h2>
         <p class="section-subtitle">
-            (because we're not gonna make you sign up for some vague "exclusive access" without telling you what that means)
+            These aren't busywork tasks. Every single one of these helps build real momentum for launch.
+            And the bigger the launch = the more your airdrop is worth. Aligned incentives.
         </p>
 
-        <div class="bullets-grid">
-            <div class="bullet-item">
-                <span class="bullet-icon">⏰</span>
-                <p class="bullet-text">
-                    <strong>24-hour head start:</strong> Contract address delivered to your inbox a full day before we tweet it. Yes, a full day.
+        <div class="tasks-grid">
+            <div class="task-card">
+                <div class="task-points">+100 pts</div>
+                <span class="task-icon">📧</span>
+                <h3 class="task-title">Join Waitlist</h3>
+                <p class="task-description">
+                    Sign up with email. Get access to your bounty dashboard. That's it.
                 </p>
+                <a href="#waitlistForm" class="task-button" onclick="scrollToForm()">Join Now</a>
             </div>
 
-            <div class="bullet-item">
-                <span class="bullet-icon">💰</span>
-                <p class="bullet-text">
-                    <strong>Airdrop eligibility:</strong> We're reserving 6.7% of supply for early supporters. Waitlist = automatic eligibility. Simple.
+            <div class="task-card">
+                <div class="task-points">+50 pts</div>
+                <span class="task-icon">𝕏</span>
+                <h3 class="task-title">Follow on X</h3>
+                <p class="task-description">
+                    Follow @SixSevenCoin. We'll verify it's you through your dashboard.
                 </p>
+                <a href="https://twitter.com/SixSevenCoin" target="_blank" class="task-button">Follow</a>
             </div>
 
-            <div class="bullet-item">
-                <span class="bullet-icon">🎯</span>
-                <p class="bullet-text">
-                    <strong>No presale games:</strong> This isn't a VC-backed pump & dump. But you still get priority. Fair launch with a head start.
+            <div class="task-card">
+                <div class="task-points">+50 pts</div>
+                <span class="task-icon">💬</span>
+                <h3 class="task-title">Join Telegram</h3>
+                <p class="task-description">
+                    Join the official TG group. Where the real community happens.
                 </p>
+                <a href="https://t.me/SixSevenCoin" target="_blank" class="task-button">Join</a>
             </div>
 
-            <div class="bullet-item">
-                <span class="bullet-icon">🔥</span>
-                <p class="bullet-text">
-                    <strong>Launch day alpha:</strong> Best entry strategy, slippage settings, pool details. Everything you need to not fumble the bag.
+            <div class="task-card">
+                <div class="task-points">+100 pts</div>
+                <span class="task-icon">🔄</span>
+                <h3 class="task-title">Retweet Launch Tweet</h3>
+                <p class="task-description">
+                    RT + Quote tweet the pinned launch announcement. Tag 3 friends.
                 </p>
+                <a href="#" class="task-button">Retweet</a>
             </div>
 
-            <div class="bullet-item">
-                <span class="bullet-icon">👥</span>
-                <p class="bullet-text">
-                    <strong>Private TG access:</strong> Direct line to the core team. No 50k member spam channels. Just the real ones.
+            <div class="task-card">
+                <div class="task-points">+200 pts</div>
+                <span class="task-icon">🎨</span>
+                <h3 class="task-title">Create a Meme</h3>
+                <p class="task-description">
+                    Make a 6-7 meme. Post it. Submit to us. Best ones get featured.
                 </p>
+                <a href="#" class="task-button">Submit Meme</a>
             </div>
 
-            <div class="bullet-item">
-                <span class="bullet-icon">🎁</span>
-                <p class="bullet-text">
-                    <strong>Exclusive merch drop:</strong> Limited edition 67 hoodies. Only for waitlist. Already designed. Actually fire.
+            <div class="task-card">
+                <div class="task-points">+500 pts</div>
+                <span class="task-icon">📱</span>
+                <h3 class="task-title">Make TikTok/Reel</h3>
+                <p class="task-description">
+                    Create video content about $SIXSEVEN. Tag us. Quality > quantity.
                 </p>
+                <a href="#" class="task-button">Submit Video</a>
             </div>
+
+            <div class="task-card">
+                <div class="task-points">+50 pts each</div>
+                <span class="task-icon">👥</span>
+                <h3 class="task-title">Refer Friends</h3>
+                <p class="task-description">
+                    Every person who joins through your link = 50 points. No cap.
+                </p>
+                <a href="#" class="task-button">Get Link</a>
+            </div>
+
+            <div class="task-card">
+                <div class="task-points">+1000 pts</div>
+                <span class="task-icon">🔥</span>
+                <h3 class="task-title">Viral Content Bonus</h3>
+                <p class="task-description">
+                    Your content gets 100k+ views? Big bonus. We reward what works.
+                </p>
+                <a href="#" class="task-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="how-it-works-content">
+            <h2 class="section-title" style="margin-bottom: 60px;">how this actually works</h2>
+
+            <ol class="step-list">
+                <li class="step-item">
+                    <h3 class="step-title">Join the bounty program</h3>
+                    <p class="step-description">
+                        Sign up now. You get 100 points just for joining. Access your personal bounty dashboard.
+                    </p>
+                </li>
+
+                <li class="step-item">
+                    <h3 class="step-title">Complete tasks & earn points</h3>
+                    <p class="step-description">
+                        Create content. Share. Engage. Build the community. Track your points in real-time on your dashboard.
+                    </p>
+                </li>
+
+                <li class="step-item">
+                    <h3 class="step-title">We launch (everyone together)</h3>
+                    <p class="step-description">
+                        Contract goes live. Everyone gets access at the same time. No early access games. Fair launch.
+                    </p>
+                </li>
+
+                <li class="step-item">
+                    <h3 class="step-title">Get airdropped tokens</h3>
+                    <p class="step-description">
+                        After successful launch, we snapshot all bounty points. Airdrop distributed proportionally. More points = more tokens.
+                    </p>
+                </li>
+            </ol>
         </div>
     </section>
 
     <!-- Honest Section -->
     <section class="honest-section">
         <div class="honest-content">
-            <h2 class="honest-title">let's be honest for a sec</h2>
+            <h2 class="honest-title">why this is better</h2>
             <p class="honest-text">
-                Look, I could fill this page with hype and promises and "10000x guaranteed" BS.
+                Most projects do "early access" which just means <strong>early dumpers</strong>.
             </p>
             <p class="honest-text">
-                But you're too smart for that. You've seen the rug pulls. You know <strong>most memecoins go to zero.</strong>
+                They give whitelisted people tokens before launch. Those people sell immediately when it goes public. Launch momentum dies. Price tanks. Everyone loses except the early access people.
             </p>
             <p class="honest-text">
-                Here's what makes this different: the 6-7 meme is already <strong>everywhere</strong>. Teachers are losing their minds. South Park featured it. LaMelo Ball tweets about it. CNN tried to explain it.
+                <strong>We're doing the opposite.</strong>
             </p>
             <p class="honest-text">
-                <strong>The cultural moment is happening right now.</strong>
+                Everyone launches together = maximum hype, maximum participation, maximum energy.
             </p>
             <p class="honest-text">
-                We're not creating hype. We're just <strong>tokenizing what already exists.</strong>
+                Bounty program participants get airdropped AFTER launch = you're incentivized to help the token succeed, not dump it immediately.
             </p>
             <p class="honest-text">
-                So yeah, this could still go to zero. That's crypto. But if you're gonna ape into a memecoin, at least ape into one with <strong>actual cultural momentum</strong> behind it.
+                If you help build hype and the launch is successful, your airdrop is worth more. <strong>Your incentives are aligned with the project's success.</strong>
             </p>
             <p class="honest-text">
-                And if you're gonna do it? Getting in early makes a lot more sense than FOMOing in after the first pump.
-            </p>
-            <p class="honest-text" style="margin-top: 40px;">
-                <strong>Your call.</strong>
+                This is how you launch a memecoin that actually has a chance.
             </p>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="faq-section">
-        <h2 class="section-title" style="margin-bottom: 60px;">questions you're probably asking</h2>
+        <h2 class="section-title" style="margin-bottom: 60px;">questions you're asking</h2>
 
         <div class="faq-item">
-            <h3 class="faq-question">when is this actually launching?</h3>
+            <h3 class="faq-question">when do I get my tokens?</h3>
             <p class="faq-answer">
-                Soon. We're not doing the "2 weeks" meme that turns into 6 months. Check the countdown at the top of this page. That's the real date. Waitlist gets access 24 hours before that.
+                After launch. We'll snapshot bounty points, then airdrop tokens within 72 hours. You'll get them sent directly to your wallet. Instructions in your dashboard.
             </p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-question">is this gonna rug?</h3>
+            <h3 class="faq-question">how much will my airdrop be worth?</h3>
             <p class="faq-answer">
-                LP locked. Contract verified. No team tokens. We're doing this by the book because we're not trying to go to jail. Full transparency on launch day.
+                Depends on two things: (1) How many points you earn, and (2) How successful the launch is. We're distributing 6.7% of total supply to bounty participants. The math is transparent.
             </p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-question">why should I trust you?</h3>
+            <h3 class="faq-question">can I still buy tokens at launch?</h3>
             <p class="faq-answer">
-                You shouldn't blindly trust anyone in crypto. That's why we're being transparent about everything. Check our Twitter. Join our Telegram. See the community we're building. Then decide.
+                YES. The bounty program is a bonus. Everyone can buy at launch. The airdrop is just extra rewards for people who helped build momentum.
             </p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-question">what if I'm late to the waitlist?</h3>
+            <h3 class="faq-question">what if I join late?</h3>
             <p class="faq-answer">
-                You still get early access, just maybe not as early. But honestly? There are 40,000 new memecoins launching every day. Being on ANY waitlist for one with actual cultural relevance is already putting you ahead.
+                You can still earn points. But the snapshot happens on launch day, so the sooner you start completing tasks, the more points you accumulate.
             </p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-question">will my email be safe?</h3>
+            <h3 class="faq-question">is this actually legit?</h3>
             <p class="faq-answer">
-                We're not selling your data. We're not spamming you. You get launch updates and early access info. That's it. Unsubscribe anytime. We're not weirdos.
+                Check our Twitter. Join our Telegram. See the community we're building. We're being transparent about everything because we're not trying to rug anyone.
             </p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-question">can I really get airdrops?</h3>
+            <h3 class="faq-question">why should I trust this?</h3>
             <p class="faq-answer">
-                Yes. We're reserving 6.7% of total supply for community rewards. Waitlist members are automatically eligible. More details in your confirmation email.
+                You shouldn't blindly trust anyone in crypto. That's smart. But bounty programs are standard in crypto launches. The incentives are aligned: we want you to succeed because when you succeed, the project succeeds.
             </p>
         </div>
     </section>
@@ -935,26 +1122,24 @@
     <section class="footer-cta">
         <div class="footer-cta-content">
             <h2 class="footer-cta-title">
-                don't be that person
+                start earning now
             </h2>
             <p class="footer-cta-text">
-                The one who knew about it early but didn't join the waitlist.<br>
-                The one texting "I KNEW about this coin..." after it moons.<br>
-                The one who had the link but didn't click.
+                The countdown is running. Every day you wait is fewer points you could be earning.<br>
+                Join the bounty program. Help us launch. Get rewarded for real.
             </p>
             <a href="#waitlistForm" class="footer-cta-button" onclick="scrollToForm()">
-                Join the Waitlist Now
+                Join Bounty Program
             </a>
             <p style="margin-top: 32px; font-size: 14px; opacity: 0.8;">
-                Takes 30 seconds. Could change everything. Probably won't. But could.
+                Free to join. Costs you nothing but time. Could be worth a lot.
             </p>
         </div>
     </section>
 
     <script>
-        // Countdown Timer
+        // Countdown Timer (set to launch date - 7 days from now for demo)
         function updateCountdown() {
-            // Set launch date (7 days from now for demo - UPDATE THIS)
             const launchDate = new Date();
             launchDate.setDate(launchDate.getDate() + 7);
 
@@ -972,7 +1157,7 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 
             if (distance < 0) {
-                document.querySelector('.countdown-container').innerHTML = '<div style="font-size: 32px; font-weight: 900;">🚀 LIVE NOW 🚀</div>';
+                document.querySelector('.countdown-container').innerHTML = '<div style="font-size: 32px; font-weight: 900;">🚀 SNAPSHOT COMPLETE 🚀</div>';
             }
         }
 
@@ -982,11 +1167,11 @@
         // Animate waitlist count
         function animateCount() {
             const countElement = document.getElementById('waitlistCount');
-            let currentCount = 12847;
+            let currentCount = 14382;
             setInterval(() => {
-                currentCount += Math.floor(Math.random() * 3);
+                currentCount += Math.floor(Math.random() * 4);
                 countElement.textContent = currentCount.toLocaleString();
-            }, 5000);
+            }, 6000);
         }
         animateCount();
 
@@ -995,55 +1180,24 @@
             e.preventDefault();
 
             const email = document.getElementById('email').value;
+            const twitter = document.getElementById('twitter').value;
             const telegram = document.getElementById('telegram').value;
 
-            // Generate referral code
-            const referralCode = Math.random().toString(36).substring(2, 10).toUpperCase();
-
             // Store data (in production, send to backend)
-            console.log('Waitlist signup:', { email, telegram, referralCode });
+            console.log('Bounty signup:', { email, twitter, telegram });
 
             // Show success message
             document.getElementById('waitlistForm').style.display = 'none';
             document.getElementById('successMessage').classList.add('active');
-
-            // Update referral link
-            document.getElementById('referralLink').textContent =
-                `https://sixseven.com/waitlist?ref=${referralCode}`;
 
             // Scroll to success message
             document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
         // Scroll to form
-        function scrollToForm() {
-            event.preventDefault();
+        function scrollToForm(event) {
+            if (event) event.preventDefault();
             document.getElementById('waitlistForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        // Referral functions
-        function copyReferral() {
-            event.preventDefault();
-            const referralLink = document.getElementById('referralLink').textContent;
-            navigator.clipboard.writeText(referralLink).then(() => {
-                alert('Link copied! Now go share it and jump the line 🚀');
-            });
-        }
-
-        function shareTwitter() {
-            event.preventDefault();
-            const referralLink = document.getElementById('referralLink').textContent;
-            const text = "just joined the $SIXSEVEN waitlist. if you know, you know 👐\n\nget early access:";
-            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(referralLink)}`;
-            window.open(url, '_blank');
-        }
-
-        function shareTelegram() {
-            event.preventDefault();
-            const referralLink = document.getElementById('referralLink').textContent;
-            const text = "just joined the $SIXSEVEN waitlist 👐 get early access here:";
-            const url = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
         }
     </script>
 </body>
