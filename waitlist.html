@@ -845,7 +845,7 @@
             <div class="offer-box">
                 <h3 class="offer-box-title">Creators Get Paid More</h3>
                 <p class="offer-box-text">
-                    <strong>4.7% of supply</strong> split among the top 67 content creators. Make memes, videos, tweets. Tag @SixSevenCoin and #SIXSEVEN.
+                    <strong>4.7% of supply</strong> split among top creators: <strong>Top 34 on Twitter/X + Top 33 on Instagram</strong> = 67 total. Make memes, Reels, threads. Tag @SixSevenCoin and #SIXSEVEN.
                 </p>
             </div>
 
@@ -895,6 +895,11 @@
                         <input type="text" id="twitter" class="form-input" placeholder="@yourusername">
                     </div>
 
+                    <div class="form-group">
+                        <label class="form-label">Instagram Username (Optional - for Creator Bonus)</label>
+                        <input type="text" id="instagram" class="form-input" placeholder="@yourusername">
+                    </div>
+
                     <button type="submit" class="form-button">Join Waitlist Now</button>
                 </form>
 
@@ -914,11 +919,11 @@
                     <h4 class="success-next-title">Want to compete for the TOP 67 Creator Bonus? (4.7% supply pool)</h4>
                     <p class="success-next-text">
                         <strong>How to qualify:</strong><br>
-                        1. Create content about $SIXSEVEN (memes, videos, tweets, threads)<br>
-                        2. Tag <strong>@SixSevenCoin</strong> and use <strong>#SIXSEVEN</strong><br>
-                        3. Post before 11/11 launch<br><br>
+                        • <strong>Twitter/X:</strong> Tweet/thread/meme, tag <strong>@SixSevenCoin</strong> and <strong>#SIXSEVEN</strong> (Top 34 creators win)<br>
+                        • <strong>Instagram:</strong> Post/Reel/Story, tag <strong>@SixSevenCoin</strong> and <strong>#SIXSEVEN</strong> (Top 33 creators win)<br>
+                        • Post before 11/11 launch<br><br>
 
-                        We're tracking all content. Top 67 creators by engagement get massive bonus airdrops from the 4.7% creator pool. Go make something shareable.
+                        We're tracking engagement on both platforms. <strong>Top 34 on Twitter + Top 33 on Instagram</strong> = 67 total winners. The 4.7% creator pool gets split among them. Go make something viral.
                     </p>
                 </div>
             </div>
@@ -979,8 +984,9 @@
             const email = document.getElementById('email').value;
             const wallet = document.getElementById('wallet').value;
             const twitter = document.getElementById('twitter').value;
+            const instagram = document.getElementById('instagram').value;
 
-            console.log('Waitlist signup:', { email, wallet, twitter });
+            console.log('Waitlist signup:', { email, wallet, twitter, instagram });
 
             document.getElementById('formContainer').style.display = 'none';
             document.getElementById('success').classList.add('active');
