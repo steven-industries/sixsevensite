@@ -828,37 +828,37 @@
 
     <!-- The Offer -->
     <section class="offer">
-        <h2 class="offer-title">Join the waitlist. Get rewarded.</h2>
+        <h2 class="offer-title">6.7% of supply = Community Bounty</h2>
 
         <p class="offer-text">
-            We're not doing some complicated bounty dashboard. <strong>We're keeping it simple:</strong>
+            We're airdropping <strong>6.7% of the total supply</strong> to the community. No complicated dashboard. <strong>Here's how it works:</strong>
         </p>
 
         <div class="offer-boxes">
             <div class="offer-box">
-                <h3 class="offer-box-title">1. Join Waitlist</h3>
+                <h3 class="offer-box-title">Everyone Gets Paid</h3>
                 <p class="offer-box-text">
-                    Sign up. You're in. We'll email you the contract address the second we launch.
+                    <strong>2% of supply</strong> split equally among ALL waitlist signups. Just join = guaranteed airdrop. Simple.
                 </p>
             </div>
 
             <div class="offer-box">
-                <h3 class="offer-box-title">2. Create & Tag Us</h3>
+                <h3 class="offer-box-title">Creators Get Paid More</h3>
                 <p class="offer-box-text">
-                    Make memes. Create videos. Share content. Tag @SixSevenCoin. We're watching.
+                    <strong>4.7% of supply</strong> split among the top 67 content creators. Make memes, videos, tweets. Tag @SixSevenCoin and #SIXSEVEN.
                 </p>
             </div>
 
             <div class="offer-box">
-                <h3 class="offer-box-title">3. Top 67 Get Airdrops</h3>
+                <h3 class="offer-box-title">Early Birds Get Bonus</h3>
                 <p class="offer-box-text">
-                    The 67 people who create the best content get massive airdrops. Everyone else gets to buy at launch.
+                    First <strong>677 signups</strong> get a 7% bonus on their airdrop. The clock is ticking.
                 </p>
             </div>
         </div>
 
         <p class="offer-text" style="margin-top: 80px;">
-            <strong>That's it.</strong> No dashboard. No complicated point system. Just create, tag us, and if your content goes hard, you get rewarded. Simple.
+            <strong>That's 6.7% total.</strong> Everyone who joins the waitlist gets tokens. Top creators get massive bonuses. Early signups get extra. Airdrops happen AFTER launch on 11/11.
         </p>
     </section>
 
@@ -874,9 +874,9 @@
             </p>
 
             <div class="form-container" id="formContainer">
-                <h3 class="form-title">Get the Contract First</h3>
+                <h3 class="form-title">Join Waitlist = Get Airdrop</h3>
                 <p class="form-subtitle">
-                    Join 20,000+ people on the waitlist. We'll email you the contract address the second we launch. No games. No presale. Just early notification.
+                    Everyone who joins gets a guaranteed airdrop from the 2% pool. First 677 signups get a 7% bonus. We'll email you the contract address at launch (11/11 at 6:07pm EST).
                 </p>
 
                 <form id="signupForm">
@@ -886,7 +886,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Twitter/X Username (Optional - for airdrops)</label>
+                        <label class="form-label">Solana Wallet Address (Required for Airdrop)</label>
+                        <input type="text" id="wallet" class="form-input" placeholder="Your Solana wallet address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Twitter/X Username (Optional - for Creator Bonus)</label>
                         <input type="text" id="twitter" class="form-input" placeholder="@yourusername">
                     </div>
 
@@ -901,14 +906,19 @@
             <div class="success" id="success">
                 <div class="success-title">You're In 🎯</div>
                 <p class="success-text">
-                    Check your email in 2 minutes. We just sent you confirmation.<br>
-                    You'll get the contract address the second we launch.
+                    You're guaranteed an airdrop from the 2% community pool.<br>
+                    We'll email you the contract address on 11/11 at 6:07pm EST.
                 </p>
 
                 <div class="success-next">
-                    <h4 class="success-next-title">Want to compete for the top 67 airdrop spots?</h4>
+                    <h4 class="success-next-title">Want to compete for the TOP 67 Creator Bonus? (4.7% supply pool)</h4>
                     <p class="success-next-text">
-                        Create content about $SIXSEVEN. Make memes. Make videos. Tag @SixSevenCoin on Twitter/X. We're watching. The best creators get massive airdrops.
+                        <strong>How to qualify:</strong><br>
+                        1. Create content about $SIXSEVEN (memes, videos, tweets, threads)<br>
+                        2. Tag <strong>@SixSevenCoin</strong> and use <strong>#SIXSEVEN</strong><br>
+                        3. Post before 11/11 launch<br><br>
+
+                        We're tracking all content. Top 67 creators by engagement get massive bonus airdrops from the 4.7% creator pool. Go make something shareable.
                     </p>
                 </div>
             </div>
@@ -967,9 +977,10 @@
             e.preventDefault();
 
             const email = document.getElementById('email').value;
+            const wallet = document.getElementById('wallet').value;
             const twitter = document.getElementById('twitter').value;
 
-            console.log('Waitlist signup:', { email, twitter });
+            console.log('Waitlist signup:', { email, wallet, twitter });
 
             document.getElementById('formContainer').style.display = 'none';
             document.getElementById('success').classList.add('active');
