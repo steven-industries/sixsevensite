@@ -55,8 +55,16 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: var(--black);
+            background: transparent;
             z-index: 1000;
+            border-bottom: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        /* Nav when scrolled past hero */
+        .nav.scrolled {
+            background: var(--black);
             border-bottom: 3px solid var(--pink);
             backdrop-filter: blur(20px);
         }
@@ -954,12 +962,23 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Parallax scroll effect for headline
+        // Parallax scroll effect for headline + Nav background change
         window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const nav = document.querySelector('.nav');
+            const hero = document.getElementById('hero');
+
+            // Change nav style when scrolling past hero
+            if (scrolled > hero.offsetHeight - 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Parallax headline effect
             const headline = document.getElementById('parallaxHeadline');
             const section = headline.closest('.parallax-section');
             const sectionTop = section.offsetTop;
-            const scrolled = window.pageYOffset;
 
             // Calculate parallax offset relative to section position
             const offset = (scrolled - sectionTop) * 0.3;
