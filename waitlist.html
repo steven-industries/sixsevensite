@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Early Access - $SIXSEVEN Waitlist</title>
+    <meta name="description" content="Join the waitlist for $SIXSEVEN launch. Limited spots. Early access. Exclusive perks. Don't be the person who finds out too late.">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="$SIXSEVEN Waitlist - Don't Miss Launch">
+    <meta property="og:description" content="Join 10,000+ people waiting for the most anticipated memecoin launch of 2025. Limited early access spots available.">
+    <meta property="og:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --nike-black: #0a0a0a;
+            --nike-white: #ffffff;
+            --nike-grey: #8f8f8f;
+            --nike-light-grey: #1a1a1a;
+            --brainrot-purple: #9d4edd;
+            --brainrot-pink: #ff006e;
+            --brainrot-cyan: #00f5ff;
+            --brainrot-yellow: #ffd60a;
+            --brainrot-green: #06ffa5;
+            --neon-pink: #ff0080;
+            --neon-blue: #0ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--nike-black);
+            color: var(--nike-white);
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 100vw;
+            background: var(--nike-black);
+            z-index: 1000;
+            border-bottom: 3px solid var(--neon-pink);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--nike-white);
+            letter-spacing: -2px;
+            text-shadow:
+                4px 4px 0 var(--neon-pink),
+                8px 8px 0 var(--neon-blue);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--nike-white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--neon-pink);
+            transform: translateX(-5px);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 100px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 0, 110, 0.1) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 2px, transparent 2px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--neon-pink);
+            margin-bottom: 24px;
+            padding: 12px 24px;
+            background: rgba(255, 0, 110, 0.1);
+            border: 2px solid var(--neon-pink);
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% {
+                border-color: var(--neon-pink);
+                box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+            }
+            50% {
+                border-color: var(--neon-blue);
+                box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+            color: var(--nike-white);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--nike-grey);
+            margin-bottom: 48px;
+        }
+
+        .hero-subtitle strong {
+            color: var(--nike-white);
+            font-weight: 700;
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: var(--nike-light-grey);
+            padding: 40px;
+            margin: 0 auto 60px;
+            max-width: 600px;
+            border: 3px solid var(--neon-pink);
+            position: relative;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--neon-blue);
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .countdown-item {
+            background: var(--nike-black);
+            padding: 20px 10px;
+            border: 2px solid var(--nike-light-grey);
+        }
+
+        .countdown-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--neon-pink);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .countdown-text {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--nike-grey);
+        }
+
+        /* Waitlist Form */
+        .waitlist-form-container {
+            background: var(--nike-white);
+            color: var(--nike-black);
+            padding: 60px 40px;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            border: 6px solid var(--nike-black);
+            box-shadow:
+                12px 12px 0 var(--neon-pink),
+                24px 24px 0 var(--neon-blue);
+        }
+
+        .form-title {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .form-subtitle {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            border: 3px solid var(--nike-black);
+            background: #f5f5f5;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            background: var(--nike-white);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 0 3px rgba(255, 0, 110, 0.2);
+        }
+
+        .form-checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .form-checkbox {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .form-checkbox-label {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 24px;
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
+            color: var(--nike-white);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .form-button:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .form-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.4);
+        }
+
+        .social-proof {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .social-proof strong {
+            color: var(--nike-black);
+            font-weight: 900;
+        }
+
+        /* Why Join Section */
+        .why-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 40px;
+        }
+
+        .section-title {
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--nike-grey);
+            margin-bottom: 60px;
+            max-width: 800px;
+        }
+
+        /* Bullets */
+        .bullets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .bullet-item {
+            background: var(--nike-light-grey);
+            padding: 32px;
+            border-left: 6px solid var(--neon-pink);
+            transition: all 0.3s;
+        }
+
+        .bullet-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--neon-blue);
+            background: rgba(255, 0, 110, 0.05);
+        }
+
+        .bullet-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .bullet-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--nike-white);
+        }
+
+        /* Honest Section */
+        .honest-section {
+            background: var(--nike-light-grey);
+            padding: 80px 40px;
+            margin: 80px 0;
+        }
+
+        .honest-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .honest-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 900;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+        }
+
+        .honest-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--nike-grey);
+            margin-bottom: 24px;
+        }
+
+        .honest-text strong {
+            color: var(--nike-white);
+            font-weight: 700;
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .faq-item {
+            background: var(--nike-light-grey);
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--neon-pink);
+        }
+
+        .faq-question {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .faq-answer {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--nike-grey);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            text-align: center;
+            padding: 100px 40px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.1) 2px,
+                rgba(255, 255, 255, 0.1) 4px
+            );
+            animation: scan 10s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        .footer-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-cta-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .footer-cta-text {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .footer-cta-button {
+            display: inline-block;
+            padding: 24px 64px;
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: var(--nike-white);
+            color: var(--nike-black);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 3px solid var(--nike-black);
+            box-shadow: 8px 8px 0 var(--nike-black);
+        }
+
+        .footer-cta-button:hover {
+            transform: translate(-8px, -8px);
+            box-shadow: 16px 16px 0 var(--nike-black);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 16px 24px;
+            }
+
+            .logo-nav {
+                font-size: 32px;
+                text-shadow:
+                    2px 2px 0 var(--neon-pink),
+                    4px 4px 0 var(--neon-blue);
+            }
+
+            .hero {
+                padding: 60px 24px;
+            }
+
+            .countdown {
+                gap: 10px;
+            }
+
+            .countdown-number {
+                font-size: 32px;
+            }
+
+            .waitlist-form-container {
+                padding: 40px 24px;
+                box-shadow:
+                    8px 8px 0 var(--neon-pink),
+                    16px 16px 0 var(--neon-blue);
+            }
+
+            .why-section,
+            .faq-section {
+                padding: 60px 24px;
+            }
+
+            .bullets-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            background: var(--brainrot-green);
+            color: var(--nike-black);
+            padding: 48px;
+            text-align: center;
+            border: 6px solid var(--nike-black);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        .success-text {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .referral-section {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            margin-top: 32px;
+        }
+
+        .referral-title {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .referral-code {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: 900;
+            padding: 16px;
+            background: var(--nike-white);
+            border: 3px solid var(--nike-black);
+            margin: 16px 0;
+            word-break: break-all;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+        .share-button {
+            padding: 12px 24px;
+            background: var(--nike-black);
+            color: var(--nike-white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .share-button:hover {
+            background: var(--nike-white);
+            color: var(--nike-black);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-nav">$67</a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">⚡ EARLY ACCESS</div>
+            <h1 class="hero-title">
+                okay so here's the deal
+            </h1>
+            <p class="hero-subtitle">
+                You're either on this waitlist getting <strong>early access</strong> when we launch,<br>
+                or you're the person texting your friend 3 days later asking "wait why didn't you tell me about this?"
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div class="countdown-label">🚨 LAUNCH COUNTDOWN</div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-text">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-text">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-text">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-text">Seconds</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <div class="waitlist-form-container" id="waitlistForm">
+                <h2 class="form-title">Join the Waitlist</h2>
+                <p class="form-subtitle">
+                    Get the contract address 24 hours before everyone else. Plus exclusive launch perks.
+                    No BS. No spam. Just early access.
+                </p>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-input"
+                            placeholder="your.email@example.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="telegram">Telegram Username (Optional)</label>
+                        <input
+                            type="text"
+                            id="telegram"
+                            class="form-input"
+                            placeholder="@yourusername"
+                        >
+                    </div>
+
+                    <div class="form-checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="updates"
+                            class="form-checkbox"
+                            checked
+                        >
+                        <label class="form-checkbox-label" for="updates">
+                            Yeah, send me launch updates. I actually want to know when this goes live because FOMO would destroy me.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-button">
+                        Get Early Access
+                    </button>
+                </form>
+
+                <div class="social-proof">
+                    <strong><span id="waitlistCount">12,847</span></strong> people already on the list
+                </div>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-title">you're in 👐</div>
+                <p class="success-text">
+                    Check your email in like 2 minutes. We just sent you confirmation + your early access details.
+                </p>
+                <p class="success-text">
+                    Also? You just moved to the front of the line.
+                </p>
+
+                <div class="referral-section">
+                    <div class="referral-title">Want to skip even MORE people?</div>
+                    <p style="font-size: 16px; margin-bottom: 16px;">
+                        Share your unique link. Every person who joins = you move up 10 spots.
+                    </p>
+                    <div class="referral-code" id="referralLink">
+                        https://sixseven.com/waitlist?ref=YOUR_CODE
+                    </div>
+                    <div class="share-buttons">
+                        <a href="#" class="share-button" onclick="copyReferral()">📋 Copy Link</a>
+                        <a href="#" class="share-button" onclick="shareTwitter()">𝕏 Share on X</a>
+                        <a href="#" class="share-button" onclick="shareTelegram()">📱 Share on TG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-section">
+        <h2 class="section-title">what you're actually getting</h2>
+        <p class="section-subtitle">
+            (because we're not gonna make you sign up for some vague "exclusive access" without telling you what that means)
+        </p>
+
+        <div class="bullets-grid">
+            <div class="bullet-item">
+                <span class="bullet-icon">⏰</span>
+                <p class="bullet-text">
+                    <strong>24-hour head start:</strong> Contract address delivered to your inbox a full day before we tweet it. Yes, a full day.
+                </p>
+            </div>
+
+            <div class="bullet-item">
+                <span class="bullet-icon">💰</span>
+                <p class="bullet-text">
+                    <strong>Airdrop eligibility:</strong> We're reserving 6.7% of supply for early supporters. Waitlist = automatic eligibility. Simple.
+                </p>
+            </div>
+
+            <div class="bullet-item">
+                <span class="bullet-icon">🎯</span>
+                <p class="bullet-text">
+                    <strong>No presale games:</strong> This isn't a VC-backed pump & dump. But you still get priority. Fair launch with a head start.
+                </p>
+            </div>
+
+            <div class="bullet-item">
+                <span class="bullet-icon">🔥</span>
+                <p class="bullet-text">
+                    <strong>Launch day alpha:</strong> Best entry strategy, slippage settings, pool details. Everything you need to not fumble the bag.
+                </p>
+            </div>
+
+            <div class="bullet-item">
+                <span class="bullet-icon">👥</span>
+                <p class="bullet-text">
+                    <strong>Private TG access:</strong> Direct line to the core team. No 50k member spam channels. Just the real ones.
+                </p>
+            </div>
+
+            <div class="bullet-item">
+                <span class="bullet-icon">🎁</span>
+                <p class="bullet-text">
+                    <strong>Exclusive merch drop:</strong> Limited edition 67 hoodies. Only for waitlist. Already designed. Actually fire.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest Section -->
+    <section class="honest-section">
+        <div class="honest-content">
+            <h2 class="honest-title">let's be honest for a sec</h2>
+            <p class="honest-text">
+                Look, I could fill this page with hype and promises and "10000x guaranteed" BS.
+            </p>
+            <p class="honest-text">
+                But you're too smart for that. You've seen the rug pulls. You know <strong>most memecoins go to zero.</strong>
+            </p>
+            <p class="honest-text">
+                Here's what makes this different: the 6-7 meme is already <strong>everywhere</strong>. Teachers are losing their minds. South Park featured it. LaMelo Ball tweets about it. CNN tried to explain it.
+            </p>
+            <p class="honest-text">
+                <strong>The cultural moment is happening right now.</strong>
+            </p>
+            <p class="honest-text">
+                We're not creating hype. We're just <strong>tokenizing what already exists.</strong>
+            </p>
+            <p class="honest-text">
+                So yeah, this could still go to zero. That's crypto. But if you're gonna ape into a memecoin, at least ape into one with <strong>actual cultural momentum</strong> behind it.
+            </p>
+            <p class="honest-text">
+                And if you're gonna do it? Getting in early makes a lot more sense than FOMOing in after the first pump.
+            </p>
+            <p class="honest-text" style="margin-top: 40px;">
+                <strong>Your call.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title" style="margin-bottom: 60px;">questions you're probably asking</h2>
+
+        <div class="faq-item">
+            <h3 class="faq-question">when is this actually launching?</h3>
+            <p class="faq-answer">
+                Soon. We're not doing the "2 weeks" meme that turns into 6 months. Check the countdown at the top of this page. That's the real date. Waitlist gets access 24 hours before that.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">is this gonna rug?</h3>
+            <p class="faq-answer">
+                LP locked. Contract verified. No team tokens. We're doing this by the book because we're not trying to go to jail. Full transparency on launch day.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">why should I trust you?</h3>
+            <p class="faq-answer">
+                You shouldn't blindly trust anyone in crypto. That's why we're being transparent about everything. Check our Twitter. Join our Telegram. See the community we're building. Then decide.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">what if I'm late to the waitlist?</h3>
+            <p class="faq-answer">
+                You still get early access, just maybe not as early. But honestly? There are 40,000 new memecoins launching every day. Being on ANY waitlist for one with actual cultural relevance is already putting you ahead.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">will my email be safe?</h3>
+            <p class="faq-answer">
+                We're not selling your data. We're not spamming you. You get launch updates and early access info. That's it. Unsubscribe anytime. We're not weirdos.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">can I really get airdrops?</h3>
+            <p class="faq-answer">
+                Yes. We're reserving 6.7% of total supply for community rewards. Waitlist members are automatically eligible. More details in your confirmation email.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="footer-cta-content">
+            <h2 class="footer-cta-title">
+                don't be that person
+            </h2>
+            <p class="footer-cta-text">
+                The one who knew about it early but didn't join the waitlist.<br>
+                The one texting "I KNEW about this coin..." after it moons.<br>
+                The one who had the link but didn't click.
+            </p>
+            <a href="#waitlistForm" class="footer-cta-button" onclick="scrollToForm()">
+                Join the Waitlist Now
+            </a>
+            <p style="margin-top: 32px; font-size: 14px; opacity: 0.8;">
+                Takes 30 seconds. Could change everything. Probably won't. But could.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            // Set launch date (7 days from now for demo - UPDATE THIS)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7);
+
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                document.querySelector('.countdown-container').innerHTML = '<div style="font-size: 32px; font-weight: 900;">🚀 LIVE NOW 🚀</div>';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Animate waitlist count
+        function animateCount() {
+            const countElement = document.getElementById('waitlistCount');
+            let currentCount = 12847;
+            setInterval(() => {
+                currentCount += Math.floor(Math.random() * 3);
+                countElement.textContent = currentCount.toLocaleString();
+            }, 5000);
+        }
+        animateCount();
+
+        // Form submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const telegram = document.getElementById('telegram').value;
+
+            // Generate referral code
+            const referralCode = Math.random().toString(36).substring(2, 10).toUpperCase();
+
+            // Store data (in production, send to backend)
+            console.log('Waitlist signup:', { email, telegram, referralCode });
+
+            // Show success message
+            document.getElementById('waitlistForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('active');
+
+            // Update referral link
+            document.getElementById('referralLink').textContent =
+                `https://sixseven.com/waitlist?ref=${referralCode}`;
+
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // Scroll to form
+        function scrollToForm() {
+            event.preventDefault();
+            document.getElementById('waitlistForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Referral functions
+        function copyReferral() {
+            event.preventDefault();
+            const referralLink = document.getElementById('referralLink').textContent;
+            navigator.clipboard.writeText(referralLink).then(() => {
+                alert('Link copied! Now go share it and jump the line 🚀');
+            });
+        }
+
+        function shareTwitter() {
+            event.preventDefault();
+            const referralLink = document.getElementById('referralLink').textContent;
+            const text = "just joined the $SIXSEVEN waitlist. if you know, you know 👐\n\nget early access:";
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(referralLink)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareTelegram() {
+            event.preventDefault();
+            const referralLink = document.getElementById('referralLink').textContent;
+            const text = "just joined the $SIXSEVEN waitlist 👐 get early access here:";
+            const url = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
