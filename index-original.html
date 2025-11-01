@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SIXSEVEN - Just Do 6-7</title>
+    <meta name="description" content="The Gen Alpha memecoin revolution. Meaningless by design. Legendary by accident.">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="$SIXSEVEN - Gen Alpha's First Memecoin">
+    <meta property="og:description" content="Meaningless by Design. Legendary by Accident. The 6-7 meme is now a Solana memecoin.">
+    <meta property="og:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="$SIXSEVEN - Just Do 6-7">
+    <meta name="twitter:description" content="Gen Alpha's first native memecoin. Join the movement. 👐">
+    <meta name="twitter:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --nike-black: #0a0a0a;
+            --nike-white: #ffffff;
+            --nike-grey: #8f8f8f;
+            --nike-light-grey: #1a1a1a;
+            --brainrot-purple: #9d4edd;
+            --brainrot-pink: #ff006e;
+            --brainrot-cyan: #00f5ff;
+            --brainrot-yellow: #ffd60a;
+            --brainrot-green: #06ffa5;
+            --neon-pink: #ff0080;
+            --neon-blue: #0ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--nike-black);
+            color: var(--nike-white);
+            overflow-x: hidden;
+            position: relative;
+            letter-spacing: -0.02em;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Brutalist Navigation - Supreme Style */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 100vw;
+            background: var(--nike-black);
+            z-index: 1000;
+            border-bottom: 3px solid var(--neon-pink);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            overflow: hidden;
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo-nav {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--nike-white);
+            letter-spacing: -2px;
+            text-shadow:
+                4px 4px 0 var(--neon-pink),
+                8px 8px 0 var(--neon-blue);
+            animation: logo-float 3s ease-in-out infinite;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .logo-nav:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        @keyframes logo-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-shrink: 1;
+            flex-wrap: nowrap;
+        }
+
+        .nav-link {
+            color: var(--nike-white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-pink);
+            transform: translateY(-2px);
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
+            color: var(--nike-white);
+            padding: 12px 28px;
+            border-radius: 0;
+            font-weight: 900;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                4px 4px 0 var(--neon-blue),
+                8px 8px 20px rgba(255, 0, 110, 0.5);
+        }
+
+        .cta-nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-nav:hover::before {
+            left: 100%;
+        }
+
+        .cta-nav:hover {
+            transform: translate(-4px, -4px);
+            box-shadow:
+                8px 8px 0 var(--neon-blue),
+                12px 12px 30px rgba(255, 0, 110, 0.7);
+        }
+
+        /* Hero Section - Bold & Striking */
+        .hero {
+            margin-top: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            background: var(--nike-black);
+            overflow: visible;
+            padding-top: 100px;
+        }
+
+        /* Animated Grid Background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 0, 110, 0.1) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 2px, transparent 2px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            padding: 80px 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-overline {
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--neon-pink);
+            margin-bottom: 24px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 0, 110, 0.1);
+            border: 2px solid var(--neon-pink);
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% {
+                border-color: var(--neon-pink);
+                box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+            }
+            50% {
+                border-color: var(--neon-blue);
+                box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(120px, 15vw, 240px);
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -8px;
+            margin-bottom: 32px;
+            color: var(--nike-white);
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .hero-title .six {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite, tilt-six 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px var(--neon-pink));
+        }
+
+        .hero-title .seven {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-blue), var(--brainrot-green), var(--brainrot-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite reverse, tilt-seven 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px var(--neon-blue));
+        }
+
+        @keyframes tilt-six {
+            0%, 100% { transform: rotate(-2deg) translateX(0); }
+            50% { transform: rotate(2deg) translateX(10px); }
+        }
+
+        @keyframes tilt-seven {
+            0%, 100% { transform: rotate(2deg) translateX(0); }
+            50% { transform: rotate(-2deg) translateX(-10px); }
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                background-position: 100% 50%;
+                filter: hue-rotate(180deg);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: var(--nike-grey);
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle strong {
+            color: var(--nike-white);
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 20px 48px;
+            font-size: 18px;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
+            color: var(--nike-white);
+            box-shadow:
+                6px 6px 0 var(--nike-black),
+                6px 6px 0 2px var(--neon-blue);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary:hover {
+            transform: translate(-6px, -6px);
+            box-shadow:
+                12px 12px 0 var(--nike-black),
+                12px 12px 0 2px var(--neon-blue),
+                0 0 40px rgba(255, 0, 110, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--nike-white);
+            border: 3px solid var(--neon-blue);
+            box-shadow:
+                6px 6px 0 var(--neon-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--neon-blue);
+            color: var(--nike-black);
+            transform: translate(-6px, -6px);
+            box-shadow:
+                12px 12px 0 var(--neon-pink),
+                0 0 40px rgba(0, 245, 255, 0.6);
+        }
+
+        /* Hero Visual - GIF Section */
+        .hero-visual {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            padding: 0 60px 0 40px;
+        }
+
+        .hero-gif-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1;
+            animation: float-gif 6s ease-in-out infinite;
+        }
+
+        @keyframes float-gif {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(-3deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-20px) rotate(3deg); }
+        }
+
+        .hero-gif-container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue), var(--brainrot-green), var(--brainrot-yellow));
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.6;
+            animation: rotate-glow 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate-glow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid var(--nike-white);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 0 8px var(--nike-black),
+                0 0 0 12px var(--neon-pink);
+            filter: contrast(1.1) saturate(1.2);
+        }
+
+        .hero-emoji {
+            position: absolute;
+            font-size: 120px;
+            animation: weighing 2s ease-in-out infinite;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+        }
+
+        @keyframes weighing {
+            0%, 100% { transform: translateY(0) rotate(-10deg); }
+            25% { transform: translateY(-15px) rotate(-15deg); }
+            50% { transform: translateY(0) rotate(-10deg); }
+            75% { transform: translateY(-15px) rotate(-5deg); }
+        }
+
+        /* Stats Bar - Oversaturated Brainrot */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
+            color: var(--nike-white);
+            padding: 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .stats-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat {
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: transform 0.3s;
+        }
+
+        .stat:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--nike-white);
+            margin-bottom: 12px;
+            text-shadow:
+                4px 4px 0 rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(255, 255, 255, 0.5);
+            filter: drop-shadow(0 0 20px currentColor);
+        }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Content Sections - Streetwear Brutalist */
+        .section {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 120px 60px;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: clamp(48px, 8vw, 140px);
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            margin-bottom: 40px;
+            color: var(--nike-white);
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            font-family: 'Inter Tight', sans-serif;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+        }
+
+        /* Balenciaga Oversized Text Block */
+        .balenciaga-block {
+            background: var(--nike-white);
+            color: var(--nike-black);
+            padding: 60px;
+            margin: 120px 0;
+            border: 8px solid var(--nike-black);
+            position: relative;
+        }
+
+        .balenciaga-block-text {
+            font-size: clamp(32px, 5vw, 72px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            font-family: 'Inter Tight', sans-serif;
+        }
+
+        .section-subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--nike-grey);
+            margin-bottom: 60px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* Timeline - Balenciaga Brutalist Style */
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 80px auto 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
+            z-index: 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-date {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: var(--neon-pink);
+            border: 4px solid var(--nike-black);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% {
+                box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 0, 110, 0.5), 0 0 40px var(--neon-pink);
+            }
+        }
+
+        .timeline-date {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .timeline-year {
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.05em;
+            font-family: 'Inter Tight', sans-serif;
+        }
+
+        .timeline-label {
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--nike-grey);
+            margin-top: 12px;
+        }
+
+        .timeline-content {
+            background: var(--nike-light-grey);
+            padding: 48px;
+            border: 3px solid transparent;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s;
+        }
+
+        .timeline-content:hover::before {
+            transform: scaleY(1);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--neon-pink);
+            transform: translateX(10px);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 110, 0.3);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:hover {
+            transform: translateX(-10px);
+        }
+
+        .timeline-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
+            display: block;
+            filter: drop-shadow(0 0 20px currentColor);
+        }
+
+        .timeline-content h3 {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            color: var(--nike-white);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            font-family: 'Inter Tight', sans-serif;
+        }
+
+        .timeline-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--nike-grey);
+        }
+
+        /* Timeline Mobile Responsive */
+        @media (max-width: 968px) {
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                margin-bottom: 60px;
+                padding-left: 80px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                grid-column: 1;
+            }
+
+            .timeline-item:nth-child(even) .timeline-date,
+            .timeline-item:nth-child(odd) .timeline-date {
+                grid-column: 1;
+                text-align: left;
+                padding: 0 0 20px 0;
+            }
+
+            .timeline-year {
+                font-size: 72px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content:hover {
+                transform: translateX(10px);
+            }
+        }
+
+        /* Split Section - Framer Style */
+        .split-section {
+            background: var(--nike-black);
+            padding: 0;
+            margin: 120px 0;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .split-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 700px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .split-text {
+            padding: 100px 80px;
+            color: var(--nike-white);
+            background: var(--nike-black);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .split-text h2 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .split-text p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            color: var(--nike-grey);
+        }
+
+        .split-visual {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+            background: var(--nike-black);
+        }
+
+        .split-visual-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.1) saturate(1.3) grayscale(0.2);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .split-visual:hover .split-visual-img {
+            transform: scale(1.05);
+            filter: contrast(1.2) saturate(1.5) grayscale(0);
+        }
+
+        .split-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 0, 110, 0.3),
+                rgba(0, 245, 255, 0.3)
+            );
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .split-visual::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: diagonal-move 20s linear infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes diagonal-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Testimonials - Modern Cards */
+        .testimonials {
+            background: var(--nike-light-grey);
+            padding: 120px 60px;
+        }
+
+        .testimonials-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .testimonial {
+            background: var(--nike-black);
+            padding: 48px;
+            position: relative;
+            border: 3px solid var(--nike-light-grey);
+            transition: all 0.3s;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 120px;
+            font-weight: 900;
+            color: var(--neon-pink);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .testimonial:hover {
+            border-color: var(--neon-pink);
+            transform: translateY(-8px);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 110, 0.3);
+        }
+
+        .testimonial-quote {
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--nike-white);
+            margin-bottom: 32px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Manifesto - Bold Statement */
+        .manifesto {
+            background: linear-gradient(135deg, var(--nike-black), var(--nike-light-grey));
+            color: var(--nike-white);
+            padding: 180px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto::before {
+            content: '👐';
+            position: absolute;
+            font-size: 600px;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-emoji 20s linear infinite;
+        }
+
+        @keyframes rotate-emoji {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .manifesto-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .manifesto h2 {
+            font-size: 96px;
+            font-weight: 900;
+            margin-bottom: 80px;
+            line-height: 1;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .manifesto-item {
+            font-size: 28px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: left;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 6px solid var(--neon-pink);
+            transition: all 0.3s;
+        }
+
+        .manifesto-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(20px);
+            border-left-color: var(--neon-blue);
+        }
+
+        .manifesto-item strong {
+            color: var(--brainrot-yellow);
+            font-weight: 900;
+        }
+
+        /* How to Buy - Bold Steps */
+        .how-to-buy {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 120px 60px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 48px;
+            background: var(--nike-light-grey);
+            position: relative;
+            border: 3px solid transparent;
+            transition: all 0.4s;
+        }
+
+        .step:hover {
+            border-color: var(--neon-pink);
+            transform: translateY(-12px);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 110, 0.4);
+        }
+
+        .step-number {
+            width: 120px;
+            height: 120px;
+            border-radius: 0;
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
+            color: var(--nike-white);
+            font-size: 64px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            position: relative;
+            box-shadow:
+                8px 8px 0 var(--nike-black),
+                8px 8px 0 3px var(--neon-blue);
+            transition: all 0.3s;
+        }
+
+        .step:hover .step-number {
+            transform: translate(-8px, -8px);
+            box-shadow:
+                16px 16px 0 var(--nike-black),
+                16px 16px 0 3px var(--neon-blue);
+        }
+
+        .step h3 {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--nike-white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--nike-grey);
+        }
+
+        /* Contract Section - Bold Display */
+        .contract-section {
+            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contract-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.1) 2px,
+                rgba(255, 255, 255, 0.1) 4px
+            );
+            animation: scan 10s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        .contract-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--nike-black);
+            padding: 60px;
+            border: 6px solid var(--nike-white);
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.8),
+                0 0 60px rgba(255, 0, 110, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contract-label {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 24px;
+            color: var(--neon-pink);
+        }
+
+        .contract-address {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--nike-white);
+            word-break: break-all;
+            padding: 32px;
+            background: var(--nike-light-grey);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .contract-address:hover {
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            border-color: var(--nike-white);
+            transform: scale(1.02);
+        }
+
+        /* Footer - Clean & Bold */
+        footer {
+            background: var(--nike-black);
+            color: var(--nike-white);
+            padding: 100px 60px 60px;
+            border-top: 6px solid var(--neon-pink);
+        }
+
+        .footer-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 80px;
+            margin-bottom: 80px;
+        }
+
+        .footer-section h4 {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            color: var(--neon-pink);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--nike-grey);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--neon-blue);
+            transform: translateX(10px);
+        }
+
+        .footer-bottom {
+            border-top: 3px solid var(--nike-light-grey);
+            padding-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--nike-grey);
+        }
+
+        .disclaimer {
+            max-width: 900px;
+            margin: 0 auto 32px;
+            line-height: 1.8;
+        }
+
+        /* Scroll Reveal Animation - Framer Style */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 120px;
+            }
+
+            .hero-visual {
+                height: 60vh;
+                padding: 0 40px;
+            }
+
+            .hero-gif-container {
+                max-width: 400px;
+            }
+
+            .split-content {
+                grid-template-columns: 1fr;
+            }
+
+            .split-visual {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 12px 16px;
+            }
+
+            .logo-nav {
+                font-size: 28px;
+                text-shadow:
+                    2px 2px 0 var(--neon-pink),
+                    4px 4px 0 var(--neon-blue);
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-link {
+                font-size: 11px;
+            }
+
+            .cta-nav {
+                padding: 8px 12px;
+                font-size: 11px;
+            }
+
+            .hero-content {
+                padding: 60px 24px;
+            }
+
+            .section {
+                padding: 80px 24px;
+            }
+
+            .hero-title {
+                letter-spacing: -4px;
+            }
+
+            .split-text {
+                padding: 60px 24px;
+            }
+
+            .split-text h2 {
+                font-size: 40px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+            }
+
+            .split-text p {
+                font-size: 18px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .manifesto {
+                padding: 100px 24px;
+            }
+
+            .manifesto h2 {
+                font-size: 48px;
+            }
+
+            .manifesto-item {
+                font-size: 20px;
+                padding: 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 10px 12px;
+            }
+
+            .logo-nav {
+                font-size: 24px;
+                text-shadow:
+                    1px 1px 0 var(--neon-pink),
+                    2px 2px 0 var(--neon-blue);
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-link {
+                font-size: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .cta-nav {
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+
+            .split-text {
+                padding: 40px 16px;
+            }
+
+            .split-text h2 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 60px 16px;
+            }
+
+            .section-title {
+                font-size: clamp(32px, 10vw, 48px);
+            }
+        }
+
+        /* Glitch Effect Enhancement */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            color: var(--neon-pink);
+            animation: glitch-1 0.65s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translateX(-3px);
+        }
+
+        .glitch::after {
+            color: var(--neon-blue);
+            animation: glitch-2 0.65s infinite;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+            transform: translateX(3px);
+        }
+
+        @keyframes glitch-1 {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-3px); }
+            40% { transform: translateX(3px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(3px); }
+        }
+
+        @keyframes glitch-2 {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(3px); }
+            40% { transform: translateX(-3px); }
+            60% { transform: translateX(3px); }
+            80% { transform: translateX(-3px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo-nav">$67</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#lore" class="nav-link">The Lore</a>
+                <a href="#how" class="nav-link">How to Buy</a>
+                <a href="#buy" class="nav-link cta-nav">Buy Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-overline">GEN ALPHA'S FIRST MEMECOIN</div>
+            <h1 class="hero-title">
+                <span class="six">6</span>
+                <span class="seven">7</span>
+            </h1>
+            <p class="hero-subtitle">
+                <strong>Meaningless</strong> by Design.<br><strong>Legendary</strong> by Accident.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#buy" class="btn btn-primary">Buy $SIXSEVEN</a>
+                <a href="#lore" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-gif-container">
+                <img src="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif" alt="6-7 meme" class="hero-gif">
+                <div class="hero-emoji" style="bottom: -60px; right: -60px;">👐</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">6.7B</div>
+                <div class="stat-label">Total Supply</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Tax</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Community</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">67%</div>
+                <div class="stat-label">LP Locked</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section reveal" id="about">
+        <h2 class="section-title">What Does It Mean?</h2>
+        <p class="section-subtitle">
+            Nothing. And that's exactly the point.
+        </p>
+        <p style="font-size: 22px; line-height: 1.8; color: var(--nike-grey); max-width: 900px;">
+            While you're over there "researching fundamentals" and "analyzing tokenomics," Gen Alpha just made $SIXSEVEN the most viral movement in crypto. This isn't a coin. It's a cultural revolution wrapped in chaos, delivered via TikTok, amplified by NBA highlight reels, and sustained by pure, unfiltered brainrot energy.
+        </p>
+    </section>
+
+    <!-- The Lore Timeline -->
+    <section class="section reveal" id="lore">
+        <h2 class="section-title">The Sacred Lore</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-label">The Beginning</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🎵</span>
+                    <h3>The Prophecy</h3>
+                    <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-label">The Ascension</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🏀</span>
+                    <h3>The Chosen One</h3>
+                    <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">MAR<br>2025</div>
+                    <div class="timeline-label">The Messiah</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">👦</span>
+                    <h3>The 67 Kid</h3>
+                    <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-label">The Disruption</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🎓</span>
+                    <h3>Global Chaos</h3>
+                    <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">OCT<br>2025</div>
+                    <div class="timeline-label">The Tokenization</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">💰</span>
+                    <h3>Peak Absurdity</h3>
+                    <p>October 2025: Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. The prophecy is monetized.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <div class="timeline-year">NOW</div>
+                    <div class="timeline-label">You Are Here</div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-icon">🚀</span>
+                    <h3>Your Moment</h3>
+                    <p>You're reading this. Considering buying. About to become part of history. Welcome to the movement.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Section -->
+    <div class="split-section reveal">
+        <div class="split-content">
+            <div class="split-text">
+                <h2>Peak Cultural Relevance</h2>
+                <p>South Park featured it. CNN tried to explain it. Teachers are losing their minds. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.</p>
+                <p>This is the moment. The meme is peaking. Adults are talking. Gen Alpha is about to move on.</p>
+                <a href="#buy" class="btn btn-primary">Don't Miss Out</a>
+            </div>
+            <div class="split-visual">
+                <img src="https://vergemagazine.co.uk/wp-content/uploads/2025/10/AA1LJYLq.jpeg" alt="6-7 Cultural Moment" class="split-visual-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials reveal">
+        <div class="testimonials-container">
+            <h2 class="section-title">What Degens Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"I don't understand it but I'm all in. My kids won't talk to me anymore but my bag is up 600%."</p>
+                    <div class="testimonial-author">— Dad on Twitter</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Teacher: 'Turn to page 67.' My entire class: *buys $SIXSEVEN*. I've lost control of my life."</p>
+                    <div class="testimonial-author">— 7th Grade Math Teacher</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"This is either the dumbest thing I've ever seen or absolute genius. I bought more just in case."</p>
+                    <div class="testimonial-author">— Crypto Veteran Since 2021</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"My financial advisor asked what it means. I just did the hand gesture. He bought in."</p>
+                    <div class="testimonial-author">— Diamond Hands</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Finally, a coin as stupid as the market. This is peak crypto."</p>
+                    <div class="testimonial-author">— Anonymous Degen</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"My nephew explained it to me for 20 minutes. I still don't get it. I bought anyway."</p>
+                    <div class="testimonial-author">— Confused Boomer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto reveal">
+        <div class="manifesto-content">
+            <h2>The Manifesto</h2>
+            <div class="manifesto-item">
+                <strong>We believe</strong> in the power of meaninglessness.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> Gen Alpha is smarter than us and we should follow their lead into beautiful chaos.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> the best investments are the ones that make your financial advisor cry.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> page 67 is the most powerful page in any textbook.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> the hand gesture 👐 is sacred and must be protected.
+            </div>
+            <div class="manifesto-item">
+                <strong>We believe</strong> in you, degen. Welcome to the movement.
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section class="how-to-buy reveal" id="how">
+        <h2 class="section-title">How to Buy</h2>
+        <p class="section-subtitle">Four steps to generational wealth (or at least legendary memes)</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Get a Wallet</h3>
+                <p>Download Phantom or Solflare. Your first step into the future.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Buy SOL</h3>
+                <p>Use any exchange. Send SOL to your wallet. Don't send it to the wrong address.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Swap on DEX</h3>
+                <p>Hit Raydium or Jupiter. Paste our contract. Swap SOL for $SIXSEVEN.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Join the Movement</h3>
+                <p>Do the hand gesture. Screenshot your bag. Welcome to the 67 Army. 👐</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Section -->
+    <section class="contract-section" id="buy">
+        <div class="contract-box">
+            <div class="contract-label">Contract Address</div>
+            <div class="contract-address" onclick="copyContract()">
+                LAUNCHING SOON • STAY TUNED
+            </div>
+            <p style="margin-top: 32px; color: rgba(255, 255, 255, 0.8); font-size: 16px;">
+                Click to copy when live • Verify on Solscan before buying
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="text-align: center; padding: 180px 60px;">
+        <h2 class="section-title" style="margin-bottom: 32px;">The Clock Is Ticking</h2>
+        <p style="font-size: 24px; color: var(--nike-grey); margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+            Adults are talking about it. The meme is peaking. You have 2-4 weeks before Gen Alpha moves on. This is your window.
+        </p>
+        <a href="#buy" class="btn btn-primary" style="padding: 28px 64px; font-size: 22px;">
+            Buy $SIXSEVEN Now
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Twitter/X</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Whitepaper</a></li>
+                    <li><a href="#">Tokenomics</a></li>
+                    <li><a href="#">How to Buy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Charts</h4>
+                <ul class="footer-links">
+                    <li><a href="#">DexScreener</a></li>
+                    <li><a href="#">DexTools</a></li>
+                    <li><a href="#">CoinGecko</a></li>
+                    <li><a href="#">CoinMarketCap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul class="footer-links">
+                    <li><a href="#">The Lore</a></li>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="disclaimer">
+                <strong>DISCLAIMER:</strong> $SIXSEVEN is a memecoin. It means nothing. It could go to zero. You could lose everything. We're not financial advisors. Do your own research. Only invest what you can afford to lose. This is pure speculation wrapped in absurdity wrapped in Gen Alpha brainrot. Past performance doesn't indicate future results. Not affiliated with Skrilla, LaMelo Ball, the NBA, or rational decision-making.
+            </p>
+            <p style="margin-top: 32px;">
+                © 2025 $SIXSEVEN. All Rights Reserved. Built with chaos, fueled by brainrot, sustained by community.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation - Framer style
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        // Mouse move effect on stats
+        const stats = document.querySelectorAll('.stat');
+
+        stats.forEach(stat => {
+            stat.addEventListener('mousemove', (e) => {
+                const rect = stat.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                stat.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.05)`;
+            });
+
+            stat.addEventListener('mouseleave', () => {
+                stat.style.transform = '';
+            });
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            revealOnScroll();
+        });
+
+        revealOnScroll(); // Initial check
+
+        // Copy contract address
+        function copyContract() {
+            const contractAddress = "SIXSEVEN_CONTRACT_ADDRESS_HERE";
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                alert('Contract address copied! 👐');
+            }).catch(() => {
+                alert('Coming soon! Join our socials for launch updates.');
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 3D tilt effect on cards
+        const cards = document.querySelectorAll('.timeline-content, .testimonial, .step');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        // Animated counter for stats
+        const animateValue = (element, start, end, duration) => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = progress * (end - start) + start;
+
+                if (element.textContent.includes('B')) {
+                    element.textContent = value.toFixed(1) + 'B';
+                } else if (element.textContent.includes('%')) {
+                    element.textContent = Math.floor(value) + '%';
+                }
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        };
+
+        // Trigger counter animation on scroll
+        let statsAnimated = false;
+        const statsBar = document.querySelector('.stats-bar');
+
+        const checkStatsVisible = () => {
+            if (statsAnimated) return;
+
+            const rect = statsBar.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                statsAnimated = true;
+
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers.forEach((stat, index) => {
+                    const text = stat.textContent;
+                    if (text.includes('6.7B')) {
+                        animateValue(stat, 0, 6.7, 2000);
+                    } else if (text.includes('0%')) {
+                        animateValue(stat, 100, 0, 2000);
+                    } else if (text.includes('100%')) {
+                        animateValue(stat, 0, 100, 2000);
+                    } else if (text.includes('67%')) {
+                        animateValue(stat, 0, 67, 2000);
+                    }
+                });
+            }
+        };
+
+        window.addEventListener('scroll', checkStatsVisible);
+        checkStatsVisible();
+    </script>
+</body>
+</html>

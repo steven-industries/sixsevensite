@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$SIXSEVEN - Just Do 6-7</title>
-    <meta name="description" content="The Gen Alpha memecoin revolution. Meaningless by design. Legendary by accident.">
+    <title>$SIXSEVEN - Teachers Banned It. We Tokenized It.</title>
+    <meta name="description" content="The 6-7 meme broke the internet. We're launching it on Solana. Join the waitlist. Top 67 creators get massive airdrops. Everyone else gets FOMO.">
 
     <!-- OpenGraph Meta Tags -->
-    <meta property="og:title" content="$SIXSEVEN - Gen Alpha's First Memecoin">
-    <meta property="og:description" content="Meaningless by Design. Legendary by Accident. The 6-7 meme is now a Solana memecoin.">
+    <meta property="og:title" content="$SIXSEVEN - Teachers Banned It. We Tokenized It.">
+    <meta property="og:description" content="Gen Alpha's meme. Solana's next 100x. Join 20,000+ people waiting for launch. This is your 2-week window.">
     <meta property="og:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="$SIXSEVEN - Just Do 6-7">
-    <meta name="twitter:description" content="Gen Alpha's first native memecoin. Join the movement. 👐">
-    <meta name="twitter:image" content="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -27,50 +25,48 @@
         }
 
         :root {
-            --nike-black: #0a0a0a;
-            --nike-white: #ffffff;
-            --nike-grey: #8f8f8f;
-            --nike-light-grey: #1a1a1a;
-            --brainrot-purple: #9d4edd;
-            --brainrot-pink: #ff006e;
-            --brainrot-cyan: #00f5ff;
-            --brainrot-yellow: #ffd60a;
-            --brainrot-green: #06ffa5;
-            --neon-pink: #ff0080;
-            --neon-blue: #0ff;
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --grey: #8f8f8f;
+            --light-grey: #1a1a1a;
+            --pink: #ff0080;
+            --blue: #0ff;
+            --purple: #9d4edd;
+            --green: #06ffa5;
+            --yellow: #ffd60a;
         }
 
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
-            width: 100%;
         }
 
         body {
-            font-family: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background: var(--nike-black);
-            color: var(--nike-white);
+            background: var(--black);
+            color: var(--white);
             overflow-x: hidden;
-            position: relative;
             letter-spacing: -0.02em;
-            width: 100%;
-            max-width: 100vw;
         }
 
-        /* Brutalist Navigation - Supreme Style */
+        /* Nav */
         .nav {
             position: fixed;
             top: 0;
             width: 100%;
-            max-width: 100vw;
-            background: var(--nike-black);
+            background: transparent;
             z-index: 1000;
-            border-bottom: 3px solid var(--neon-pink);
+            border-bottom: none;
+            backdrop-filter: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Nav when scrolled past hero */
+        .nav.scrolled {
+            background: var(--black);
+            border-bottom: 3px solid var(--pink);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            overflow: hidden;
         }
 
         .nav-container {
@@ -80,1749 +76,1137 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
-            box-sizing: border-box;
         }
 
-        .logo-nav {
+        .logo {
             font-size: 48px;
             font-weight: 900;
-            color: var(--nike-white);
             letter-spacing: -2px;
-            text-shadow:
-                4px 4px 0 var(--neon-pink),
-                8px 8px 0 var(--neon-blue);
-            animation: logo-float 3s ease-in-out infinite;
-            transition: all 0.3s;
-            flex-shrink: 0;
-            white-space: nowrap;
+            text-shadow: 4px 4px 0 var(--pink), 8px 8px 0 var(--blue);
         }
 
-        .logo-nav:hover {
-            transform: scale(1.05) rotate(-2deg);
-        }
-
-        @keyframes logo-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-            flex-shrink: 1;
-            flex-wrap: nowrap;
-        }
-
-        .nav-link {
-            color: var(--nike-white);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            color: var(--neon-pink);
-            transform: translateY(-2px);
-        }
-
-        .cta-nav {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
-            color: var(--nike-white);
-            padding: 12px 28px;
-            border-radius: 0;
+        .nav-badge {
+            padding: 8px 16px;
+            background: var(--pink);
+            font-size: 12px;
             font-weight: 900;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            box-shadow:
-                4px 4px 0 var(--neon-blue),
-                8px 8px 20px rgba(255, 0, 110, 0.5);
+            text-transform: uppercase;
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        .cta-nav::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s;
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
-        .cta-nav:hover::before {
-            left: 100%;
-        }
-
-        .cta-nav:hover {
-            transform: translate(-4px, -4px);
-            box-shadow:
-                8px 8px 0 var(--neon-blue),
-                12px 12px 30px rgba(255, 0, 110, 0.7);
-        }
-
-        /* Hero Section - Bold & Striking */
+        /* Hero */
         .hero {
             margin-top: 0;
             min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            position: relative;
-            background: var(--nike-black);
-            overflow: visible;
-            padding-top: 100px;
-        }
-
-        /* Animated Grid Background */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(rgba(255, 0, 110, 0.1) 2px, transparent 2px),
-                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 2px, transparent 2px);
-            background-size: 50px 50px;
-            animation: grid-move 20s linear infinite;
-            opacity: 0.3;
-        }
-
-        @keyframes grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        .hero-content {
-            padding: 80px 60px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-overline {
-            font-size: 14px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--neon-pink);
-            margin-bottom: 24px;
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(255, 0, 110, 0.1);
-            border: 2px solid var(--neon-pink);
-            animation: pulse-border 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-border {
-            0%, 100% {
-                border-color: var(--neon-pink);
-                box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
-            }
-            50% {
-                border-color: var(--neon-blue);
-                box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
-            }
-        }
-
-        .hero-title {
-            font-size: clamp(120px, 15vw, 240px);
-            font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -8px;
-            margin-bottom: 32px;
-            color: var(--nike-white);
-            position: relative;
-            text-transform: uppercase;
-        }
-
-        .hero-title .six {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 3s ease infinite, tilt-six 2s ease-in-out infinite;
-            filter: drop-shadow(0 0 30px var(--neon-pink));
-        }
-
-        .hero-title .seven {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--neon-blue), var(--brainrot-green), var(--brainrot-yellow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 3s ease infinite reverse, tilt-seven 2s ease-in-out infinite;
-            filter: drop-shadow(0 0 30px var(--neon-blue));
-        }
-
-        @keyframes tilt-six {
-            0%, 100% { transform: rotate(-2deg) translateX(0); }
-            50% { transform: rotate(2deg) translateX(10px); }
-        }
-
-        @keyframes tilt-seven {
-            0%, 100% { transform: rotate(2deg) translateX(0); }
-            50% { transform: rotate(-2deg) translateX(-10px); }
-        }
-
-        @keyframes gradient-shift {
-            0%, 100% {
-                background-position: 0% 50%;
-                filter: hue-rotate(0deg);
-            }
-            50% {
-                background-position: 100% 50%;
-                filter: hue-rotate(180deg);
-            }
-        }
-
-        .hero-subtitle {
-            font-size: clamp(24px, 3vw, 36px);
-            font-weight: 700;
-            margin-bottom: 48px;
-            color: var(--nike-grey);
-            line-height: 1.3;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle strong {
-            color: var(--nike-white);
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-cta-group {
             display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .btn {
-            padding: 20px 48px;
-            font-size: 18px;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
             position: relative;
             overflow: hidden;
+            background: #000000;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
-            color: var(--nike-white);
-            box-shadow:
-                6px 6px 0 var(--nike-black),
-                6px 6px 0 2px var(--neon-blue);
-        }
-
-        .btn-primary::before {
-            content: '';
+        /* Hero Video - Responsive Scaling */
+        .hero-video {
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            transform: translateX(-50%);
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            z-index: 1;
+            opacity: 1;
         }
 
-        .btn-primary:hover::before {
-            width: 300px;
-            height: 300px;
+        /* Mobile: Fit video horizontally to show overlaid text */
+        @media (max-width: 768px) {
+            .hero-video {
+                width: 100%;
+                height: auto;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
         }
 
-        .btn-primary:hover {
-            transform: translate(-6px, -6px);
-            box-shadow:
-                12px 12px 0 var(--nike-black),
-                12px 12px 0 2px var(--neon-blue),
-                0 0 40px rgba(255, 0, 110, 0.6);
+        /* Extra-wide screens: Constrain video size */
+        @media (min-width: 2000px) {
+            .hero-video {
+                max-width: 2000px;
+            }
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--nike-white);
-            border: 3px solid var(--neon-blue);
-            box-shadow:
-                6px 6px 0 var(--neon-blue);
+        /* Remove dark overlay - video at full brightness */
+        .hero::before {
+            display: none;
+        }
+
+        /* Countdown in Hero - Centered */
+        .hero .countdown-box {
+            position: relative;
+            z-index: 3;
+            background: none;
+            backdrop-filter: none;
+            padding: 0;
+            border: none;
+            max-width: none;
+            margin: 0;
+            width: 100%;
+        }
+
+        /* Countdown Box - Lower Right Corner */
+        .hero .countdown-box {
+            position: absolute;
+            bottom: clamp(24px, 4vh, 60px);
+            right: clamp(24px, 4vw, 60px);
+            z-index: 3;
+            text-align: right;
+        }
+
+        /* Launch label - Refined A24/MSCHF aesthetic */
+        .hero .countdown-label {
+            font-size: clamp(10px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 16px 0;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+            opacity: 0.85;
+        }
+
+        /* Countdown numbers - Compact horizontal layout */
+        .hero .countdown {
+            display: flex;
+            gap: clamp(12px, 2.5vw, 28px);
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+
+        .hero .countdown-item {
+            background: none;
+            padding: 0;
+            border: none;
+            backdrop-filter: none;
+            text-align: center;
+            min-width: clamp(40px, 8vw, 70px);
+        }
+
+        .hero .countdown-number {
+            font-size: clamp(28px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 6px;
+            color: var(--white);
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+            letter-spacing: -0.02em;
+        }
+
+        .hero .countdown-text {
+            font-size: clamp(7px, 1.2vw, 11px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Mobile: Adjust countdown for better fit */
+        @media (max-width: 768px) {
+            .hero .countdown-box {
+                bottom: 20px;
+                right: 16px;
+                left: 16px;
+                text-align: center;
+            }
+
+            .hero .countdown {
+                justify-content: center;
+                gap: clamp(8px, 3vw, 16px);
+            }
+
+            .hero .countdown-item {
+                min-width: clamp(32px, 12vw, 60px);
+            }
+
+            .hero .countdown-label {
+                font-size: clamp(8px, 2.5vw, 11px);
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Extra-wide: Prevent countdown from being too large */
+        @media (min-width: 1920px) {
+            .hero .countdown-box {
+                bottom: 80px;
+                right: 80px;
+            }
+        }
+
+        /* Parallax Headline Section - Below Hero */
+        .parallax-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            background: var(--black);
+            position: relative;
+            overflow: visible;
+            padding: 20vh 0 120px;
+        }
+
+        .parallax-headline {
+            text-align: center;
+            padding: 80px 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .parallax-title {
+            font-size: clamp(60px, 12vw, 180px);
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            text-shadow:
+                4px 4px 0 rgba(255, 0, 110, 0.3),
+                8px 8px 20px rgba(255, 0, 110, 0.2);
+        }
+
+        .parallax-title .highlight {
+            background: linear-gradient(135deg, var(--pink), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
-            background: var(--neon-blue);
-            color: var(--nike-black);
+            background: var(--blue);
+            color: var(--black);
             transform: translate(-6px, -6px);
-            box-shadow:
-                12px 12px 0 var(--neon-pink),
-                0 0 40px rgba(0, 245, 255, 0.6);
+            box-shadow: 12px 12px 0 var(--pink);
         }
 
-        /* Hero Visual - GIF Section */
-        .hero-visual {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: visible;
-            padding: 0 60px 0 40px;
+        /* Quote Block - Screenshot Worthy */
+        .quote-block {
+            background: var(--white);
+            color: var(--black);
+            padding: 80px 60px;
+            margin: 120px 0;
+            border: 8px solid var(--black);
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-gif-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            aspect-ratio: 1;
-            animation: float-gif 6s ease-in-out infinite;
+        .quote-text {
+            font-size: clamp(32px, 5vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
         }
 
-        @keyframes float-gif {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(-3deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(-20px) rotate(3deg); }
+        .quote-attr {
+            font-size: 18px;
+            margin-top: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
         }
 
-        .hero-gif-container::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue), var(--brainrot-green), var(--brainrot-yellow));
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.6;
-            animation: rotate-glow 10s linear infinite;
-            z-index: -1;
+        /* Section */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 60px;
         }
 
-        @keyframes rotate-glow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .section-title {
+            font-size: clamp(40px, 7vw, 96px);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+            line-height: 0.9;
+            letter-spacing: -0.03em;
         }
 
-        .hero-gif {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 4px solid var(--nike-white);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 0 8px var(--nike-black),
-                0 0 0 12px var(--neon-pink);
-            filter: contrast(1.1) saturate(1.2);
+        .big-text {
+            font-size: clamp(24px, 3vw, 40px);
+            line-height: 1.4;
+            margin-bottom: 32px;
+            font-weight: 600;
         }
 
-        .hero-emoji {
-            position: absolute;
-            font-size: 120px;
-            animation: weighing 2s ease-in-out infinite;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+        .big-text strong {
+            color: var(--pink);
+            font-weight: 900;
         }
 
-        @keyframes weighing {
-            0%, 100% { transform: translateY(0) rotate(-10deg); }
-            25% { transform: translateY(-15px) rotate(-15deg); }
-            50% { transform: translateY(0) rotate(-10deg); }
-            75% { transform: translateY(-15px) rotate(-5deg); }
+        /* Stats */
+        .stats {
+            background: var(--light-grey);
+            padding: 100px 60px;
         }
 
-        /* Stats Bar - Oversaturated Brainrot */
-        .stats-bar {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
-            color: var(--nike-white);
-            padding: 40px 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stats-bar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .stats-container {
-            max-width: 1600px;
+        .stats-grid {
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 60px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stat {
             text-align: center;
-            transform-style: preserve-3d;
-            transition: transform 0.3s;
-        }
-
-        .stat:hover {
-            transform: translateY(-10px) scale(1.05);
         }
 
         .stat-number {
-            font-size: 72px;
+            font-size: 96px;
             font-weight: 900;
-            color: var(--nike-white);
-            margin-bottom: 12px;
-            text-shadow:
-                4px 4px 0 rgba(0, 0, 0, 0.5),
-                0 0 30px rgba(255, 255, 255, 0.5);
-            filter: drop-shadow(0 0 20px currentColor);
+            color: var(--pink);
+            margin-bottom: 16px;
+            text-shadow: 0 0 40px var(--pink);
         }
 
         .stat-label {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--grey);
         }
 
-        /* Content Sections - Streetwear Brutalist */
-        .section {
-            max-width: 1600px;
-            margin: 0 auto;
+        /* Proof Section */
+        .proof {
+            background: var(--black);
             padding: 120px 60px;
-            position: relative;
         }
 
-        .section-title {
-            font-size: clamp(48px, 8vw, 140px);
-            font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -0.05em;
-            margin-bottom: 40px;
-            color: var(--nike-white);
-            text-transform: uppercase;
-            position: relative;
-            display: inline-block;
-            font-family: 'Inter Tight', sans-serif;
-            max-width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 1400px;
+            margin: 80px auto 0;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+        .proof-item {
+            background: var(--light-grey);
+            padding: 48px;
+            border-left: 6px solid var(--pink);
+            transition: all 0.3s;
         }
 
-        /* Balenciaga Oversized Text Block */
-        .balenciaga-block {
-            background: var(--nike-white);
-            color: var(--nike-black);
-            padding: 60px;
-            margin: 120px 0;
-            border: 8px solid var(--nike-black);
-            position: relative;
+        .proof-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--blue);
         }
 
-        .balenciaga-block-text {
-            font-size: clamp(32px, 5vw, 72px);
-            font-weight: 900;
-            line-height: 1;
-            letter-spacing: -0.03em;
-            text-transform: uppercase;
-            font-family: 'Inter Tight', sans-serif;
-        }
-
-        .section-subtitle {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--nike-grey);
-            margin-bottom: 60px;
-            max-width: 800px;
+        .proof-quote {
+            font-size: 20px;
             line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
         }
 
-        /* Timeline - Balenciaga Brutalist Style */
-        .timeline-container {
-            position: relative;
+        .proof-source {
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--blue);
+        }
+
+        /* The Offer */
+        .offer {
+            background: linear-gradient(135deg, var(--black), var(--light-grey));
+            padding: 120px 60px;
+            text-align: center;
+        }
+
+        .offer-title {
+            font-size: clamp(48px, 8vw, 120px);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+            line-height: 0.9;
+            background: linear-gradient(135deg, var(--green), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .offer-text {
+            font-size: clamp(20px, 2.5vw, 32px);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            color: var(--grey);
+        }
+
+        .offer-text strong {
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        .offer-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
             max-width: 1200px;
             margin: 80px auto 0;
         }
 
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
-            z-index: 0;
-        }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 80px;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            grid-column: 2;
-        }
-
-        .timeline-item:nth-child(even) .timeline-date {
-            grid-column: 1;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            grid-column: 2;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-date {
-            grid-column: 1;
-            text-align: right;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            top: 40px;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 24px;
-            background: var(--neon-pink);
-            border: 4px solid var(--nike-black);
-            border-radius: 50%;
-            z-index: 2;
-            box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
-            animation: pulse-dot 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% {
-                box-shadow: 0 0 0 4px var(--neon-pink), 0 0 30px var(--neon-pink);
-            }
-            50% {
-                box-shadow: 0 0 0 8px rgba(255, 0, 110, 0.5), 0 0 40px var(--neon-pink);
-            }
-        }
-
-        .timeline-date {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .timeline-year {
-            font-size: 120px;
-            font-weight: 900;
-            line-height: 1;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.05em;
-            font-family: 'Inter Tight', sans-serif;
-        }
-
-        .timeline-label {
-            font-size: 14px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--nike-grey);
-            margin-top: 12px;
-        }
-
-        .timeline-content {
-            background: var(--nike-light-grey);
+        .offer-box {
+            background: var(--light-grey);
             padding: 48px;
             border: 3px solid transparent;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 6px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.4s;
-        }
-
-        .timeline-content:hover::before {
-            transform: scaleY(1);
-        }
-
-        .timeline-content:hover {
-            border-color: var(--neon-pink);
-            transform: translateX(10px);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(255, 0, 110, 0.3);
-        }
-
-        .timeline-item:nth-child(even) .timeline-content:hover {
-            transform: translateX(-10px);
-        }
-
-        .timeline-icon {
-            font-size: 56px;
-            margin-bottom: 24px;
-            display: block;
-            filter: drop-shadow(0 0 20px currentColor);
-        }
-
-        .timeline-content h3 {
-            font-size: 32px;
-            font-weight: 900;
-            margin-bottom: 16px;
-            color: var(--nike-white);
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            font-family: 'Inter Tight', sans-serif;
-        }
-
-        .timeline-content p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: var(--nike-grey);
-        }
-
-        /* Timeline Mobile Responsive */
-        @media (max-width: 968px) {
-            .timeline-line {
-                left: 30px;
-            }
-
-            .timeline-item {
-                grid-template-columns: 1fr;
-                margin-bottom: 60px;
-                padding-left: 80px;
-            }
-
-            .timeline-dot {
-                left: 30px;
-            }
-
-            .timeline-item:nth-child(even) .timeline-content,
-            .timeline-item:nth-child(odd) .timeline-content {
-                grid-column: 1;
-            }
-
-            .timeline-item:nth-child(even) .timeline-date,
-            .timeline-item:nth-child(odd) .timeline-date {
-                grid-column: 1;
-                text-align: left;
-                padding: 0 0 20px 0;
-            }
-
-            .timeline-year {
-                font-size: 72px;
-            }
-
-            .timeline-item:nth-child(even) .timeline-content:hover {
-                transform: translateX(10px);
-            }
-        }
-
-        /* Split Section - Framer Style */
-        .split-section {
-            background: var(--nike-black);
-            padding: 0;
-            margin: 120px 0;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 100vw;
-        }
-
-        .split-content {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 700px;
-            align-items: center;
-            width: 100%;
-        }
-
-        .split-text {
-            padding: 100px 80px;
-            color: var(--nike-white);
-            background: var(--nike-black);
-            position: relative;
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        .split-text h2 {
-            font-size: 64px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 32px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .split-text p {
-            font-size: 20px;
-            line-height: 1.8;
-            margin-bottom: 32px;
-            color: var(--nike-grey);
-        }
-
-        .split-visual {
-            position: relative;
-            height: 700px;
-            overflow: hidden;
-            background: var(--nike-black);
-        }
-
-        .split-visual-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: contrast(1.1) saturate(1.3) grayscale(0.2);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .split-visual:hover .split-visual-img {
-            transform: scale(1.05);
-            filter: contrast(1.2) saturate(1.5) grayscale(0);
-        }
-
-        .split-visual::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                135deg,
-                rgba(255, 0, 110, 0.3),
-                rgba(0, 245, 255, 0.3)
-            );
-            mix-blend-mode: overlay;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .split-visual::after {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 255, 255, 0.05) 10px,
-                rgba(255, 255, 255, 0.05) 20px
-            );
-            animation: diagonal-move 20s linear infinite;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        @keyframes diagonal-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Testimonials - Modern Cards */
-        .testimonials {
-            background: var(--nike-light-grey);
-            padding: 120px 60px;
-        }
-
-        .testimonials-container {
-            max-width: 1600px;
-            margin: 0 auto;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 80px;
-        }
-
-        .testimonial {
-            background: var(--nike-black);
-            padding: 48px;
-            position: relative;
-            border: 3px solid var(--nike-light-grey);
             transition: all 0.3s;
         }
 
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 120px;
-            font-weight: 900;
-            color: var(--neon-pink);
-            opacity: 0.2;
-            line-height: 1;
-        }
-
-        .testimonial:hover {
-            border-color: var(--neon-pink);
-            transform: translateY(-8px);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(255, 0, 110, 0.3);
-        }
-
-        .testimonial-quote {
-            font-size: 20px;
-            line-height: 1.7;
-            color: var(--nike-white);
-            margin-bottom: 32px;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Manifesto - Bold Statement */
-        .manifesto {
-            background: linear-gradient(135deg, var(--nike-black), var(--nike-light-grey));
-            color: var(--nike-white);
-            padding: 180px 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .manifesto::before {
-            content: '👐';
-            position: absolute;
-            font-size: 600px;
-            opacity: 0.03;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: rotate-emoji 20s linear infinite;
-        }
-
-        @keyframes rotate-emoji {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .manifesto-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .manifesto h2 {
-            font-size: 96px;
-            font-weight: 900;
-            margin-bottom: 80px;
-            line-height: 1;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .manifesto-item {
-            font-size: 28px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            text-align: left;
-            padding: 32px;
-            background: rgba(255, 255, 255, 0.03);
-            border-left: 6px solid var(--neon-pink);
-            transition: all 0.3s;
-        }
-
-        .manifesto-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateX(20px);
-            border-left-color: var(--neon-blue);
-        }
-
-        .manifesto-item strong {
-            color: var(--brainrot-yellow);
-            font-weight: 900;
-        }
-
-        /* How to Buy - Bold Steps */
-        .how-to-buy {
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 120px 60px;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
-            margin-top: 80px;
-        }
-
-        .step {
-            text-align: center;
-            padding: 48px;
-            background: var(--nike-light-grey);
-            position: relative;
-            border: 3px solid transparent;
-            transition: all 0.4s;
-        }
-
-        .step:hover {
-            border-color: var(--neon-pink);
+        .offer-box:hover {
+            border-color: var(--pink);
             transform: translateY(-12px);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 40px rgba(255, 0, 110, 0.4);
+            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
         }
 
-        .step-number {
-            width: 120px;
-            height: 120px;
-            border-radius: 0;
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple));
-            color: var(--nike-white);
-            font-size: 64px;
+        .offer-box-title {
+            font-size: 28px;
             font-weight: 900;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-            position: relative;
-            box-shadow:
-                8px 8px 0 var(--nike-black),
-                8px 8px 0 3px var(--neon-blue);
-            transition: all 0.3s;
-        }
-
-        .step:hover .step-number {
-            transform: translate(-8px, -8px);
-            box-shadow:
-                16px 16px 0 var(--nike-black),
-                16px 16px 0 3px var(--neon-blue);
-        }
-
-        .step h3 {
-            font-size: 24px;
-            font-weight: 900;
+            text-transform: uppercase;
             margin-bottom: 20px;
-            color: var(--nike-white);
+        }
+
+        .offer-box-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--grey);
+        }
+
+        /* Form Section */
+        .form-section {
+            background: var(--black);
+            padding: 120px 60px;
+        }
+
+        .form-container {
+            background: var(--white);
+            color: var(--black);
+            padding: 80px;
+            max-width: 800px;
+            margin: 60px auto 0;
+            border: 8px solid var(--black);
+            box-shadow: 16px 16px 0 var(--pink), 32px 32px 0 var(--blue);
+        }
+
+        .form-title {
+            font-size: 56px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+
+        .form-subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 48px;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
-        .step p {
+        .form-input {
+            width: 100%;
+            padding: 20px;
             font-size: 18px;
-            line-height: 1.7;
-            color: var(--nike-grey);
-        }
-
-        /* Contract Section - Bold Display */
-        .contract-section {
-            background: linear-gradient(135deg, var(--neon-pink), var(--brainrot-purple), var(--neon-blue));
-            padding: 80px 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contract-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(255, 255, 255, 0.1) 2px,
-                rgba(255, 255, 255, 0.1) 4px
-            );
-            animation: scan 10s linear infinite;
-        }
-
-        @keyframes scan {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(50px); }
-        }
-
-        .contract-box {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: var(--nike-black);
-            padding: 60px;
-            border: 6px solid var(--nike-white);
-            box-shadow:
-                0 30px 80px rgba(0, 0, 0, 0.8),
-                0 0 60px rgba(255, 0, 110, 0.5);
-            position: relative;
-            z-index: 2;
-        }
-
-        .contract-label {
-            font-size: 18px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 24px;
-            color: var(--neon-pink);
-        }
-
-        .contract-address {
-            font-family: 'Courier New', monospace;
-            font-size: 24px;
-            font-weight: 900;
-            color: var(--nike-white);
-            word-break: break-all;
-            padding: 32px;
-            background: var(--nike-light-grey);
-            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            border: 4px solid var(--black);
+            background: #f5f5f5;
             transition: all 0.3s;
-            border: 3px solid transparent;
         }
 
-        .contract-address:hover {
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
-            border-color: var(--nike-white);
-            transform: scale(1.02);
+        .form-input:focus {
+            outline: none;
+            background: var(--white);
+            border-color: var(--pink);
+            box-shadow: 0 0 0 4px rgba(255, 0, 110, 0.2);
         }
 
-        /* Footer - Clean & Bold */
-        footer {
-            background: var(--nike-black);
-            color: var(--nike-white);
-            padding: 100px 60px 60px;
-            border-top: 6px solid var(--neon-pink);
-        }
-
-        .footer-content {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 80px;
-            margin-bottom: 80px;
-        }
-
-        .footer-section h4 {
-            font-size: 20px;
+        .form-button {
+            width: 100%;
+            padding: 28px;
+            font-size: 24px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 32px;
-            color: var(--neon-pink);
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        .footer-links {
-            list-style: none;
+        .form-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(255, 0, 110, 0.5);
         }
 
-        .footer-links li {
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            color: var(--nike-grey);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-
-        .footer-links a:hover {
-            color: var(--neon-blue);
-            transform: translateX(10px);
-        }
-
-        .footer-bottom {
-            border-top: 3px solid var(--nike-light-grey);
-            padding-top: 40px;
+        .form-proof {
             text-align: center;
-            font-size: 14px;
-            color: var(--nike-grey);
+            margin-top: 32px;
+            font-size: 16px;
+            color: #666;
         }
 
-        .disclaimer {
-            max-width: 900px;
-            margin: 0 auto 32px;
-            line-height: 1.8;
+        .form-proof strong {
+            color: var(--black);
+            font-weight: 900;
+            font-size: 20px;
         }
 
-        /* Scroll Reveal Animation - Framer Style */
-        .reveal {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Success */
+        .success {
+            display: none;
+            background: var(--green);
+            color: var(--black);
+            padding: 80px;
+            text-align: center;
+            border: 8px solid var(--black);
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .success.active {
+            display: block;
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding-top: 120px;
-            }
+        .success-title {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+        }
 
-            .hero-visual {
-                height: 60vh;
-                padding: 0 40px;
-            }
+        .success-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
 
-            .hero-gif-container {
-                max-width: 400px;
-            }
+        .success-next {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 48px;
+            margin-top: 48px;
+        }
 
-            .split-content {
-                grid-template-columns: 1fr;
-            }
+        .success-next-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
 
-            .split-visual {
-                height: 400px;
-            }
+        .success-next-text {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Meme Break - Visual Interest */
+        .meme-break {
+            background: var(--black);
+            padding: 100px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .meme-image {
+            max-width: 600px;
+            width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: none;
         }
 
         @media (max-width: 768px) {
+            .meme-break {
+                padding: 60px 0;
+            }
+
+            .meme-image {
+                max-width: 400px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+            padding: 120px 60px;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 900;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .footer-text {
+            font-size: clamp(20px, 2.5vw, 32px);
+            margin-bottom: 60px;
+            line-height: 1.4;
+        }
+
+        /* Tablet and Mobile Responsive */
+        @media (max-width: 1024px) {
+            .section {
+                padding: 80px 40px;
+            }
+
+            .stats {
+                padding: 80px 40px;
+            }
+
+            .proof {
+                padding: 80px 40px;
+            }
+
+            .footer {
+                padding: 80px 40px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
             .nav-container {
-                padding: 12px 16px;
+                padding: 16px 24px;
             }
 
-            .logo-nav {
-                font-size: 28px;
-                text-shadow:
-                    2px 2px 0 var(--neon-pink),
-                    4px 4px 0 var(--neon-blue);
+            .logo {
+                font-size: 32px;
+                text-shadow: 2px 2px 0 var(--pink), 4px 4px 0 var(--blue);
             }
 
-            .nav-links {
-                gap: 12px;
+            .nav-badge {
+                font-size: 10px;
+                padding: 6px 12px;
+                letter-spacing: 1px;
             }
 
-            .nav-link {
-                font-size: 11px;
+            .parallax-section {
+                min-height: auto;
+                padding: 80px 0;
             }
 
-            .cta-nav {
-                padding: 8px 12px;
-                font-size: 11px;
-            }
-
-            .hero-content {
+            .parallax-headline {
                 padding: 60px 24px;
+            }
+
+            .parallax-title {
+                font-size: clamp(36px, 11vw, 72px);
+                line-height: 0.9;
             }
 
             .section {
-                padding: 80px 24px;
-            }
-
-            .hero-title {
-                letter-spacing: -4px;
-            }
-
-            .split-text {
                 padding: 60px 24px;
             }
 
-            .split-text h2 {
-                font-size: 40px;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                hyphens: auto;
+            .quote-block {
+                padding: 40px 24px;
+                margin: 40px 16px;
+                border-width: 4px;
             }
 
-            .split-text p {
-                font-size: 18px;
+            .quote-text {
+                font-size: clamp(24px, 6vw, 48px);
             }
 
-            .testimonial-grid {
-                grid-template-columns: 1fr;
+            .stats {
+                padding: 60px 24px;
             }
 
-            .manifesto {
-                padding: 100px 24px;
-            }
-
-            .manifesto h2 {
-                font-size: 48px;
-            }
-
-            .manifesto-item {
-                font-size: 20px;
-                padding: 24px;
-            }
-
-            .footer-content {
+            .stats-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
-            .btn {
-                padding: 16px 32px;
-                font-size: 16px;
+            .stat-number {
+                font-size: 64px;
+            }
+
+            .proof {
+                padding: 60px 24px;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .proof-item {
+                padding: 32px;
+            }
+
+            .offer {
+                padding: 60px 24px;
+            }
+
+            .form-container {
+                padding: 40px 24px;
+                box-shadow: 6px 6px 0 var(--pink), 12px 12px 0 var(--blue);
+            }
+
+            .footer {
+                padding: 60px 24px;
             }
         }
 
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 10px 12px;
-            }
-
-            .logo-nav {
-                font-size: 24px;
-                text-shadow:
-                    1px 1px 0 var(--neon-pink),
-                    2px 2px 0 var(--neon-blue);
-            }
-
-            .nav-links {
-                gap: 8px;
-            }
-
-            .nav-link {
-                font-size: 10px;
-                letter-spacing: 0.5px;
-            }
-
-            .cta-nav {
-                padding: 6px 10px;
-                font-size: 10px;
-            }
-
-            .split-text {
-                padding: 40px 16px;
-            }
-
-            .split-text h2 {
-                font-size: 32px;
-            }
-
-            .section {
-                padding: 60px 16px;
+        /* Extra-wide screens: Prevent excessive scaling */
+        @media (min-width: 2000px) {
+            .parallax-title {
+                font-size: 180px;
             }
 
             .section-title {
-                font-size: clamp(32px, 10vw, 48px);
+                font-size: 96px;
             }
-        }
 
-        /* Glitch Effect Enhancement */
-        .glitch {
-            position: relative;
-            display: inline-block;
-        }
+            .stat-number {
+                font-size: 120px;
+            }
 
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .glitch::before {
-            color: var(--neon-pink);
-            animation: glitch-1 0.65s infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-            transform: translateX(-3px);
-        }
-
-        .glitch::after {
-            color: var(--neon-blue);
-            animation: glitch-2 0.65s infinite;
-            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-            transform: translateX(3px);
-        }
-
-        @keyframes glitch-1 {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-3px); }
-            40% { transform: translateX(3px); }
-            60% { transform: translateX(-3px); }
-            80% { transform: translateX(3px); }
-        }
-
-        @keyframes glitch-2 {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(3px); }
-            40% { transform: translateX(-3px); }
-            60% { transform: translateX(3px); }
-            80% { transform: translateX(-3px); }
+            .offer-title,
+            .footer-title {
+                font-size: 120px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="logo-nav">$67</div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#lore" class="nav-link">The Lore</a>
-                <a href="#how" class="nav-link">How to Buy</a>
-                <a href="#buy" class="nav-link cta-nav">Buy Now</a>
-            </div>
+            <div class="logo">$67</div>
+            <div class="nav-badge">⚡ LAUNCHING SOON</div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-overline">GEN ALPHA'S FIRST MEMECOIN</div>
-            <h1 class="hero-title">
-                <span class="six">6</span>
-                <span class="seven">7</span>
-            </h1>
-            <p class="hero-subtitle">
-                <strong>Meaningless</strong> by Design.<br><strong>Legendary</strong> by Accident.
-            </p>
-            <div class="hero-cta-group">
-                <a href="#buy" class="btn btn-primary">Buy $SIXSEVEN</a>
-                <a href="#lore" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-gif-container">
-                <img src="https://media1.tenor.com/m/wXfbbjRyyWcAAAAd/scp-067-67.gif" alt="6-7 meme" class="hero-gif">
-                <div class="hero-emoji" style="bottom: -60px; right: -60px;">👐</div>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <!-- Video Background -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/67kid-with-writing.mp4" type="video/mp4">
+        </video>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-box">
+            <div class="countdown-label">LAUNCHING 11/11 AT 6:07PM EST</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-text">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-text">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-text">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-text">Seconds</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stats-container">
-            <div class="stat">
+    <!-- Parallax Headline Section -->
+    <section class="parallax-section">
+        <div class="parallax-headline" id="parallaxHeadline">
+            <h1 class="parallax-title">
+                Teachers <span class="highlight">Banned</span> It.<br>
+                We <span class="highlight">Tokenized</span> It.
+            </h1>
+
+            <p style="font-size: clamp(24px, 4vw, 48px); font-weight: 700; line-height: 1.3; color: #8f8f8f; margin: 48px 0; max-width: 900px; margin-left: auto; margin-right: auto;">
+                The 6-7 meme broke the internet.<br>
+                <strong style="color: #fff;">We're launching it on Solana.</strong><br>
+                You have 2 weeks before Gen Alpha moves on.
+            </p>
+
+            <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 60px;">
+                <a href="#join" style="padding: 24px 64px; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; background: linear-gradient(135deg, #ff0080, #9d4edd); color: #fff; box-shadow: 6px 6px 0 #0a0a0a, 6px 6px 0 2px #0ff; transition: all 0.3s;">Join The Waitlist</a>
+                <a href="#proof" style="padding: 24px 64px; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; background: transparent; color: #fff; border: 3px solid #0ff; box-shadow: 6px 6px 0 #0ff; transition: all 0.3s;">See The Proof</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Block 1 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "Teachers report students disrupting class whenever they see the number 67. One teacher recorded hearing it 75 times in a single school day."
+        </div>
+        <div class="quote-attr">— Fed-up teachers nationwide banning the phrase from classrooms</div>
+    </div>
+
+    <!-- Meme Break -->
+    <section class="meme-break">
+        <img src="images/67kidglowing.jpeg" alt="67 Kid" class="meme-image">
+    </section>
+
+    <!-- The Moment -->
+    <section class="section">
+        <h2 class="section-title">This is the moment</h2>
+
+        <p class="big-text">
+            <strong>South Park featured it.</strong> CNN tried to explain it. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.
+        </p>
+
+        <p class="big-text">
+            The 6-7 meme is at <strong>peak cultural relevance.</strong> Right now. This exact second.
+        </p>
+
+        <p class="big-text">
+            In 2-4 weeks, Gen Alpha will have moved on to the next thing. Adults will stop talking about it. <strong>The window will close.</strong>
+        </p>
+
+        <p class="big-text">
+            We're tokenizing it <strong>right at the peak.</strong> On Solana. Fair launch. No presale. No VC games.
+        </p>
+
+        <p class="big-text">
+            You're either in the waitlist or you're explaining to your friends why you missed it.
+        </p>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div>
                 <div class="stat-number">6.7B</div>
                 <div class="stat-label">Total Supply</div>
             </div>
-            <div class="stat">
+            <div>
                 <div class="stat-number">0%</div>
                 <div class="stat-label">Tax</div>
             </div>
-            <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Community</div>
+            <div>
+                <div class="stat-number">11/11</div>
+                <div class="stat-label">Launch Date</div>
             </div>
-            <div class="stat">
-                <div class="stat-number">67%</div>
-                <div class="stat-label">LP Locked</div>
+            <div>
+                <div class="stat-number">6:07</div>
+                <div class="stat-label">EST</div>
             </div>
         </div>
+    </section>
+
+    <!-- Quote Block 2 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "Dictionary.com named '6-7' the Word of the Year for 2025. South Park featured it in their Season 28 premiere. The window is closing."
+        </div>
+        <div class="quote-attr">— Peak cultural relevance happens fast</div>
     </div>
 
-    <!-- About Section -->
-    <section class="section reveal" id="about">
-        <h2 class="section-title">What Does It Mean?</h2>
-        <p class="section-subtitle">
-            Nothing. And that's exactly the point.
-        </p>
-        <p style="font-size: 22px; line-height: 1.8; color: var(--nike-grey); max-width: 900px;">
-            While you're over there "researching fundamentals" and "analyzing tokenomics," Gen Alpha just made $SIXSEVEN the most viral movement in crypto. This isn't a coin. It's a cultural revolution wrapped in chaos, delivered via TikTok, amplified by NBA highlight reels, and sustained by pure, unfiltered brainrot energy.
-        </p>
-    </section>
+    <!-- Proof -->
+    <section class="proof" id="proof">
+        <div class="section">
+            <h2 class="section-title">The proof is everywhere</h2>
 
-    <!-- The Lore Timeline -->
-    <section class="section reveal" id="lore">
-        <h2 class="section-title">The Sacred Lore</h2>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "In March 2025, a boy named Maverick Trevillion became known as the '67 Kid' after a viral video showed him yelling the term at a basketball game with an excited hand gesture."
+                    </p>
+                    <div class="proof-source">Wikipedia, Know Your Meme</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-label">The Beginning</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "Fed-up teachers are banning it from their classrooms or making exasperated TikToks about the number of times they've heard it in a single school day (for one teacher, the record is 75)."
+                    </p>
+                    <div class="proof-source">CNN - "Kids are shouting it for good reason"</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🎵</span>
-                    <h3>The Prophecy</h3>
-                    <p>Rapper Skrilla drops "Doot Doot (6 7)" in 2024. The lyric was meaningless. The prophecy was perfect.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-label">The Ascension</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "LaMelo Ball, who is 6 feet 7 inches tall, has become the unwitting prophet. TikTok edits of his highlights with Skrilla's song gained over 9.6 million views in two months."
+                    </p>
+                    <div class="proof-source">Yahoo Sports, Know Your Meme</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🏀</span>
-                    <h3>The Chosen One</h3>
-                    <p>LaMelo Ball, exactly 6'7", becomes the unwitting prophet. Basketball edits go nuclear. The meme ascends.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">MAR<br>2025</div>
-                    <div class="timeline-label">The Messiah</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "South Park's Season 28 premiere 'Twisted Christian' aired October 15, 2025, with Cartman obsessed with the 6-7 meme to the point he vomits when someone mentions it."
+                    </p>
+                    <div class="proof-source">Hollywood Reporter, NME</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">👦</span>
-                    <h3>The 67 Kid</h3>
-                    <p>March 2025: A boy shouts "SIX SEVEN!" at a basketball game. The hand gesture is born. The internet finds its messiah.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-label">The Disruption</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "Skrilla's 'Doot Doot (6 7)' dropped December 1, 2024. The '6-7' references 67th Street in Philadelphia. The music video hit 1.1 million views in a week."
+                    </p>
+                    <div class="proof-source">Know Your Meme, Wikipedia</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🎓</span>
-                    <h3>Global Chaos</h3>
-                    <p>Teachers nationwide report chaos. Page 67 becomes legendary. 6:07 becomes sacred. Education will never recover.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">OCT<br>2025</div>
-                    <div class="timeline-label">The Tokenization</div>
+                <div class="proof-item">
+                    <p class="proof-quote">
+                        "Dictionary.com named '6-7' the Word of the Year for 2025. It's become so ubiquitous that kids shout it when a teacher turns to page 67 or when lunchtime is 6 to 7 minutes away."
+                    </p>
+                    <div class="proof-source">CNN, Multiple sources</div>
                 </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">💰</span>
-                    <h3>Peak Absurdity</h3>
-                    <p>October 2025: Peak absurdity meets peak speculation. $SIXSEVEN launches on Solana. The prophecy is monetized.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <div class="timeline-year">NOW</div>
-                    <div class="timeline-label">You Are Here</div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-icon">🚀</span>
-                    <h3>Your Moment</h3>
-                    <p>You're reading this. Considering buying. About to become part of history. Welcome to the movement.</p>
-                </div>
-                <div class="timeline-dot"></div>
             </div>
         </div>
     </section>
 
-    <!-- Split Section -->
-    <div class="split-section reveal">
-        <div class="split-content">
-            <div class="split-text">
-                <h2>Peak Cultural Relevance</h2>
-                <p>South Park featured it. CNN tried to explain it. Teachers are losing their minds. LaMelo Ball owns it. Your neighbor's kid won't shut up about it.</p>
-                <p>This is the moment. The meme is peaking. Adults are talking. Gen Alpha is about to move on.</p>
-                <a href="#buy" class="btn btn-primary">Don't Miss Out</a>
-            </div>
-            <div class="split-visual">
-                <img src="https://vergemagazine.co.uk/wp-content/uploads/2025/10/AA1LJYLq.jpeg" alt="6-7 Cultural Moment" class="split-visual-img">
-            </div>
+    <!-- Quote Block 3 -->
+    <div class="quote-block">
+        <div class="quote-text">
+            "You're going to see $SIXSEVEN and think 'this is the dumbest thing I've ever seen.' Then you're going to buy it anyway."
         </div>
+        <div class="quote-attr">— You, probably</div>
     </div>
 
-    <!-- Testimonials -->
-    <section class="testimonials reveal">
-        <div class="testimonials-container">
-            <h2 class="section-title">What Degens Are Saying</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p class="testimonial-quote">"I don't understand it but I'm all in. My kids won't talk to me anymore but my bag is up 600%."</p>
-                    <div class="testimonial-author">— Dad on Twitter</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Teacher: 'Turn to page 67.' My entire class: *buys $SIXSEVEN*. I've lost control of my life."</p>
-                    <div class="testimonial-author">— 7th Grade Math Teacher</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"This is either the dumbest thing I've ever seen or absolute genius. I bought more just in case."</p>
-                    <div class="testimonial-author">— Crypto Veteran Since 2021</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"My financial advisor asked what it means. I just did the hand gesture. He bought in."</p>
-                    <div class="testimonial-author">— Diamond Hands</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Finally, a coin as stupid as the market. This is peak crypto."</p>
-                    <div class="testimonial-author">— Anonymous Degen</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"My nephew explained it to me for 20 minutes. I still don't get it. I bought anyway."</p>
-                    <div class="testimonial-author">— Confused Boomer</div>
-                </div>
+    <!-- The Offer -->
+    <section class="offer">
+        <h2 class="offer-title">You have exactly 2 weeks</h2>
+
+        <p class="offer-text">
+            The 6-7 meme is at <strong>peak cultural relevance.</strong> South Park just featured it. Dictionary.com named it Word of the Year. Your neighbor's kid won't shut up about it.
+        </p>
+
+        <p class="offer-text">
+            In 2-4 weeks? Gen Alpha moves on. Adults stop talking about it. <strong>The window closes.</strong>
+        </p>
+
+        <div class="offer-boxes">
+            <div class="offer-box">
+                <h3 class="offer-box-title">Fair Launch</h3>
+                <p class="offer-box-text">
+                    No presale. No VCs. No team allocation. <strong>Everyone buys at the same time.</strong> November 11 at 6:07pm EST.
+                </p>
+            </div>
+
+            <div class="offer-box">
+                <h3 class="offer-box-title">First to Know</h3>
+                <p class="offer-box-text">
+                    Join the waitlist. We email you the contract address <strong>5 minutes before launch.</strong> You get first access while everyone else is still looking for it.
+                </p>
+            </div>
+
+            <div class="offer-box">
+                <h3 class="offer-box-title">Join the Community</h3>
+                <p class="offer-box-text">
+                    Get exclusive Discord access. Daily updates. Memes. Countdown. <strong>Be part of the launch,</strong> not just watching from the sidelines.
+                </p>
             </div>
         </div>
+
+        <p class="offer-text" style="margin-top: 80px;">
+            <strong>That's it.</strong> No complicated tokenomics. No airdrops. No presale games. Just a fair launch at the peak of the 6-7 cultural moment. You're either in early or you're not.
+        </p>
     </section>
 
-    <!-- Manifesto -->
-    <section class="manifesto reveal">
-        <div class="manifesto-content">
-            <h2>The Manifesto</h2>
-            <div class="manifesto-item">
-                <strong>We believe</strong> in the power of meaninglessness.
-            </div>
-            <div class="manifesto-item">
-                <strong>We believe</strong> Gen Alpha is smarter than us and we should follow their lead into beautiful chaos.
-            </div>
-            <div class="manifesto-item">
-                <strong>We believe</strong> the best investments are the ones that make your financial advisor cry.
-            </div>
-            <div class="manifesto-item">
-                <strong>We believe</strong> page 67 is the most powerful page in any textbook.
-            </div>
-            <div class="manifesto-item">
-                <strong>We believe</strong> the hand gesture 👐 is sacred and must be protected.
-            </div>
-            <div class="manifesto-item">
-                <strong>We believe</strong> in you, degen. Welcome to the movement.
-            </div>
-        </div>
-    </section>
+    <!-- Form -->
+    <section class="form-section" id="join">
+        <div class="section" style="padding: 0;">
+            <h2 class="section-title" style="text-align: center;">Don't be that person</h2>
 
-    <!-- How to Buy -->
-    <section class="how-to-buy reveal" id="how">
-        <h2 class="section-title">How to Buy</h2>
-        <p class="section-subtitle">Four steps to generational wealth (or at least legendary memes)</p>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Get a Wallet</h3>
-                <p>Download Phantom or Solflare. Your first step into the future.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Buy SOL</h3>
-                <p>Use any exchange. Send SOL to your wallet. Don't send it to the wrong address.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Swap on DEX</h3>
-                <p>Hit Raydium or Jupiter. Paste our contract. Swap SOL for $SIXSEVEN.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Join the Movement</h3>
-                <p>Do the hand gesture. Screenshot your bag. Welcome to the 67 Army. 👐</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contract Section -->
-    <section class="contract-section" id="buy">
-        <div class="contract-box">
-            <div class="contract-label">Contract Address</div>
-            <div class="contract-address" onclick="copyContract()">
-                LAUNCHING SOON • STAY TUNED
-            </div>
-            <p style="margin-top: 32px; color: rgba(255, 255, 255, 0.8); font-size: 16px;">
-                Click to copy when live • Verify on Solscan before buying
+            <p class="big-text" style="text-align: center; margin-bottom: 80px;">
+                The one who knew about it early.<br>
+                The one who <strong>didn't</strong> join the waitlist.<br>
+                The one texting their friends after it moons.
             </p>
-        </div>
-    </section>
 
-    <!-- Final CTA -->
-    <section class="section" style="text-align: center; padding: 180px 60px;">
-        <h2 class="section-title" style="margin-bottom: 32px;">The Clock Is Ticking</h2>
-        <p style="font-size: 24px; color: var(--nike-grey); margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-            Adults are talking about it. The meme is peaking. You have 2-4 weeks before Gen Alpha moves on. This is your window.
-        </p>
-        <a href="#buy" class="btn btn-primary" style="padding: 28px 64px; font-size: 22px;">
-            Buy $SIXSEVEN Now
-        </a>
+            <div class="form-container" id="formContainer">
+                <h3 class="form-title">Get In First</h3>
+                <p class="form-subtitle">
+                    We'll email you the contract address at 6:02pm EST on 11/11. That's a 5-minute head start while everyone else is refreshing Twitter. Plus instant Discord access.
+                </p>
+
+                <form id="signupForm" name="waitlist" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Honeypot field for spam protection -->
+                    <input type="hidden" name="form-name" value="waitlist">
+                    <div style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Twitter/X Username (Optional)</label>
+                        <input type="text" id="twitter" name="twitter" class="form-input" placeholder="@yourusername">
+                    </div>
+
+                    <button type="submit" class="form-button" id="submitButton">Join Waitlist Now</button>
+                </form>
+
+                <div class="form-proof">
+                    <strong><span id="count">23,847</span></strong> people waiting for launch
+                </div>
+            </div>
+
+            <div class="success" id="success">
+                <div class="success-title">You're In 🎯</div>
+                <p class="success-text">
+                    Check your email in 2 minutes for confirmation.<br>
+                    On November 11 at 6:02pm EST, we'll send you the contract address.<br>
+                    <strong>You'll have a 5-minute head start.</strong>
+                </p>
+
+                <div class="success-next">
+                    <h4 class="success-next-title">What happens next?</h4>
+                    <p class="success-next-text">
+                        <strong>Now:</strong> You'll get a Discord invite link. Join the community. Daily updates, memes, countdown.<br><br>
+                        <strong>Nov 11, 6:02pm EST:</strong> Contract address hits your inbox.<br><br>
+                        <strong>Nov 11, 6:07pm EST:</strong> Token goes live on Solana. Fair launch. No presale.<br><br>
+
+                        Want to help build hype? Share memes, tag <strong>@SixSevenCoin</strong> and <strong>#SIXSEVEN</strong>. The bigger the launch, the better for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Community</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Twitter/X</a></li>
-                    <li><a href="#">Telegram</a></li>
-                    <li><a href="#">Discord</a></li>
-                    <li><a href="#">TikTok</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Whitepaper</a></li>
-                    <li><a href="#">Tokenomics</a></li>
-                    <li><a href="#">How to Buy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Charts</h4>
-                <ul class="footer-links">
-                    <li><a href="#">DexScreener</a></li>
-                    <li><a href="#">DexTools</a></li>
-                    <li><a href="#">CoinGecko</a></li>
-                    <li><a href="#">CoinMarketCap</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>About</h4>
-                <ul class="footer-links">
-                    <li><a href="#">The Lore</a></li>
-                    <li><a href="#">Manifesto</a></li>
-                    <li><a href="#">Press Kit</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="disclaimer">
-                <strong>DISCLAIMER:</strong> $SIXSEVEN is a memecoin. It means nothing. It could go to zero. You could lose everything. We're not financial advisors. Do your own research. Only invest what you can afford to lose. This is pure speculation wrapped in absurdity wrapped in Gen Alpha brainrot. Past performance doesn't indicate future results. Not affiliated with Skrilla, LaMelo Ball, the NBA, or rational decision-making.
-            </p>
-            <p style="margin-top: 32px;">
-                © 2025 $SIXSEVEN. All Rights Reserved. Built with chaos, fueled by brainrot, sustained by community.
-            </p>
-        </div>
+    <footer class="footer">
+        <h2 class="footer-title">
+            The window is closing
+        </h2>
+        <p class="footer-text">
+            Join now or explain later.
+        </p>
+        <a href="#join" class="btn btn-primary" style="background: var(--white); color: var(--black); box-shadow: 8px 8px 0 var(--black);">
+            Join Waitlist
+        </a>
+
+        <p style="font-size: 14px; opacity: 0.6; max-width: 800px; margin: 40px auto 0; line-height: 1.6;">
+            Tokenomics: 92% liquidity, 5% team, 3% marketing. Fair launch November 11, 2025 at 6:07pm EST. No presale, no VC allocation. LP locked.
+        </p>
     </footer>
 
     <script>
-        // Scroll reveal animation - Framer style
-        const reveals = document.querySelectorAll('.reveal');
+        // Countdown - Launch: November 11, 2025 at 6:07pm EST (NYC time)
+        function updateCountdown() {
+            const launchDate = new Date('2025-11-11T23:07:00Z'); // 6:07pm EST = 11:07pm UTC
 
-        const revealOnScroll = () => {
-            reveals.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 100;
+            const now = new Date().getTime();
+            const distance = launchDate - now;
 
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        };
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Mouse move effect on stats
-        const stats = document.querySelectorAll('.stat');
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 
-        stats.forEach(stat => {
-            stat.addEventListener('mousemove', (e) => {
-                const rect = stat.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-
-                stat.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.05)`;
-            });
-
-            stat.addEventListener('mouseleave', () => {
-                stat.style.transform = '';
-            });
-        });
-
-        // Event listeners
-        window.addEventListener('scroll', () => {
-            revealOnScroll();
-        });
-
-        revealOnScroll(); // Initial check
-
-        // Copy contract address
-        function copyContract() {
-            const contractAddress = "SIXSEVEN_CONTRACT_ADDRESS_HERE";
-            navigator.clipboard.writeText(contractAddress).then(() => {
-                alert('Contract address copied! 👐');
-            }).catch(() => {
-                alert('Coming soon! Join our socials for launch updates.');
-            });
+            if (distance < 0) {
+                document.querySelector('.countdown-box').innerHTML = '<div style="font-size: 56px; font-weight: 900; padding: 60px;">🚀 LIVE NOW 🚀</div>';
+            }
         }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Nav background change on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const nav = document.querySelector('.nav');
+            const hero = document.getElementById('hero');
+
+            // Change nav style when scrolling past hero
+            if (scrolled > hero.offsetHeight - 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Counter animation
+        const countElement = document.getElementById('count');
+        let currentCount = 23847;
+        setInterval(() => {
+            currentCount += Math.floor(Math.random() * 7);
+            countElement.textContent = currentCount.toLocaleString();
+        }, 8000);
+
+        // Form submission with Mailchimp integration
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const twitter = document.getElementById('twitter').value;
+            const submitButton = document.getElementById('submitButton');
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Joining...';
+
+            try {
+                // Call Netlify Function to add to Mailchimp
+                const response = await fetch('/.netlify/functions/mailchimp-subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, twitter })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Success - show success message
+                    console.log('Waitlist signup successful:', { email, twitter });
+                    document.getElementById('formContainer').style.display = 'none';
+                    document.getElementById('success').classList.add('active');
+                    document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Error from API
+                    alert(data.error || 'Something went wrong. Please try again.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Join Waitlist Now';
+                }
+            } catch (error) {
+                // Network error
+                console.error('Submission error:', error);
+                alert('Network error. Please check your connection and try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Join Waitlist Now';
+            }
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1830,87 +1214,10 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
-
-        // 3D tilt effect on cards
-        const cards = document.querySelectorAll('.timeline-content, .testimonial, .step');
-
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
-        });
-
-        // Animated counter for stats
-        const animateValue = (element, start, end, duration) => {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const value = progress * (end - start) + start;
-
-                if (element.textContent.includes('B')) {
-                    element.textContent = value.toFixed(1) + 'B';
-                } else if (element.textContent.includes('%')) {
-                    element.textContent = Math.floor(value) + '%';
-                }
-
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        };
-
-        // Trigger counter animation on scroll
-        let statsAnimated = false;
-        const statsBar = document.querySelector('.stats-bar');
-
-        const checkStatsVisible = () => {
-            if (statsAnimated) return;
-
-            const rect = statsBar.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                statsAnimated = true;
-
-                const statNumbers = document.querySelectorAll('.stat-number');
-                statNumbers.forEach((stat, index) => {
-                    const text = stat.textContent;
-                    if (text.includes('6.7B')) {
-                        animateValue(stat, 0, 6.7, 2000);
-                    } else if (text.includes('0%')) {
-                        animateValue(stat, 100, 0, 2000);
-                    } else if (text.includes('100%')) {
-                        animateValue(stat, 0, 100, 2000);
-                    } else if (text.includes('67%')) {
-                        animateValue(stat, 0, 67, 2000);
-                    }
-                });
-            }
-        };
-
-        window.addEventListener('scroll', checkStatsVisible);
-        checkStatsVisible();
     </script>
 </body>
 </html>
