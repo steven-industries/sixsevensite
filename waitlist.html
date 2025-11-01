@@ -633,6 +633,33 @@
             line-height: 1.7;
         }
 
+        /* Meme Break - Visual Interest */
+        .meme-break {
+            background: var(--black);
+            padding: 100px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .meme-image {
+            max-width: 600px;
+            width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .meme-break {
+                padding: 60px 0;
+            }
+
+            .meme-image {
+                max-width: 400px;
+            }
+        }
+
         /* Footer */
         .footer {
             background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
@@ -871,6 +898,11 @@
         <p class="big-text">
             You're either in the waitlist or you're explaining to your friends why you missed it.
         </p>
+    </section>
+
+    <!-- Meme Break -->
+    <section class="meme-break">
+        <img src="images/67kidglowing.jpeg" alt="67 Kid" class="meme-image">
     </section>
 
     <!-- Stats -->
