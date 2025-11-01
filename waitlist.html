@@ -255,13 +255,14 @@
 
         /* Parallax Headline Section - Below Hero */
         .parallax-section {
-            min-height: 80vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: var(--black);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
+            padding: 120px 0;
         }
 
         .parallax-headline {
@@ -269,6 +270,8 @@
             padding: 80px 40px;
             will-change: transform, opacity;
             transition: transform 0.1s ease-out;
+            position: relative;
+            z-index: 10;
         }
 
         .parallax-title {
@@ -690,12 +693,17 @@
             }
 
             .parallax-section {
-                min-height: 60vh;
-                padding: 40px 0;
+                min-height: auto;
+                padding: 80px 0;
             }
 
             .parallax-headline {
                 padding: 60px 24px;
+            }
+
+            /* Disable parallax effect on mobile for better usability */
+            .parallax-headline {
+                transform: none !important;
             }
 
             .parallax-title {
