@@ -1051,18 +1051,24 @@
                     We'll email you the contract address at 6:02pm EST on 11/11. That's a 5-minute head start while everyone else is refreshing Twitter. Plus instant Discord access.
                 </p>
 
-                <form id="signupForm">
+                <form id="signupForm" name="waitlist" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Honeypot field for spam protection -->
+                    <input type="hidden" name="form-name" value="waitlist">
+                    <div style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </div>
+
                     <div class="form-group">
                         <label class="form-label">Email Address</label>
-                        <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">Twitter/X Username (Optional)</label>
-                        <input type="text" id="twitter" class="form-input" placeholder="@yourusername">
+                        <input type="text" id="twitter" name="twitter" class="form-input" placeholder="@yourusername">
                     </div>
 
-                    <button type="submit" class="form-button">Join Waitlist Now</button>
+                    <button type="submit" class="form-button" id="submitButton">Join Waitlist Now</button>
                 </form>
 
                 <div class="form-proof">
@@ -1157,18 +1163,49 @@
             countElement.textContent = currentCount.toLocaleString();
         }, 8000);
 
-        // Form
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        // Form submission with Mailchimp integration
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const email = document.getElementById('email').value;
             const twitter = document.getElementById('twitter').value;
+            const submitButton = document.getElementById('submitButton');
 
-            console.log('Waitlist signup:', { email, twitter });
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Joining...';
 
-            document.getElementById('formContainer').style.display = 'none';
-            document.getElementById('success').classList.add('active');
-            document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            try {
+                // Call Netlify Function to add to Mailchimp
+                const response = await fetch('/.netlify/functions/mailchimp-subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, twitter })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Success - show success message
+                    console.log('Waitlist signup successful:', { email, twitter });
+                    document.getElementById('formContainer').style.display = 'none';
+                    document.getElementById('success').classList.add('active');
+                    document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Error from API
+                    alert(data.error || 'Something went wrong. Please try again.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Join Waitlist Now';
+                }
+            } catch (error) {
+                // Network error
+                console.error('Submission error:', error);
+                alert('Network error. Please check your connection and try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Join Waitlist Now';
+            }
         });
 
         // Smooth scroll
