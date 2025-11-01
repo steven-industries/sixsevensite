@@ -114,7 +114,7 @@
             background: #000000;
         }
 
-        /* Hero Video - Fit Vertically */
+        /* Hero Video - Responsive Scaling */
         .hero-video {
             position: absolute;
             top: 0;
@@ -125,6 +125,24 @@
             object-fit: contain;
             z-index: 1;
             opacity: 1;
+        }
+
+        /* Mobile: Fit video horizontally to show overlaid text */
+        @media (max-width: 768px) {
+            .hero-video {
+                width: 100%;
+                height: auto;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+        }
+
+        /* Extra-wide screens: Constrain video size */
+        @media (min-width: 2000px) {
+            .hero-video {
+                max-width: 2000px;
+            }
         }
 
         /* Remove dark overlay - video at full brightness */
@@ -148,28 +166,30 @@
         /* Countdown Box - Lower Right Corner */
         .hero .countdown-box {
             position: absolute;
-            bottom: 40px;
-            right: 40px;
+            bottom: clamp(24px, 4vh, 60px);
+            right: clamp(24px, 4vw, 60px);
             z-index: 3;
             text-align: right;
         }
 
-        /* Launch label - Refined */
+        /* Launch label - Refined A24/MSCHF aesthetic */
         .hero .countdown-label {
-            font-size: clamp(9px, 1.2vw, 11px);
-            font-weight: 500;
+            font-size: clamp(10px, 1.4vw, 13px);
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0 0 12px 0;
-            color: rgba(255, 255, 255, 0.8);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 3px;
+            margin: 0 0 16px 0;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+            opacity: 0.85;
         }
 
         /* Countdown numbers - Compact horizontal layout */
         .hero .countdown {
             display: flex;
-            gap: clamp(16px, 2vw, 24px);
+            gap: clamp(12px, 2.5vw, 28px);
             align-items: baseline;
+            justify-content: flex-end;
         }
 
         .hero .countdown-item {
@@ -178,25 +198,59 @@
             border: none;
             backdrop-filter: none;
             text-align: center;
+            min-width: clamp(40px, 8vw, 70px);
         }
 
         .hero .countdown-number {
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 600;
+            font-size: clamp(28px, 5vw, 56px);
+            font-weight: 700;
             line-height: 1;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             color: var(--white);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            letter-spacing: -0.01em;
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+            letter-spacing: -0.02em;
         }
 
         .hero .countdown-text {
-            font-size: clamp(8px, 1vw, 10px);
-            font-weight: 500;
+            font-size: clamp(7px, 1.2vw, 11px);
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: rgba(255, 255, 255, 0.6);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Mobile: Adjust countdown for better fit */
+        @media (max-width: 768px) {
+            .hero .countdown-box {
+                bottom: 20px;
+                right: 16px;
+                left: 16px;
+                text-align: center;
+            }
+
+            .hero .countdown {
+                justify-content: center;
+                gap: clamp(8px, 3vw, 16px);
+            }
+
+            .hero .countdown-item {
+                min-width: clamp(32px, 12vw, 60px);
+            }
+
+            .hero .countdown-label {
+                font-size: clamp(8px, 2.5vw, 11px);
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Extra-wide: Prevent countdown from being too large */
+        @media (min-width: 1920px) {
+            .hero .countdown-box {
+                bottom: 80px;
+                right: 80px;
+            }
         }
 
         /* Parallax Headline Section - Below Hero */
@@ -599,6 +653,25 @@
             line-height: 1.4;
         }
 
+        /* Tablet and Mobile Responsive */
+        @media (max-width: 1024px) {
+            .section {
+                padding: 80px 40px;
+            }
+
+            .stats {
+                padding: 80px 40px;
+            }
+
+            .proof {
+                padding: 80px 40px;
+            }
+
+            .footer {
+                padding: 80px 40px;
+            }
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .nav-container {
@@ -610,8 +683,15 @@
                 text-shadow: 2px 2px 0 var(--pink), 4px 4px 0 var(--blue);
             }
 
+            .nav-badge {
+                font-size: 10px;
+                padding: 6px 12px;
+                letter-spacing: 1px;
+            }
+
             .parallax-section {
                 min-height: 60vh;
+                padding: 40px 0;
             }
 
             .parallax-headline {
@@ -619,36 +699,81 @@
             }
 
             .parallax-title {
-                font-size: clamp(40px, 10vw, 80px);
-            }
-
-            .hero .countdown-label {
-                top: 100px;
-                letter-spacing: 3px;
-            }
-
-            .hero .countdown {
-                bottom: 40px;
-                gap: 16px;
+                font-size: clamp(36px, 11vw, 72px);
+                line-height: 0.9;
             }
 
             .section {
-                padding: 80px 24px;
+                padding: 60px 24px;
             }
 
             .quote-block {
-                padding: 48px 24px;
-                margin: 60px 24px;
+                padding: 40px 24px;
+                margin: 40px 16px;
+                border-width: 4px;
+            }
+
+            .quote-text {
+                font-size: clamp(24px, 6vw, 48px);
+            }
+
+            .stats {
+                padding: 60px 24px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+
+            .proof {
+                padding: 60px 24px;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .proof-item {
+                padding: 32px;
+            }
+
+            .offer {
+                padding: 60px 24px;
             }
 
             .form-container {
-                padding: 48px 32px;
-                box-shadow: 8px 8px 0 var(--pink), 16px 16px 0 var(--blue);
+                padding: 40px 24px;
+                box-shadow: 6px 6px 0 var(--pink), 12px 12px 0 var(--blue);
             }
 
-            .offer-boxes,
-            .proof-grid {
-                grid-template-columns: 1fr;
+            .footer {
+                padding: 60px 24px;
+            }
+        }
+
+        /* Extra-wide screens: Prevent excessive scaling */
+        @media (min-width: 2000px) {
+            .parallax-title {
+                font-size: 180px;
+            }
+
+            .section-title {
+                font-size: 96px;
+            }
+
+            .stat-number {
+                font-size: 120px;
+            }
+
+            .offer-title,
+            .footer-title {
+                font-size: 120px;
             }
         }
     </style>
