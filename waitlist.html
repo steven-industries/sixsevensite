@@ -145,31 +145,31 @@
             width: 100%;
         }
 
-        /* Launch label - Top of hero */
-        .hero .countdown-label {
+        /* Countdown Box - Lower Right Corner */
+        .hero .countdown-box {
             position: absolute;
-            top: 120px;
-            left: 0;
-            right: 0;
-            font-size: clamp(14px, 2vw, 20px);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin: 0;
-            color: var(--white);
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+            bottom: 40px;
+            right: 40px;
             z-index: 3;
+            text-align: right;
         }
 
-        /* Countdown numbers - Bottom of hero */
+        /* Launch label - Refined */
+        .hero .countdown-label {
+            font-size: clamp(9px, 1.2vw, 11px);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 12px 0;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Countdown numbers - Compact horizontal layout */
         .hero .countdown {
-            position: absolute;
-            bottom: 60px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
-            gap: clamp(24px, 5vw, 60px);
-            z-index: 3;
+            gap: clamp(16px, 2vw, 24px);
+            align-items: baseline;
         }
 
         .hero .countdown-item {
@@ -181,22 +181,22 @@
         }
 
         .hero .countdown-number {
-            font-size: clamp(64px, 12vw, 140px);
-            font-weight: 900;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 600;
             line-height: 1;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             color: var(--white);
-            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.9);
-            letter-spacing: -0.02em;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.01em;
         }
 
         .hero .countdown-text {
-            font-size: clamp(10px, 1.5vw, 14px);
-            font-weight: 700;
+            font-size: clamp(8px, 1vw, 10px);
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.7);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.6);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Parallax Headline Section - Below Hero */
