@@ -268,8 +268,6 @@
         .parallax-headline {
             text-align: center;
             padding: 80px 40px;
-            will-change: transform, opacity;
-            transition: transform 0.1s ease-out;
             position: relative;
             z-index: 10;
         }
@@ -701,11 +699,6 @@
                 padding: 60px 24px;
             }
 
-            /* Disable parallax effect on mobile for better usability */
-            .parallax-headline {
-                transform: none !important;
-            }
-
             .parallax-title {
                 font-size: clamp(36px, 11vw, 72px);
                 line-height: 0.9;
@@ -1110,7 +1103,7 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Parallax scroll effect for headline + Nav background change
+        // Nav background change on scroll
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const nav = document.querySelector('.nav');
@@ -1122,17 +1115,6 @@
             } else {
                 nav.classList.remove('scrolled');
             }
-
-            // Parallax headline effect
-            const headline = document.getElementById('parallaxHeadline');
-            const section = headline.closest('.parallax-section');
-            const sectionTop = section.offsetTop;
-
-            // Calculate parallax offset relative to section position
-            const offset = (scrolled - sectionTop) * 0.3;
-
-            // Apply parallax transform
-            headline.style.transform = `translateY(${offset}px)`;
         });
 
         // Counter animation
